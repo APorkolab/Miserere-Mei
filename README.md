@@ -1,5 +1,5 @@
 # Miserere Mei - The Precarious Trails to the Library of Preachers v0.8
-A retro, Hungarian adventure game. Written, programmed by Dr. Porkoláb Ádám. The game can be further developed with the author's permission but the sotfware may not be sold.
+A retro, Hungarian adventure game. Written, programmed by Dr. Porkoláb Ádám. The game can be further developed with the author's permission but the software may not be sold.
 
 ## History of the game
 
@@ -79,4 +79,4 @@ By clicking Furtherlocation1 or clicking Furtherlocation2,3,4, the "name" of the
 
 • In the event of a fight for each location, invocation, and handling of the fighting system. 
 
-I'm waiting for ideas and opinions on adam <at]porkolab.digital e-mail address. 
+## I'm waiting for ideas and opinions on adam<at]porkolab.digital e-mail address. 
