@@ -42,8 +42,11 @@ export class PlaceComponent implements OnInit {
   getHarcuzenet(locationName: string){
     if (locationName == "protagonistStrike"){
       this.fightService.getHarcuzenet().subscribe(value => this.harcUzenet = value);
+    } else {
+      this.harcUzenet = [];
     }
 
   }
 
 }
+
