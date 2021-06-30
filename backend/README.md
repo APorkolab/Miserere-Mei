@@ -1,8 +1,9 @@
 # Spring backend
 
-## Futtatási információk
+## Information for the running
 
-A futtatási konfigurációban meg kell adni a dev profil nevet, hogy a web szolgáltatásokat könnyebb legyen elérni a fejlesztés során.
-A parancssorban átadott paramérter ez legyen:
+You must specify the dev profile name in the runtime configuration to make it easier to access web services during development.
+The parameter passed on the command line should be:
+
 > -Dspring.profiles.active=dev
 
