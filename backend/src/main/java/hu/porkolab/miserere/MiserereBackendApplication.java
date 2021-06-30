@@ -1,0 +1,13 @@
+package hu.porkolab.miserere;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MiserereBackendApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MiserereBackendApplication.class, args);
+	}
+
+}
