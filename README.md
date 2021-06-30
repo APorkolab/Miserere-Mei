@@ -17,13 +17,16 @@ The game's stlye is influenced by the tradition of classic flipbooks and text-ba
 
 The game can be completed in about half an hour if the player takes the appropriate route, however, the planned side quests and secondary locations have not been added yet.  
 
-## Main specifiations of the game
+## Main specifications of the game
 
 The software is currently on version 0.8.  
 
 The structure of the project is currently two parts. 
 
-One is a Java backend application based on a Spring, and the other is a Typescript-based application based on Angular. Attached to the backend part of the project, there is another run-config.png which shows the settings needed to start the backend in the IntelliJ Idea Community.
+One is a Java backend application based on a Spring, and the other is a Typescript-based application based on Angular. At the backend part of the project, you must specify the dev profile name in the runtime configuration to make it easier to access web services during development. The parameter passed on the command line should be:
+> -Dspring.profiles.active=dev
+
+This setting is needed to start the backend in the IntelliJ Idea.
 
 ## Spring Backend
 I have assembled a basic Spring project with https://start.spring.io/. In this project I added some classes:
