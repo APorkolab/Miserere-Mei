@@ -15,6 +15,12 @@ import { PlacesEditorComponent } from './page/places-editor/places-editor.compon
 import { PlacesComponent } from './page/places/places.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { JwtInterceptor } from './service/jwt.interceptor';
+import { AuthService } from './service/auth.service';
+import { ConfigService, IMenuItem } from './service/config.service';
 
 @NgModule({
   declarations: [
@@ -30,13 +36,28 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
     PlacesEditorComponent,
     PlacesComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [FormsModule],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      deps: [AuthService],
+      multi: true,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+  sidebar: IMenuItem[] = this.config.sidebarMenu;
+  constructor(private config: ConfigService) {}
+}
