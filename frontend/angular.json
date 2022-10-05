@@ -31,7 +31,8 @@
               "src/styles.scss",
               "src/assets/css/nucleo-icons.css",
               "src/assets/css/nucleo-svg.css",
-              "src/assets/css/soft-ui-dashboard.css"
+              "src/assets/css/soft-ui-dashboard.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.js",
@@ -44,13 +45,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1mb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "1mb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 }
               ],
               "fileReplacements": [

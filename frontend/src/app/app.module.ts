@@ -21,6 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JwtInterceptor } from './service/jwt.interceptor';
 import { AuthService } from './service/auth.service';
 import { ConfigService, IMenuItem } from './service/config.service';
+import { FilterPipe } from './pipe/filter.pipe';
+import { DataTableModule } from './common/data-table/data-table.module';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { ConfigService, IMenuItem } from './service/config.service';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    DataTableModule,
   ],
   exports: [FormsModule],
   providers: [

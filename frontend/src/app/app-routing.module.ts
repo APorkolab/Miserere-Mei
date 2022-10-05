@@ -22,7 +22,7 @@ const routes: Routes = [
     path: 'forbidden',
     component: ForbiddenComponent,
   },
-   {
+  {
     path: 'users',
     component: UsersComponent,
     canActivate: [AuthGuardService, RoleGuardService],
@@ -38,7 +38,7 @@ const routes: Routes = [
       expectedRole: 3,
     },
   },
-    {
+  {
     path: 'users/edit/:id',
     component: UsersEditorComponent,
     canActivate: [AuthGuardService, RoleGuardService],
@@ -46,11 +46,15 @@ const routes: Routes = [
       expectedRole: 3,
     },
   },
-    {
+  {
     path: 'places',
     component: PlacesComponent,
   },
-    {
+  {
+    path: 'places/:locationName',
+    component: PlacesComponent,
+  },
+  {
     path: 'places/edit/`0`',
     component: UsersEditorComponent,
     canActivate: [AuthGuardService, RoleGuardService],
@@ -58,7 +62,7 @@ const routes: Routes = [
       expectedRole: 3,
     },
   },
-    {
+  {
     path: 'places/edit/:id',
     component: UsersEditorComponent,
     canActivate: [AuthGuardService, RoleGuardService],
@@ -70,6 +74,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

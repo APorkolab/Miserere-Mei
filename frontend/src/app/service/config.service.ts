@@ -1,5 +1,6 @@
 // import { INgxTableColumn } from './../data-table/ngx-data-table/ngx-data-table.component';
 import { Injectable } from '@angular/core';
+import { INgxTableColumn } from '../common/data-table/ngx-data-table/ngx-data-table.component';
 
 export interface IMenuItem {
   link: string;
@@ -20,7 +21,7 @@ export class ConfigService {
     { link: '/family-members', title: 'Family Members', icon: 'users' },
   ];
 
-  // entriesTableColumns: INgxTableColumn[] = [
+  // placesTableColumns: INgxTableColumn[] = [
   //   { key: '_id', title: 'ID' },
   //   { key: 'hungarian', title: 'Hungarian version' },
   //   { key: 'fieldOfExpertise', title: 'Field Of Expertise' },
@@ -28,14 +29,14 @@ export class ConfigService {
   //   { key: 'english', title: 'English version' },
   // ];
 
-  // usersTableColumn: INgxTableColumn[] = [
-  //   { key: '_id', title: 'ID' },
-  //   { key: 'firstName', title: 'First Name' },
-  //   { key: 'lastName', title: 'Last Name' },
-  //   { key: 'email', title: 'E-mail' },
-  //   { key: 'role', title: 'Role' },
-  //   { key: 'password', title: 'Encrypted password' },
-  // ];
+  usersTableColumn: INgxTableColumn[] = [
+    { key: '_id', title: 'ID' },
+    { key: 'firstName', title: 'First Name' },
+    { key: 'lastName', title: 'Last Name' },
+    { key: 'email', title: 'E-mail' },
+    { key: 'role', title: 'Role' },
+    { key: 'password', title: 'Encrypted password' },
+  ];
 
   constructor() {}
 }

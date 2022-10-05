@@ -1,16 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Place } from '../model/place';
+import { Player } from '../model/player';
 import { BaseService } from './base.service';
 import { ConfigService } from './config.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class PlaceService extends BaseService<Place> {
+export class PlayerService extends BaseService<Player> {
   constructor(http: HttpClient, config: ConfigService) {
     super(http, config);
-    this.entity = 'places';
+    this.entity = 'player';
   }
 }
