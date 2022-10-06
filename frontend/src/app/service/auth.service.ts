@@ -23,8 +23,7 @@ export class AuthService {
   apiUrl: string = environment.apiUrl;
   loginUrl: string = '';
 
-  user$: BehaviorSubject<User | null> =
-    new BehaviorSubject<User | null>(null);
+  user$: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
 
   access_token$: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
@@ -46,11 +45,10 @@ export class AuthService {
           this.access_token$.next('');
           sessionStorage.removeItem('login');
         }
-        this.router.navigate(['/', 'login']);
+        // this.router.navigate(['/', 'login']);
       },
     });
   }
-  
 
   login(loginData: ILoginData): void {
     this.http.post<IAuthModel>(this.loginUrl, loginData).subscribe({

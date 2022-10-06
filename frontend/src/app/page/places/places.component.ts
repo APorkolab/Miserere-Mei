@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { PlaceService } from './../../service/place.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable, of } from 'rxjs';
+import { INgxTableColumn } from 'src/app/common/data-table/ngx-data-table/ngx-data-table.component';
 import { Place } from 'src/app/model/place';
 import { Player } from 'src/app/model/player';
+import { AuthService } from 'src/app/service/auth.service';
 import { ConfigService } from 'src/app/service/config.service';
 import { NotificationService } from 'src/app/service/notification.service';
-import { PlaceService } from 'src/app/service/place.service';
 import { PlayerService } from 'src/app/service/player.service';
 
 @Component({
@@ -13,59 +16,46 @@ import { PlayerService } from 'src/app/service/player.service';
   styleUrls: ['./places.component.scss'],
 })
 export class PlacesComponent implements OnInit {
-  // columns = this.config.;
+  @Input() currentPlace: Place = {
+    _id: '633e15dc54bf40eac48ee597',
+    location: 'GameBeginning',
+    narrationZoneText:
+      'Cantus Planus idegesen szívta a fogát: túl hamar ért ide. A koszosbarna, valaha katonai köpeny és az   erősen javított katonai felszerelés Cantus részévé vált. A negyven év körüli harcos arcát mélyen barázdálták azok az események, melyeket a múltban meg kellett tennie. Piszkosszőke, őszülő haja, ovális arca és vékony testalkata a környéken szinte legendává tette a szótlan, látszólag érzelmek nélküli zsoldost. Az Öreggel csak napnyugtakor kell találkoznia. A zsoldos negyvenvalahány évével már idősnek számított egy olyan korban, ahol mindenki az ereje alapján ítéltetik meg. Azt mondják, hogy a világ régebben más volt, de arra nem emlékezhetett.',
+    opponentName: '',
+    decision1: 'Eltöltöd az időt valamivel',
+    decision2: 'Elalszol',
+    decision3: '',
+    decision4: '',
+    furtherLocation1: 'spendTime',
+    furtherLocation2: 'takeANap',
+    furtherLocation3: '',
+    furtherLocation4: '',
+  };
 
-  list$ = this.placeService.getAll();
-  entity = 'Place';
-  place!: Place;
-  player: Player = new Player();
-  whereTo = '';
+  @Input() columns: INgxTableColumn[] = [];
+  @Input() entity: string = '';
+
+  @Output() selectOne: EventEmitter<Place> = new EventEmitter<Place>();
+  @Output() deleteOne: EventEmitter<Place> = new EventEmitter<Place>();
 
   constructor(
-    private placeService: PlaceService,
-    private config: ConfigService,
+    private notifyService: NotificationService,
+    private route: ActivatedRoute,
     private router: Router,
-    private notifyService: NotificationService
+    public placeService: PlaceService
   ) {}
 
   ngOnInit(): void {
-    this.gotoPlace('GameBeginning');
+    this.getPlace(this.route.snapshot.params['location']);
   }
 
-  showSuccessDelete() {
-    this.notifyService.showSuccess(
-      `${this.entity} delete successfully!`,
-      'NyelvSzó v.2.0.0'
-    );
-  }
-
-  showError(err: String) {
-    this.notifyService.showError(
-      'Something went wrong. Details:' + err,
-      'NyelvSzó v.2.0.0'
-    );
-  }
-
-  onSelectOne(place: Place): void {
-    this.router.navigate(['/', 'entries', 'edit', place._id]);
-  }
-
-  onDeleteOne(place: Place): void {
-    this.placeService.delete(place).subscribe({
-      next: () => (this.list$ = this.placeService.getAll()),
-      error: (err) => this.showError(err),
-      complete: () => this.showSuccessDelete(),
+  getPlace(location: string): void {
+    this.placeService.getOnePlace(location).subscribe({
+      next: (data) => {
+        this.currentPlace = data;
+        console.log(data);
+      },
+      error: (e) => console.error(e),
     });
-  }
-
-  gotoPlace(locationName: string) {
-    this.placeService
-      .getPlace(locationName)
-      .subscribe((value) => (this.place = value));
-  }
-
-  clickLocation(event: Event) {
-    console.log(event);
-    this.gotoPlace((event.target as HTMLBodyElement).id);
   }
 }

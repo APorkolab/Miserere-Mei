@@ -1,5 +1,10 @@
+const place = require("../../models/place");
+
 module.exports = (model, populateList = []) => {
 	return {
+		findPlace: (location) => model.findOne({
+			"location": location
+		}).populate(),
 		findAll: (params = {}) => {
 			if (Object.keys(params).length) {
 				Object.keys(params).map(key => {
@@ -12,7 +17,7 @@ module.exports = (model, populateList = []) => {
 			}
 			return model.find(params).populate(...populateList);
 		},
-		findOne: (id) => model.findById(id).populate(...populateList),
+		findId: (id) => model.findById(id).populate(...populateList),
 		// findOne: (id) => model.findById(id).populate(),
 		update: (id, updateData) => model.findByIdAndUpdate(id, updateData, {
 			new: true

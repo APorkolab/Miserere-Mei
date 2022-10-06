@@ -5,12 +5,21 @@ const createError = require('http-errors');
 module.exports = (model, populateList = []) => {
 	const service = baseService(model, populateList);
 	return {
+		findOnebyPlaceName(req, res, next) {
+			return service.findPlace(req.params.location)
+				.then(entity => {
+					if (!entity) {
+						return next(new createError.NotFound("Entity has not found"));
+					}
+					return res.json(entity);
+				});
+		},
 		findAll(req, res, next) {
 			return service.findAll()
 				.then(list => res.json(list));
 		},
-		findOne(req, res, next) {
-			return service.findOne(req.params.id)
+		findOneById(req, res, next) {
+			return service.findId(req.params.id)
 				.then(entity => {
 					if (!entity) {
 						return next(new createError.NotFound("Entity has not found"));

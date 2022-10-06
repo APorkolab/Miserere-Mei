@@ -22,20 +22,24 @@ export class BaseService<
     return this.http.get<T[]>(`${this.apiUrl}/${this.entity}`);
   }
 
-  getPlace(locationName: String): Observable<Place> {
-    return this.http
-      .get<Place>('/places/' + locationName)
-      .pipe(map((response) => new Place()));
-  }
+  // getOnePlace(locationName: String): Observable<Place> {
+  //   return this.http
+  //     .get<Place>('/places/' + locationName)
+  //     .pipe(map((response) => new Place()));
+  // }
 
   getPlayer(): Observable<Player> {
     return this.http
-      .get<Player>('/api/misere/player')
+      .get<Player>('/player')
       .pipe(map((response) => new Player()));
   }
 
   getOne(_id: string | number): Observable<T> {
     return this.http.get<T>(`${this.apiUrl}/${this.entity}/${_id}`);
+  }
+
+  getOnePlace(location: string | number): Observable<T> {
+    return this.http.get<T>(`${this.apiUrl}/place/${location}`);
   }
 
   create(entity: T): Observable<T> {

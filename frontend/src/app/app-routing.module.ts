@@ -51,7 +51,7 @@ const routes: Routes = [
     component: PlacesComponent,
   },
   {
-    path: 'places/:locationName',
+    path: 'place/:location',
     component: PlacesComponent,
   },
   {
