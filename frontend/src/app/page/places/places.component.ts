@@ -16,21 +16,21 @@ import { PlayerService } from 'src/app/service/player.service';
   styleUrls: ['./places.component.scss'],
 })
 export class PlacesComponent implements OnInit {
-  @Input() currentPlace: Place = {
-    _id: '633e15dc54bf40eac48ee597',
-    location: 'GameBeginning',
-    narrationZoneText:
-      'Cantus Planus idegesen szívta a fogát: túl hamar ért ide. A koszosbarna, valaha katonai köpeny és az   erősen javított katonai felszerelés Cantus részévé vált. A negyven év körüli harcos arcát mélyen barázdálták azok az események, melyeket a múltban meg kellett tennie. Piszkosszőke, őszülő haja, ovális arca és vékony testalkata a környéken szinte legendává tette a szótlan, látszólag érzelmek nélküli zsoldost. Az Öreggel csak napnyugtakor kell találkoznia. A zsoldos negyvenvalahány évével már idősnek számított egy olyan korban, ahol mindenki az ereje alapján ítéltetik meg. Azt mondják, hogy a világ régebben más volt, de arra nem emlékezhetett.',
-    opponentName: '',
-    decision1: 'Eltöltöd az időt valamivel',
-    decision2: 'Elalszol',
-    decision3: '',
-    decision4: '',
-    furtherLocation1: 'spendTime',
-    furtherLocation2: 'takeANap',
-    furtherLocation3: '',
-    furtherLocation4: '',
-  };
+  @Input()
+  currentPlace!: Place;
+  // _id: '633e15dc54bf40eac48ee597',
+  // location: 'GameBeginning',
+  // narrationZoneText:
+  //   'Cantus Planus idegesen szívta a fogát: túl hamar ért ide. A koszosbarna, valaha katonai köpeny és az   erősen javított katonai felszerelés Cantus részévé vált. A negyven év körüli harcos arcát mélyen barázdálták azok az események, melyeket a múltban meg kellett tennie. Piszkosszőke, őszülő haja, ovális arca és vékony testalkata a környéken szinte legendává tette a szótlan, látszólag érzelmek nélküli zsoldost. Az Öreggel csak napnyugtakor kell találkoznia. A zsoldos negyvenvalahány évével már idősnek számított egy olyan korban, ahol mindenki az ereje alapján ítéltetik meg. Azt mondják, hogy a világ régebben más volt, de arra nem emlékezhetett.',
+  // opponentName: '',
+  // decision1: 'Eltöltöd az időt valamivel',
+  // decision2: 'Elalszol',
+  // decision3: '',
+  // decision4: '',
+  // furtherLocation1: 'spendTime',
+  // furtherLocation2: 'takeANap',
+  // furtherLocation3: '',
+  // furtherLocation4: '',
 
   @Input() columns: INgxTableColumn[] = [];
   @Input() entity: string = '';

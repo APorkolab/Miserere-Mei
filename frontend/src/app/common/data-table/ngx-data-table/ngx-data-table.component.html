@@ -2,15 +2,17 @@
 	<div class="row align-items-center">
 		<div class="col-12 select_container">
 
-			<!-- Potential upgrading possibilty: search by columns. The essentials are made.    -->
-			<!-- <select [(ngModel)]="filterKey" class="form-control select">
-        <option value="">All column</option>
-        <option *ngFor="let key of keys" [value]="key">{{key| titlecase}}</option>
-      </select>
-    </div> -->
+			<div class="col-3 select_container input-field">
+				<select [(ngModel)]="filterKey" id="tableSearch" class="form-control">
+					<option>'Search in every column</option>
+					<option *ngFor="let key of columns" [selected]="key.title === filterKey" [value]="key.title">
+						{{ key.title }}
+					</option>
+				</select>
+			</div>
 
 			<div class="mb-3 input_container">
-				<input [(ngModel)]="phrase" type="text" class="form-control" placeholder="Search in all columns at once...">
+				<input [(ngModel)]="phrase" type="text" class="form-control" placeholder="Search in the data of the places">
 			</div>
 		</div>
 	</div>
@@ -41,21 +43,16 @@
 						</th>
 					</tr>
 				</thead>
-				<tbody>
-
-					<tr *ngFor="let row of list  | slice:startSlice:endSlice">
-						<td *ngFor=" let col of columns">
-							{{ row[col.key] }}
-						</td>
-						<td *ngIf="row['imdbID']">
-							<a href="https://www.imdb.com/title/{{ row['imdbID'] }}" target="_blank">IMDB link </a>
-						</td>
+				<tbody *ngIf="list | filter: phrase:keys[filterKey] as li">
+					<tr filteredList=li
+						*ngFor="let row of li | slice: startSlice:endSlice | filter: '':'' | sorter:columnKey:sortDir">
+						<td *ngFor="let col of columns">{{ row[col.key] }}</td>
 						<td>
 							<div class="btn-group">
 								<button (click)="onSelect(row)" class="btn btn-warning">
 									Edit
 								</button>
-								<button (click)="onDelete(row)" class="btn btn-danger">
+								<button (click)="onDelete(row)" class="btn btn-danger"
 									data-confirm="Are you sure to delete this item?">Delete
 								</button>
 							</div>

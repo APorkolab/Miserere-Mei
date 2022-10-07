@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AllPlaceEditorComponent } from './page/all-place-editor/all-place-editor.component';
+import { AllPlaceViewerComponent } from './page/all-place-viewer/all-place-viewer.component';
 import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 import { HomeComponent } from './page/home/home.component';
 import { LoginComponent } from './page/login/login.component';
@@ -31,14 +33,6 @@ const routes: Routes = [
     },
   },
   {
-    path: 'users/edit/`0`',
-    component: UsersEditorComponent,
-    canActivate: [AuthGuardService, RoleGuardService],
-    data: {
-      expectedRole: 3,
-    },
-  },
-  {
     path: 'users/edit/:id',
     component: UsersEditorComponent,
     canActivate: [AuthGuardService, RoleGuardService],
@@ -47,28 +41,40 @@ const routes: Routes = [
     },
   },
   {
-    path: 'places',
-    component: PlacesComponent,
+    path: 'users/edit/`0`',
+    component: UsersEditorComponent,
+    canActivate: [AuthGuardService, RoleGuardService],
+    data: {
+      expectedRole: 3,
+    },
+  },
+  {
+    path: 'all-place',
+    component: AllPlaceViewerComponent,
+    canActivate: [AuthGuardService, RoleGuardService],
+    data: {
+      expectedRole: 3,
+    },
+  },
+  {
+    path: 'all-place/edit/`0`',
+    component: AllPlaceEditorComponent,
+    canActivate: [AuthGuardService, RoleGuardService],
+    data: {
+      expectedRole: 3,
+    },
+  },
+  {
+    path: 'all-place/edit/:id',
+    component: AllPlaceEditorComponent,
+    canActivate: [AuthGuardService, RoleGuardService],
+    data: {
+      expectedRole: 3,
+    },
   },
   {
     path: 'place/:location',
     component: PlacesComponent,
-  },
-  {
-    path: 'places/edit/`0`',
-    component: UsersEditorComponent,
-    canActivate: [AuthGuardService, RoleGuardService],
-    data: {
-      expectedRole: 3,
-    },
-  },
-  {
-    path: 'places/edit/:id',
-    component: UsersEditorComponent,
-    canActivate: [AuthGuardService, RoleGuardService],
-    data: {
-      expectedRole: 3,
-    },
   },
 ];
 

@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './page/nav/nav.component';
 import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 import { PrefaceComponent } from './page/preface/preface.component';
 import { ContactComponent } from './page/contact/contact.component';
@@ -23,11 +22,13 @@ import { AuthService } from './service/auth.service';
 import { ConfigService, IMenuItem } from './service/config.service';
 import { FilterPipe } from './pipe/filter.pipe';
 import { DataTableModule } from './common/data-table/data-table.module';
+import { AllPlaceViewerComponent } from './page/all-place-viewer/all-place-viewer.component';
+import { AllPlaceEditorComponent } from './page/all-place-editor/all-place-editor.component';
+import { SorterPipe } from './pipe/sorter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
     ForbiddenComponent,
     PrefaceComponent,
     ContactComponent,
@@ -39,6 +40,8 @@ import { DataTableModule } from './common/data-table/data-table.module';
     PlacesComponent,
     NavbarComponent,
     SidebarComponent,
+    AllPlaceViewerComponent,
+    AllPlaceEditorComponent,
   ],
   imports: [
     BrowserModule,

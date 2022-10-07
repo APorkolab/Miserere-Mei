@@ -56,21 +56,21 @@ export class UsersEditorComponent implements OnInit {
   showSuccessEdit() {
     this.notifyService.showSuccess(
       `${this.entity} edited successfully!`,
-      'NyelvSzó v.2.0.0'
+      'Miserere Mei v.1.0.0'
     );
   }
 
   showSuccessCreate() {
     this.notifyService.showSuccess(
       `${this.entity} created successfully!`,
-      'NyelvSzó v.2.0.0'
+      'Miserere Mei v.1.0.0'
     );
   }
 
   showError(err: String) {
     this.notifyService.showError(
       'Something went wrong. Details:' + err,
-      'NyelvSzó v.2.0.0'
+      'Miserere Mei v.1.0.0'
     );
   }
 }

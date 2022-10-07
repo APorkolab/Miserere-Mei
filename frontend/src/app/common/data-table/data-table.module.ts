@@ -7,9 +7,10 @@ import { NgxDataTableComponent } from './ngx-data-table/ngx-data-table.component
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterPipe } from 'src/app/pipe/filter.pipe';
+import { SorterPipe } from 'src/app/pipe/sorter.pipe';
 
 @NgModule({
-  declarations: [NgxDataTableComponent, FilterPipe],
+  declarations: [NgxDataTableComponent, FilterPipe, SorterPipe],
   imports: [
     CommonModule,
     RouterModule,
@@ -18,6 +19,6 @@ import { FilterPipe } from 'src/app/pipe/filter.pipe';
     AppRoutingModule,
     FormsModule,
   ],
-  exports: [NgxDataTableComponent, FilterPipe],
+  exports: [NgxDataTableComponent, FilterPipe, SorterPipe],
 })
 export class DataTableModule {}

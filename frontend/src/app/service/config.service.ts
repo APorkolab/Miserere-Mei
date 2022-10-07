@@ -21,13 +21,20 @@ export class ConfigService {
     { link: '/family-members', title: 'Family Members', icon: 'users' },
   ];
 
-  // placesTableColumns: INgxTableColumn[] = [
-  //   { key: '_id', title: 'ID' },
-  //   { key: 'hungarian', title: 'Hungarian version' },
-  //   { key: 'fieldOfExpertise', title: 'Field Of Expertise' },
-  //   { key: 'wordType', title: 'Word type' },
-  //   { key: 'english', title: 'English version' },
-  // ];
+  placesTableColumns: INgxTableColumn[] = [
+    { key: '_id', title: 'ID' },
+    { key: 'location', title: 'Location' },
+    { key: 'narrationZoneText', title: 'Narration zone text' },
+    { key: 'opponentName', title: "Opponent's name" },
+    { key: 'decision1', title: '1st decision' },
+    { key: 'decision2', title: '2nd decision' },
+    { key: 'decision3', title: '3rd decision' },
+    { key: 'decision4', title: '4th decision' },
+    { key: 'furtherLocation1', title: '1st further location' },
+    { key: 'furtherLocation2', title: '2nd further location' },
+    { key: 'furtherLocation3', title: '3rd further location' },
+    { key: 'furtherLocation4', title: '4th further location' },
+  ];
 
   usersTableColumn: INgxTableColumn[] = [
     { key: '_id', title: 'ID' },
@@ -37,6 +44,5 @@ export class ConfigService {
     { key: 'role', title: 'Role' },
     { key: 'password', title: 'Encrypted password' },
   ];
-
   constructor() {}
 }

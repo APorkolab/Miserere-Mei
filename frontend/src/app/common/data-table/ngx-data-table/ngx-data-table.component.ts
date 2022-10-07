@@ -23,6 +23,7 @@ export class NgxDataTableComponent<T extends { [x: string]: any }>
   @Output() selectOne: EventEmitter<T> = new EventEmitter<T>();
   @Output() deleteOne: EventEmitter<T> = new EventEmitter<T>();
 
+  keys: { [x: string]: string } = {};
   phrase: string = '';
   filterKey: string = '';
   changeText = true;

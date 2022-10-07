@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavComponent } from './nav.component';
+import { AllPlaceEditorComponent } from './all-place-editor.component';
 
-describe('NavComponent', () => {
-  let component: NavComponent;
-  let fixture: ComponentFixture<NavComponent>;
+describe('AllPlaceEditorComponent', () => {
+  let component: AllPlaceEditorComponent;
+  let fixture: ComponentFixture<AllPlaceEditorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavComponent ]
+      declarations: [ AllPlaceEditorComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(NavComponent);
+    fixture = TestBed.createComponent(AllPlaceEditorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
