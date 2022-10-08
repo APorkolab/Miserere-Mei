@@ -57,7 +57,7 @@ const routes: Routes = [
     },
   },
   {
-    path: 'all-place/edit/`0`',
+    path: 'all-place/edit/:id',
     component: AllPlaceEditorComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
@@ -65,7 +65,7 @@ const routes: Routes = [
     },
   },
   {
-    path: 'all-place/edit/:id',
+    path: 'all-place/edit/`0`',
     component: AllPlaceEditorComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {

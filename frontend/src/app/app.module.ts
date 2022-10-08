@@ -10,7 +10,6 @@ import { HomeComponent } from './page/home/home.component';
 import { LoginComponent } from './page/login/login.component';
 import { UsersComponent } from './page/users/users.component';
 import { UsersEditorComponent } from './page/users-editor/users-editor.component';
-import { PlacesEditorComponent } from './page/places-editor/places-editor.component';
 import { PlacesComponent } from './page/places/places.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
@@ -36,7 +35,6 @@ import { SorterPipe } from './pipe/sorter.pipe';
     LoginComponent,
     UsersComponent,
     UsersEditorComponent,
-    PlacesEditorComponent,
     PlacesComponent,
     NavbarComponent,
     SidebarComponent,

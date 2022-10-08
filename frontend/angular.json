@@ -37,7 +37,12 @@
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.js",
               "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "../frontend/src/assets/js/core/popper.min.js",
+              "../frontend/src/assets/js/plugins/perfect-scrollbar.min.js",
+              "../frontend/src/assets/js/plugins/smooth-scrollbar.min.js",
+              "../frontend/src/assets/js/plugins/chartjs.min.js",
+              "../frontend/src/assets/js/soft-ui-dashboard.min.js"
             ]
           },
           "configurations": {

@@ -46,7 +46,7 @@
 				<tbody *ngIf="list | filter: phrase:keys[filterKey] as li">
 					<tr filteredList=li
 						*ngFor="let row of li | slice: startSlice:endSlice | filter: '':'' | sorter:columnKey:sortDir">
-						<td *ngFor="let col of columns">{{ row[col.key] }}</td>
+						<td *ngFor="let col of columns" style="white-space:pre-wrap; word-wrap:break-word">{{ row[col.key] }}</td>
 						<td>
 							<div class="btn-group">
 								<button (click)="onSelect(row)" class="btn btn-warning">

@@ -9,7 +9,7 @@ module.exports = (model, populateList = []) => {
 			return service.findPlace(req.params.location)
 				.then(entity => {
 					if (!entity) {
-						return next(new createError.NotFound("Entity has not found"));
+						return next(new createError.NotFound("Entity by location name has not found"));
 					}
 					return res.json(entity);
 				});
@@ -22,7 +22,7 @@ module.exports = (model, populateList = []) => {
 			return service.findId(req.params.id)
 				.then(entity => {
 					if (!entity) {
-						return next(new createError.NotFound("Entity has not found"));
+						return next(new createError.NotFound("Entity by id has not found"));
 					}
 					return res.json(entity);
 				});
