@@ -1,3 +1,4 @@
+import { ContactComponent } from './page/contact/contact.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AllPlaceEditorComponent } from './page/all-place-editor/all-place-editor.component';
@@ -6,10 +7,12 @@ import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 import { HomeComponent } from './page/home/home.component';
 import { LoginComponent } from './page/login/login.component';
 import { PlacesComponent } from './page/places/places.component';
+import { PrefaceComponent } from './page/preface/preface.component';
 import { UsersEditorComponent } from './page/users-editor/users-editor.component';
 import { UsersComponent } from './page/users/users.component';
 import { AuthGuardService } from './service/auth-guard.service';
 import { RoleGuardService } from './service/role-guard.service';
+import { MapComponent } from './page/map/map.component';
 
 const routes: Routes = [
   {
@@ -75,6 +78,18 @@ const routes: Routes = [
   {
     path: 'place/:location',
     component: PlacesComponent,
+  },
+  {
+    path: 'preface',
+    component: PrefaceComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
+  {
+    path: 'map',
+    component: MapComponent,
   },
 ];
 

@@ -24,6 +24,7 @@ import { DataTableModule } from './common/data-table/data-table.module';
 import { AllPlaceViewerComponent } from './page/all-place-viewer/all-place-viewer.component';
 import { AllPlaceEditorComponent } from './page/all-place-editor/all-place-editor.component';
 import { SorterPipe } from './pipe/sorter.pipe';
+import { MapComponent } from './page/map/map.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { SorterPipe } from './pipe/sorter.pipe';
     SidebarComponent,
     AllPlaceViewerComponent,
     AllPlaceEditorComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
