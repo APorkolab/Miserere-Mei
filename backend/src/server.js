@@ -42,7 +42,7 @@ const authencticateJwt = require('./models/auth/authenticate');
 
 app.use('/all-place', authencticateJwt, require('./controllers/all-place/router'));
 app.use('/place', require('./controllers/place/router'));
-// app.use('/main-actors', authencticateJwt, require('./controllers/main-actor/router'));
+app.use('/player', require('./controllers/player/router'));
 // app.use('/family-members', authencticateJwt, require('./controllers/family-member/router'));
 // app.use('/directors', authencticateJwt, require('./controllers/director/router'));
 app.use('/users', authencticateJwt, require('./controllers/user/router'));

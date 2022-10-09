@@ -1,11 +1,13 @@
 const fsp = require('fs').promises;
 const mongoose = require('mongoose');
 const place = require('../models/place');
+
 const User = require('../models/user');
 const UsersList = require('./users.json');
 const {
 	once
 } = require('events');
+const player = require('../models/player');
 
 
 // mongoose.connection.dropDatabase();
@@ -33,12 +35,13 @@ const AtlasUploader = async (model, fileName) => {
 };
 
 (async () => {
-	AtlasUploader(place, 'places');
+	// AtlasUploader(place, 'places');
+	// AtlasUploader(player, 'player');
 
-	UsersList.forEach(async user => {
-		const newUser = new User(user);
-		await newUser.save();
-	})
-	console.log("Every file has been processed by the seeder!");
+	// UsersList.forEach(async user => {
+	// 	const newUser = new User(user);
+	// 	await newUser.save();
+	// })
+	// console.log("Every file has been processed by the seeder!");
 
 })();
