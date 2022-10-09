@@ -33,7 +33,7 @@ const routes: Routes = [
     },
   },
   {
-    path: 'users/edit/:id',
+    path: 'users/select/:id',
     component: UsersEditorComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
@@ -41,7 +41,7 @@ const routes: Routes = [
     },
   },
   {
-    path: 'users/edit/`0`',
+    path: 'users/select/`0`',
     component: UsersEditorComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
@@ -57,7 +57,7 @@ const routes: Routes = [
     },
   },
   {
-    path: 'all-place/edit/:id',
+    path: 'all-place/select/:id',
     component: AllPlaceEditorComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
@@ -65,7 +65,7 @@ const routes: Routes = [
     },
   },
   {
-    path: 'all-place/edit/`0`',
+    path: 'all-place/select/`0`',
     component: AllPlaceEditorComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {

@@ -30,7 +30,8 @@
 			</td>
 		</tr>
 		<div>
-			<button *ngIf="this.auth.user$.value?.role === 3" [routerLink]="'edit/0'" class="btn btn-success col-12">Add a new
+			<button *ngIf="this.auth.user$.value?.role === 3" [routerLink]="'select/0'" class="btn btn-success col-12">Add a
+				new
 				{{ entity }} </button>
 		</div>
 

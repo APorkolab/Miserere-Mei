@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Place } from 'src/app/model/place';
+import { AllPlace } from 'src/app/model/all-place';
 import { AllPlaceViewerService } from 'src/app/service/all-place-viewer.service';
 import { ConfigService } from 'src/app/service/config.service';
 import { NotificationService } from 'src/app/service/notification.service';
@@ -14,7 +14,7 @@ import { PlaceService } from 'src/app/service/place.service';
 export class AllPlaceViewerComponent implements OnInit {
   columns = this.config.placesTableColumns;
   list$ = this.allPlaceViewerService.getAll();
-  entity = 'place';
+  entity = 'all-place';
 
   constructor(
     private config: ConfigService,
@@ -39,12 +39,12 @@ export class AllPlaceViewerComponent implements OnInit {
     );
   }
 
-  onSelectOne(place: Place): void {
-    this.router.navigate(['/', 'all-place', 'edit', place._id]);
+  onSelectOne(allPlace: AllPlace): void {
+    this.router.navigate(['/all-place', 'select', allPlace._id]);
   }
 
-  onDeleteOne(place: Place): void {
-    this.allPlaceViewerService.delete(place).subscribe({
+  onDeleteOne(allPlace: AllPlace): void {
+    this.allPlaceViewerService.delete(allPlace).subscribe({
       next: () => (this.list$ = this.allPlaceViewerService.getAll()),
       error: (err) => this.showError(err),
       complete: () => this.showSuccessDelete(),

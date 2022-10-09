@@ -39,7 +39,7 @@ export class UsersComponent implements OnInit {
   }
 
   onSelectOne(user: User): void {
-    this.router.navigate(['/', 'users', 'edit', user._id]);
+    this.router.navigate(['/', 'users', 'select', user._id]);
   }
 
   onDeleteOne(user: User): void {

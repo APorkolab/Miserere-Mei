@@ -35,7 +35,7 @@ export class BaseService<
   }
 
   getOne(_id: string | number): Observable<T> {
-    return this.http.get<T>(`${this.apiUrl}/${this.entity}/${_id}`);
+    return this.http.get<T>(`${this.apiUrl}/${this.entity}/select/${_id}`);
   }
 
   getOnePlace(location: string | number): Observable<T> {

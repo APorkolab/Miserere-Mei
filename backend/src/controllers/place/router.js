@@ -9,4 +9,8 @@ router.get('/:location', (req, res, next) => {
 	return controller.findOnebyPlaceName(req, res, next);
 });
 
+router.get('/select/:id', (req, res, next) => {
+	return controller.findOneById(req, res, next);
+});
+
 module.exports = router;
