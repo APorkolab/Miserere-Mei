@@ -1,3 +1,5 @@
-<app-player (selectOne)="onSelectOne(player)"></app-player>
+<app-player [(health)]="health" [(weapon)]="weapon" [(minDamage)]="minDamage" [(maxDamage)]="maxDamage"
+	[(bulletsNumber)]="bulletsNumber"></app-player>
+<app-enemy></app-enemy>
 
-<button (click)="this.player.protagonistHealthPoint - 15; onUpdate(player)">Kör vége</button>
+<button *ngIf="!youAreDead" (click)="oneRound(this.player)">Egy kör</button>

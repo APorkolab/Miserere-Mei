@@ -14,7 +14,7 @@ import { AuthGuardService } from './service/auth-guard.service';
 import { RoleGuardService } from './service/role-guard.service';
 import { MapComponent } from './page/map/map.component';
 import { PlayerService } from './service/player.service';
-import { PlayerComponent } from './page/player/player.component';
+import { PlayerComponent } from './page/battle/player/player.component';
 
 const routes: Routes = [
   {

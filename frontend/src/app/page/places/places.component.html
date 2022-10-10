@@ -1,7 +1,7 @@
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ps ps--active-y">
 	<!-- Navbar -->
 	<div class="container-fluid py-4">
-		<app-player></app-player>
+		<!-- <app-player></app-player> -->
 		<div class="row mt-4">
 			<div class="col-lg-7 mb-lg-0 mb-4">
 				<div class="card">
@@ -18,21 +18,21 @@
 											}}</button>
 										<i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
 									</a>
-									<a *ngIf="currentPlace.decision2 !== ''"
+									<a *ngIf="currentPlace.decision2 !== ''" && !inBattle
 										class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto">
 										<button class="btn btn-secondary" (click)="getPlace(currentPlace.furtherLocation2)">{{
 											currentPlace.decision2
 											}}</button>
 										<i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
 									</a>
-									<a *ngIf="currentPlace.decision3 !== ''"
+									<a *ngIf="currentPlace.decision3 !== ''" && !inBattle
 										class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto">
 										<button class="btn btn-secondary" (click)="getPlace(currentPlace.furtherLocation3)">{{
 											currentPlace.decision3
 											}}</button>
 										<i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
 									</a>
-									<a *ngIf="currentPlace.decision4 !== ''"
+									<a *ngIf="currentPlace.decision4 !== ''" && !inBattle
 										class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto">
 										<button class="btn btn-secondary" (click)="getPlace(currentPlace.furtherLocation4)">{{
 											currentPlace.decision4

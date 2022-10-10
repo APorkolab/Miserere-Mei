@@ -28,10 +28,8 @@ export class BaseService<
   //     .pipe(map((response) => new Place()));
   // }
 
-  getPlayer(): Observable<Player> {
-    return this.http
-      .get<Player>('/player')
-      .pipe(map((response) => new Player()));
+  getPlayer(_id: string | number): Observable<T> {
+    return this.http.get<T>(`${this.apiUrl}/${this.entity}/${_id}`);
   }
 
   getOne(_id: string | number): Observable<T> {

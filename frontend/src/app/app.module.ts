@@ -25,8 +25,9 @@ import { AllPlaceViewerComponent } from './page/all-place-viewer/all-place-viewe
 import { AllPlaceEditorComponent } from './page/all-place-editor/all-place-editor.component';
 import { SorterPipe } from './pipe/sorter.pipe';
 import { MapComponent } from './page/map/map.component';
-import { PlayerComponent } from './page/player/player.component';
+import { PlayerComponent } from './page/battle/player/player.component';
 import { BattleComponent } from './page/battle/battle.component';
+import { EnemyComponent } from './page/battle/enemy/enemy.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { BattleComponent } from './page/battle/battle.component';
     MapComponent,
     PlayerComponent,
     BattleComponent,
+    EnemyComponent,
   ],
   imports: [
     BrowserModule,

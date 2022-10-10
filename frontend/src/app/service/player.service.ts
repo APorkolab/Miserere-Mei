@@ -10,9 +10,6 @@ import { ConfigService } from './config.service';
   providedIn: 'root',
 })
 export class PlayerService extends BaseService<Player> {
-  player$: BehaviorSubject<Player | null> = new BehaviorSubject<Player | null>(
-    null
-  );
   constructor(http: HttpClient, config: ConfigService, public router: Router) {
     super(http, config);
     this.entity = 'player';
