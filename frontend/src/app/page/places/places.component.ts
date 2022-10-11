@@ -20,12 +20,16 @@ export class PlacesComponent implements OnInit {
   currentPlace!: Place;
   // @Input()
   // playerData!: Player;
-
+  monsterName = '';
   @Input() columns: INgxTableColumn[] = [];
   @Input() entity: string = '';
 
   @Output() selectOne: EventEmitter<Place> = new EventEmitter<Place>();
   @Output() deleteOne: EventEmitter<Place> = new EventEmitter<Place>();
+
+  // @Input()
+  // @Output()
+
 
   constructor(
     private notifyService: NotificationService,
@@ -33,11 +37,17 @@ export class PlacesComponent implements OnInit {
     private router: Router,
     public placeService: PlaceService,
     public playerService: PlayerService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.getPlace(this.route.snapshot.params['location']);
+    if (this.currentPlace.opponentName) {
+      this.monsterName = this.currentPlace.opponentName;
+    } else {
+      this.monsterName = '';
+    }
   }
+
 
   getPlace(location: string): void {
     this.placeService.getOnePlace(location).subscribe({
@@ -48,4 +58,6 @@ export class PlacesComponent implements OnInit {
       error: (e) => console.error(e),
     });
   }
+
+
 }

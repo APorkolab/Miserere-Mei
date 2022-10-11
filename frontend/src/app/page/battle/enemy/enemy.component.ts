@@ -1,4 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { Observable } from 'rxjs';
 import { Player } from 'src/app/model/player';
 
@@ -13,12 +21,12 @@ export class EnemyComponent implements OnInit {
   player: Player = new Player();
 
   @Input()
-  health!: number;
-  @Output() healthChange = new EventEmitter<number>();
+  monsterName!: string;
+  @Output() monsterNameChange = new EventEmitter<string>();
 
   @Input()
-  weapon!: string;
-  @Output() weaponChange = new EventEmitter<string>();
+  monsterhealth!: number;
+  @Output() monsterhealthChange = new EventEmitter<number>();
 
   @Input()
   minDamage!: number;
@@ -28,10 +36,38 @@ export class EnemyComponent implements OnInit {
   maxDamage!: number;
   @Output() maxDamageChange = new EventEmitter<number>();
 
-  @Input()
-  bulletsNumber!: number;
-  @Output() bulletsNumberChange = new EventEmitter<number>();
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+
+  static readonly monsters = [
+    {
+      opponent: "Monster_FalsettosMinion",
+      monsterName: "Falsetto egyik embere",
+      monsterhealth: 20000,
+      minDamage: 10,
+      maxDamage: 30
+    },
+    {
+      opponent: "Monster_Packofrat",
+      monsterName: "csapat patkány",
+      monsterhealth: 23,
+      minDamage: 3,
+      maxDamage: 8
+    },
+    {
+      opponent: "Monster_Madman",
+      monsterName: "Őrjöngő Mániákus",
+      monsterhealth: 20,
+      minDamage: 2,
+      maxDamage: 6
+    },
+  ];
+
+
+  searchMonster(monsterName: string): any {
+    // console.log(index);
+    return EnemyComponent.monsters.find(obj => obj.opponent === monsterName);
+  }
+
 }

@@ -39,13 +39,14 @@ export class PlayerComponent implements OnInit {
   bulletsNumber!: number;
   @Output() bulletsNumberChange = new EventEmitter<number>();
 
+  monsterName = "Tarara"
   constructor(
     private notifyService: NotificationService,
     private route: ActivatedRoute,
     private router: Router,
     public placeService: PlaceService,
     public playerService: PlayerService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe({
@@ -59,40 +60,19 @@ export class PlayerComponent implements OnInit {
     });
   }
 
-  // getPlayer(): void {
-  //   this.playerService.getOne('63429c0c2a50f89e873e0ede').subscribe({
-  //     next: (playerData) => {
-  //       this.playerData = playerData;
-  //       console.log(playerData);
-  //     },
-  //     error: (e) => console.error(e),
-  //   });
+  // healthCheck(player: Player): void {
+  //   if (this.health <= 0) {
+  //     this.router.navigate(['/', 'place', 'warehouse_058_waitingfordeath']);
+  //   }
   // }
 
-  // updatePlayer(player: Player) {
-  //   this.playerService.update(player).subscribe({
-  //     next: (category) => this.router.navigate(['/', 'player']),
-  //     error: (err) => console.log(err),
-  //   });
+  // randomDamage(player: Player) {
+  //   this.healthCheck(player);
+  //   return (
+  //     Math.floor(
+  //       Math.random() *
+  //         (player.currentWeaponMaxDamage - player.currentWeaponMinDamage)
+  //     ) + player.currentWeaponMinDamage
+  //   );
   // }
-
-  // onSelect(player: Player): void {
-  //   this.selectOne.emit(player);
-  // }
-
-  healthCheck(player: Player): void {
-    if (this.health <= 0) {
-      this.router.navigate(['/', 'place', 'warehouse_058_waitingfordeath']);
-    }
-  }
-
-  randomDamage(player: Player) {
-    this.healthCheck(player);
-    return (
-      Math.floor(
-        Math.random() *
-          (player.currentWeaponMaxDamage - player.currentWeaponMinDamage)
-      ) + player.currentWeaponMinDamage
-    );
-  }
 }
