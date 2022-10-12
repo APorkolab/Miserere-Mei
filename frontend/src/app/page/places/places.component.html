@@ -19,21 +19,21 @@
 											}}</button>
 										<i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
 									</a>
-									<a *ngIf="currentPlace.decision2 !== '' && !currentPlace.opponentName"
+									<a *ngIf="currentPlace.decision2 !== '' && !inBattle"
 										class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto">
 										<button class="btn btn-secondary" (click)="getPlace(currentPlace.furtherLocation2)">{{
 											currentPlace.decision2
 											}}</button>
 										<i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
 									</a>
-									<a *ngIf="currentPlace.decision3 !== '' && !currentPlace.opponentName"
+									<a *ngIf="currentPlace.decision3 !== '' && !inBattle"
 										class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto">
 										<button class="btn btn-secondary" (click)="getPlace(currentPlace.furtherLocation3)">{{
 											currentPlace.decision3
 											}}</button>
 										<i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
 									</a>
-									<a *ngIf="currentPlace.decision4 !== '' && !currentPlace.opponentName"
+									<a *ngIf="currentPlace.decision4 !== '' && !inBattle"
 										class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto">
 										<button class="btn btn-secondary" (click)="getPlace(currentPlace.furtherLocation4)">{{
 											currentPlace.decision4

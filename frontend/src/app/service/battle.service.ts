@@ -9,9 +9,21 @@ import { PlayerService } from './player.service';
 @Injectable({
   providedIn: 'root',
 })
-export class BattleService extends BaseService<Player> {
-  constructor(http: HttpClient, config: ConfigService, player: PlayerService) {
-    super(http, config);
-    this.entity = 'player';
+export class BattleService {
+  private monsterName = new BehaviorSubject('Nincs');
+  currentMessage = this.monsterName.asObservable();
+
+  private inBattle = new BehaviorSubject<boolean>(false);
+  currentBattleState = this.inBattle.asObservable();
+
+  constructor() { }
+
+  changeMessage(message: string) {
+    this.monsterName.next(message);
   }
+
+  changeCurrentBattleState(state: boolean) {
+    this.inBattle.next(state);
+  }
+
 }

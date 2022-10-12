@@ -13,9 +13,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NotificationService } from 'src/app/service/notification.service';
 import { PlaceService } from 'src/app/service/place.service';
 import { PlayerService } from 'src/app/service/player.service';
-import { Observable } from 'rxjs';
-import { EnemyComponent } from './enemy/enemy.component';
+import { Observable, Subscription } from 'rxjs';
 import { Enemy } from 'src/app/model/enemy';
+import { BattleService } from 'src/app/service/battle.service';
 
 @Component({
   selector: 'app-battle',
@@ -43,42 +43,48 @@ export class BattleComponent implements OnInit {
   inBattle = false;
   roundDamageByPlayer = 0;
   roundNumber = 0;
-  monsterName = this.enemy.monsterName;
+  monsterName!: string;
   monsterhealth = this.enemy.monsterhealth;
 
-
-
+  inBattleSubscription!: Subscription;
+  subscription!: Subscription;
   constructor(
     private notifyService: NotificationService,
     private route: ActivatedRoute,
     private router: Router,
     public placeService: PlaceService,
     public playerService: PlayerService,
-    private renderer: Renderer2
+    private data: BattleService
   ) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe({
-      next: (param) => {
-        this.player$ = this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
-        return this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
-      },
-    });
-    this.player$.subscribe({
-      next: (player) => (this.player = player ? player : this.player),
-    });
+    this.inBattleSubscription = this.data.currentBattleState.subscribe((state: boolean) => this.inBattle = state)
+    if (this.monsterhealth! >= 0) {
+      this.data.changeCurrentBattleState(true)
+    }
+    this.subscription = this.data.currentMessage.subscribe(monsterName => this.monsterName = monsterName)
+    // this.route.params.subscribe({
+    //   next: (param) => {
+    //     this.player$ = this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
+    //     return this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
+    //   },
+    // });
+    // this.player$.subscribe({
+    //   next: (player) => (this.player = player ? player : this.player),
+    // });
   }
 
-  onSelectOne(player: Player): void {
-    this.router.navigate(['/', 'player', player._id]);
-  }
+  // onSelectOne(player: Player): void {
+  //   this.router.navigate(['/', 'player', player._id]);
+  // }
 
-  onUpdate(player: Player) {
-    this.playerService.update(player).subscribe({
-      next: (category) => console.log(category),
-      error: (err) => console.log(err),
-    });
-  }
+  // onUpdate(player: Player) {
+  //   this.playerService.update(player).subscribe({
+  //     next: (category) => console.log(category),
+  //     error: (err) => console.log(err),
+  //   });
+  // }
+
 
   oneRound(player: Player) {
     this.roundNumber += 1;
@@ -145,8 +151,4 @@ export class BattleComponent implements OnInit {
     this.damageEnemy.nativeElement.innerHTML = `Az ellenfeled ${this.roundDamageByPlayer} sebzést okozott neked.<br>`;
   }
 
-  searchMonster(monsterName: string): any {
-    // console.log(index);
-    return EnemyComponent.monsters.find(obj => obj.opponent === monsterName);
-  }
 }

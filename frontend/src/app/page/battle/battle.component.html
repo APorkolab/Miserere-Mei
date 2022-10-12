@@ -1,7 +1,5 @@
 <app-player [(health)]="health" [(weapon)]="weapon" [(minDamage)]="minDamage" [(maxDamage)]="maxDamage"
 	[(bulletsNumber)]="bulletsNumber"></app-player>
-<app-enemy [(monsterName)]="monsterName" [(monsterhealth)]="monsterhealth" [(minDamage)]="minDamage"
-	[(maxDamage)]="maxDamage"></app-enemy>
 
 <button class="btn btn-secondary" *ngIf="!youAreDead" (click)="oneRound(this.player)">Egy kör</button>
 <div>

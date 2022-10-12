@@ -1,9 +1,11 @@
+import { state } from '@angular/animations';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { INgxTableColumn } from 'src/app/common/data-table/ngx-data-table/ngx-data-table.component';
 import { Place } from 'src/app/model/place';
 import { Player } from 'src/app/model/player';
+import { BattleService } from 'src/app/service/battle.service';
 import { NotificationService } from 'src/app/service/notification.service';
 import { PlaceService } from 'src/app/service/place.service';
 import { PlayerService } from 'src/app/service/player.service';
@@ -39,25 +41,31 @@ export class PlayerComponent implements OnInit {
   bulletsNumber!: number;
   @Output() bulletsNumberChange = new EventEmitter<number>();
 
-  monsterName = "Tarara"
+  monsterName!: string;
+  subscription!: Subscription;
+
   constructor(
     private notifyService: NotificationService,
     private route: ActivatedRoute,
     private router: Router,
     public placeService: PlaceService,
-    public playerService: PlayerService
+    public playerService: PlayerService,
+    private data: BattleService
   ) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe({
-      next: (param) => {
-        this.player$ = this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
-        return this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
-      },
-    });
-    this.player$.subscribe({
-      next: (player) => (this.player = player ? player : this.player),
-    });
+    this.subscription = this.data.currentMessage.subscribe(monsterName => this.monsterName = monsterName)
+    // this.subscription = this.data.currentBattleState.subscribe(state => this.monsterName = monsterName)
+
+    // this.route.params.subscribe({
+    //   next: (param) => {
+    //     this.player$ = this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
+    //     return this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
+    //   },
+    // });
+    // this.player$.subscribe({
+    //   next: (player) => (this.player = player ? player : this.player),
+    // });
   }
 
   // healthCheck(player: Player): void {

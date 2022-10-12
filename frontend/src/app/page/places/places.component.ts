@@ -1,7 +1,7 @@
 import { PlaceService } from './../../service/place.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, of } from 'rxjs';
+import { Observable, of, Subscription } from 'rxjs';
 import { INgxTableColumn } from 'src/app/common/data-table/ngx-data-table/ngx-data-table.component';
 import { Place } from 'src/app/model/place';
 import { Player } from 'src/app/model/player';
@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/service/auth.service';
 import { ConfigService } from 'src/app/service/config.service';
 import { NotificationService } from 'src/app/service/notification.service';
 import { PlayerService } from 'src/app/service/player.service';
+import { BattleService } from 'src/app/service/battle.service';
 
 @Component({
   selector: 'app-places',
@@ -20,7 +21,7 @@ export class PlacesComponent implements OnInit {
   currentPlace!: Place;
   // @Input()
   // playerData!: Player;
-  monsterName = '';
+  // monsterName = '';
   @Input() columns: INgxTableColumn[] = [];
   @Input() entity: string = '';
 
@@ -30,22 +31,27 @@ export class PlacesComponent implements OnInit {
   // @Input()
   // @Output()
 
+  monsterName = '';
+
+  monsterSubscription!: Subscription;
+  inBattle!: boolean;
+  inBattleSubscription!: Subscription;
+
 
   constructor(
     private notifyService: NotificationService,
     private route: ActivatedRoute,
     private router: Router,
     public placeService: PlaceService,
-    public playerService: PlayerService
+    public playerService: PlayerService,
+    private data: BattleService
   ) { }
 
   ngOnInit(): void {
     this.getPlace(this.route.snapshot.params['location']);
-    if (this.currentPlace.opponentName) {
-      this.monsterName = this.currentPlace.opponentName;
-    } else {
-      this.monsterName = '';
-    }
+
+    this.monsterSubscription = this.data.currentMessage.subscribe(message => this.monsterName = message)
+    this.inBattleSubscription = this.data.currentBattleState.subscribe((state: boolean) => this.inBattle = state)
   }
 
 
@@ -53,11 +59,20 @@ export class PlacesComponent implements OnInit {
     this.placeService.getOnePlace(location).subscribe({
       next: (data) => {
         this.currentPlace = data;
+        if (this.currentPlace.opponentName != '') {
+          this.data.changeMessage(this.currentPlace.opponentName);
+        } else {
+          this.data.changeMessage('Nincs');
+        }
         console.log(data);
       },
       error: (e) => console.error(e),
     });
   }
 
+  ngOnDestroy() {
+    this.monsterSubscription.unsubscribe();
+    this.inBattleSubscription.unsubscribe();
+  }
 
 }

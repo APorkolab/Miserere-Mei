@@ -27,7 +27,6 @@ import { SorterPipe } from './pipe/sorter.pipe';
 import { MapComponent } from './page/map/map.component';
 import { PlayerComponent } from './page/battle/player/player.component';
 import { BattleComponent } from './page/battle/battle.component';
-import { EnemyComponent } from './page/battle/enemy/enemy.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +46,7 @@ import { EnemyComponent } from './page/battle/enemy/enemy.component';
     MapComponent,
     PlayerComponent,
     BattleComponent,
-    EnemyComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -71,5 +70,5 @@ import { EnemyComponent } from './page/battle/enemy/enemy.component';
 })
 export class AppModule {
   sidebar: IMenuItem[] = this.config.sidebarMenu;
-  constructor(private config: ConfigService) {}
+  constructor(private config: ConfigService) { }
 }
