@@ -1,7 +1,10 @@
-<app-player [(health)]="health" [(weapon)]="weapon" [(minDamage)]="minDamage" [(maxDamage)]="maxDamage"
-	[(bulletsNumber)]="bulletsNumber"></app-player>
-
-<button class="btn btn-secondary" *ngIf="!youAreDead" (click)="oneRound(this.player)">Egy kör</button>
+<!-- <app-player [(health)]="health" [(weapon)]="weapon" [(minDamage)]="minDamage" [(maxDamage)]="maxDamage"
+	[(bulletsNumber)]="bulletsNumber"></app-player> -->
+<br>
+<div *ngIf="!youAreDead && monsterName != 'Nincs'">Nincs más lehetőséged, harcolnod kell.</div>
+<button class=" btn btn-secondary" *ngIf="!youAreDead && monsterName != 'Nincs'"
+	(click)="oneRound(this.player, this.enemy)">Egy
+	kör</button>
 <div>
 	<p #roundNumbers></p>
 	<span #damagePlayer></span>

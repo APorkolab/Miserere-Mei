@@ -36,7 +36,12 @@ export class PlacesComponent implements OnInit {
   monsterSubscription!: Subscription;
   inBattle!: boolean;
   inBattleSubscription!: Subscription;
-
+  monsterMinDamage = 0;
+  monsterMaxDamage = 0;
+  monsterHealth = 0;
+  monsterMinDamageSubscription!: Subscription;
+  monsterMaxDamageSubscription!: Subscription;
+  monsterHealthSubscription!: Subscription;
 
   constructor(
     private notifyService: NotificationService,
@@ -49,7 +54,9 @@ export class PlacesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPlace(this.route.snapshot.params['location']);
-
+    this.monsterMinDamageSubscription = this.data.currentMinDamage.subscribe(monsterMinDamage => this.monsterMinDamage = monsterMinDamage)
+    this.monsterMaxDamageSubscription = this.data.currentMaxDamage.subscribe(monsterMaxDamage => this.monsterMaxDamage = monsterMaxDamage)
+    this.monsterHealthSubscription = this.data.currentMonsterHealth.subscribe(monsterHealth => this.monsterHealth = monsterHealth)
     this.monsterSubscription = this.data.currentMessage.subscribe(message => this.monsterName = message)
     this.inBattleSubscription = this.data.currentBattleState.subscribe((state: boolean) => this.inBattle = state)
   }
@@ -61,8 +68,13 @@ export class PlacesComponent implements OnInit {
         this.currentPlace = data;
         if (this.currentPlace.opponentName != '') {
           this.data.changeMessage(this.currentPlace.opponentName);
+          this.data.changeMonsterHealth(this.currentPlace.opponenthealth);
+          this.data.changeMonsterMinDamage(this.currentPlace.opponentMinDamage);
+          this.data.changeMonsterMaxDamage(this.currentPlace.opponentMaxDamage);
+          this.data.changeCurrentBattleState(true);
         } else {
           this.data.changeMessage('Nincs');
+          this.data.changeCurrentBattleState(false);
         }
         console.log(data);
       },

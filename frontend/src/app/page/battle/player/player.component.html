@@ -7,7 +7,7 @@
 						<div class="numbers">
 							<p class="text-sm mb-0 text-capitalize font-weight-bold" style="color: gray;">Életerő:</p>
 							<h5 class="font-weight-bolder mb-0">
-								{{ health }} %
+								{{ playerHealth }} %
 								<!-- <span class="text-success text-sm font-weight-bolder">+55%</span> -->
 							</h5>
 						</div>
@@ -29,10 +29,10 @@
 						<div class="numbers">
 							<p class="text-sm mb-0 text-capitalize font-weight-bold" style="color: gray;">Jelenlegi fegyver:</p>
 							<h5 class="font-weight-bolder mb-0">
-								{{ weapon }}
-								<span class="text-secondary text-sm font-weight-bolder">Sebzés: {{ minDamage }} -
-									{{ maxDamage }}</span><br>
-								<span class="text-warning text-sm font-weight-bolder">Töltények: {{ bulletsNumber }} db</span>
+								{{ weaponName }}
+								<span class="text-secondary text-sm font-weight-bolder">Sebzés: {{ playerMinDamage }} -
+									{{ playerMaxDamage }}</span><br>
+								<span class="text-warning text-sm font-weight-bolder">Töltények: {{ playerBulletsNumber }} db</span>
 							</h5>
 						</div>
 					</div>
@@ -75,8 +75,8 @@
 						<div class="numbers">
 							<p class="text-sm mb-0 text-capitalize font-weight-bold" style="color: gray;">Ellenfél életerő:</p>
 							<h5 class="font-weight-bolder mb-0">
-								0%
-								<span class="text-success text-sm font-weight-bolder">+5%</span>
+								{{monsterHealth}} életpont
+								<span class="text-warning text-sm font-weight-bolder">{{monsterMinDamage}} - {{monsterMaxDamage}}</span>
 							</h5>
 						</div>
 					</div>

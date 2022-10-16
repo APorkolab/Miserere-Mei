@@ -34,19 +34,34 @@ export class BattleComponent implements OnInit {
   enemy$!: Observable<Enemy>;
   enemy: Enemy = new Enemy();
 
-  health = this.player.protagonistHealthPoint;
-  weapon = this.player.currentWeaponName;
-  minDamage = this.player.currentWeaponMinDamage;
-  maxDamage = this.player.currentWeaponMaxDamage;
-  bulletsNumber = this.player.playerAmmo;
+  playerHealth = this.player.protagonistHealthPoint;
+  weaponName = this.player.currentWeaponName;
+  playerMinDamage = this.player.currentWeaponMinDamage;
+  playerMaxDamage = this.player.currentWeaponMaxDamage;
+  playerBulletsNumber = this.player.playerAmmo;
+  playerMinDamageSubscription!: Subscription;
+  playerMaxDamageSubscription!: Subscription;
+  playerHealthSubscription!: Subscription;
+  playerWeaponSubscription!: Subscription;
+  playerBulletsNumberSubscription!: Subscription;
+
+
+
+  monsterName!: string;
+  enemyHealth = this.enemy.monsterhealth;
+  monsterMinDamage = this.enemy.minDamage;
+  monsterMaxDamage = this.enemy.maxDamage;
+
   youAreDead = false;
   inBattle = false;
   roundDamageByPlayer = 0;
+  roundDamageByEnemy = 0;
   roundNumber = 0;
-  monsterName!: string;
-  monsterhealth = this.enemy.monsterhealth;
 
   inBattleSubscription!: Subscription;
+  monsterMinDamageSubscription!: Subscription;
+  monsterMaxDamageSubscription!: Subscription;
+  monsterHealthSubscription!: Subscription;
   subscription!: Subscription;
   constructor(
     private notifyService: NotificationService,
@@ -59,10 +74,16 @@ export class BattleComponent implements OnInit {
 
   ngOnInit(): void {
     this.inBattleSubscription = this.data.currentBattleState.subscribe((state: boolean) => this.inBattle = state)
-    if (this.monsterhealth! >= 0) {
-      this.data.changeCurrentBattleState(true)
-    }
+    this.monsterMinDamageSubscription = this.data.currentMinDamage.subscribe(monsterMinDamage => this.monsterMinDamage = monsterMinDamage)
+    this.monsterMaxDamageSubscription = this.data.currentMaxDamage.subscribe(monsterMaxDamage => this.monsterMaxDamage = monsterMaxDamage)
+    this.monsterHealthSubscription = this.data.currentMonsterHealth.subscribe(enemyHealth => this.enemyHealth = enemyHealth)
     this.subscription = this.data.currentMessage.subscribe(monsterName => this.monsterName = monsterName)
+    this.playerHealthSubscription = this.data.currentPlayerHealth.subscribe(playerHealth => this.playerHealth = playerHealth)
+    this.playerMinDamageSubscription = this.data.currentPlayerMinDamage.subscribe(playerMinDamage => this.playerMinDamage = playerMinDamage)
+    this.playerMaxDamageSubscription = this.data.currentPlayerMaxDamage.subscribe(playerMaxDamage => this.playerMaxDamage = playerMaxDamage)
+    this.playerBulletsNumberSubscription = this.data.currentPlayerBulletsNumber.subscribe(playerBulletsNumber => this.playerBulletsNumber = playerBulletsNumber)
+    this.playerWeaponSubscription = this.data.currentWeapon.subscribe(weaponName => this.weaponName = weaponName)
+
     // this.route.params.subscribe({
     //   next: (param) => {
     //     this.player$ = this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
@@ -86,18 +107,21 @@ export class BattleComponent implements OnInit {
   // }
 
 
-  oneRound(player: Player) {
+  oneRound(player: Player, enemy: Enemy) {
     this.roundNumber += 1;
     this.inBattle = true;
     this.healthCheck(player);
+    this.enemyHealthCheck(enemy);
     this.bulletCheck(player);
-    this.roundDamageByPlayer = this.randomDamage(player);
-    this.health -= this.roundDamageByPlayer;
+    this.roundDamageByPlayer = this.randomDamageByPlayer(player);
+    this.roundDamageByEnemy = this.randomDamageByEnemy(enemy);
+    this.data.changePlayerHealth(this.playerHealth -= this.roundDamageByEnemy);
+    this.data.changeMonsterHealth(this.enemyHealth -= this.roundDamageByPlayer);
     this.healthCheck(player);
     this.battleMessage();
   }
 
-  randomDamage(player: Player) {
+  randomDamageByPlayer(player: Player) {
     return (
       Math.floor(
         Math.random() *
@@ -106,8 +130,17 @@ export class BattleComponent implements OnInit {
     );
   }
 
+  randomDamageByEnemy(enemy: Enemy) {
+    return (
+      Math.floor(
+        Math.random() *
+        (enemy.maxDamage - enemy.minDamage)
+      ) + enemy.minDamage + 3
+    );
+  }
+
   healthCheck(player: Player): void {
-    if (this.health <= 0) {
+    if (this.playerHealth <= 0) {
       this.youAreDead = true;
       this.notifyService.showError('Vége a játéknak!', 'MEGHALTÁL!');
       setTimeout(() => {
@@ -117,20 +150,29 @@ export class BattleComponent implements OnInit {
   }
 
   bulletCheck(player: Player) {
-    if (this.bulletsNumber <= 1) {
-      this.notifyService.showError(
+    if (this.playerBulletsNumber <= 1) {
+      this.notifyService.showWarning(
         'Cantusnak elfogyott a lőszere, ezért a jó öreg Bowie-késére vált át!',
         'NINCS LŐSZER!'
       );
-      this.minDamage = 1;
-      this.maxDamage = 3;
-      (this.weapon = 'Bowie-kés'), (this.bulletsNumber = Infinity);
+      this.data.changePlayerMinDamage(1);
+      this.data.changePlayerMaxDamage(3);
+      (this.data.changePlayerWeapon('Bowie-kés')), (this.data.changePlayerBulletsNumber(Infinity));
     } else {
-      this.bulletsNumber -= 1;
+      this.data.changePlayerBulletsNumber(this.playerBulletsNumber -= 1);
     }
   }
 
-  enemyHealthCheck(enemy: []) { }
+  enemyHealthCheck(enemy: Enemy) {
+    if (this.enemyHealth <= 0) {
+      this.data.changeMonsterMaxDamage(0);
+      this.data.changeMonsterMinDamage(0);
+      this.data.changeMonsterHealth(0);
+      this.data.changeMessage('Nincs');
+      this.data.changeCurrentBattleState(false);
+    }
+  }
+
 
   battleMessage() {
     // Add a new span every round

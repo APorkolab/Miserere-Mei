@@ -21,28 +21,48 @@ export class PlayerComponent implements OnInit {
   @Output()
   player: Player = new Player();
 
-  @Input()
-  health!: number;
-  @Output() healthChange = new EventEmitter<number>();
+  // @Input()
+  // health!: number;
+  // @Output() healthChange = new EventEmitter<number>();
 
-  @Input()
-  weapon!: string;
-  @Output() weaponChange = new EventEmitter<string>();
+  // @Input()
+  // weapon!: string;
+  // @Output() weaponChange = new EventEmitter<string>();
 
-  @Input()
-  minDamage!: number;
-  @Output() minDamageChange = new EventEmitter<number>();
+  // @Input()
+  // minDamage!: number;
+  // @Output() minDamageChange = new EventEmitter<number>();
 
-  @Input()
-  maxDamage!: number;
-  @Output() maxDamageChange = new EventEmitter<number>();
+  // @Input()
+  // maxDamage!: number;
+  // @Output() maxDamageChange = new EventEmitter<number>();
 
-  @Input()
-  bulletsNumber!: number;
-  @Output() bulletsNumberChange = new EventEmitter<number>();
+  // @Input()
+  // bulletsNumber!: number;
+  // @Output() bulletsNumberChange = new EventEmitter<number>();
+
+
+  weaponName!: string;
+  playerMinDamage !: number;
+  playerMaxDamage !: number;
+  playerHealth !: number;
+  playerBulletsNumber !: number;
+  playerMinDamageSubscription!: Subscription;
+  playerMaxDamageSubscription!: Subscription;
+  playerHealthSubscription!: Subscription;
+  playerWeaponSubscription!: Subscription;
+  playerBulletsNumberSubscription!: Subscription;
+
 
   monsterName!: string;
   subscription!: Subscription;
+  monsterMinDamage!: number;
+  monsterMaxDamage!: number;
+  monsterHealth!: number;
+  monsterMinDamageSubscription!: Subscription;
+  monsterMaxDamageSubscription!: Subscription;
+  monsterHealthSubscription!: Subscription;
+
 
   constructor(
     private notifyService: NotificationService,
@@ -55,7 +75,14 @@ export class PlayerComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscription = this.data.currentMessage.subscribe(monsterName => this.monsterName = monsterName)
-    // this.subscription = this.data.currentBattleState.subscribe(state => this.monsterName = monsterName)
+    this.monsterMinDamageSubscription = this.data.currentMinDamage.subscribe(monsterMinDamage => this.monsterMinDamage = monsterMinDamage)
+    this.monsterMaxDamageSubscription = this.data.currentMaxDamage.subscribe(monsterMaxDamage => this.monsterMaxDamage = monsterMaxDamage)
+    this.monsterHealthSubscription = this.data.currentMonsterHealth.subscribe(monsterHealth => this.monsterHealth = monsterHealth)
+    this.playerHealthSubscription = this.data.currentPlayerHealth.subscribe(playerHealth => this.playerHealth = playerHealth)
+    this.playerMinDamageSubscription = this.data.currentPlayerMinDamage.subscribe(playerMinDamage => this.playerMinDamage = playerMinDamage)
+    this.playerMaxDamageSubscription = this.data.currentPlayerMaxDamage.subscribe(playerMaxDamage => this.playerMaxDamage = playerMaxDamage)
+    this.playerBulletsNumberSubscription = this.data.currentPlayerBulletsNumber.subscribe(playerBulletsNumber => this.playerBulletsNumber = playerBulletsNumber)
+    this.playerWeaponSubscription = this.data.currentWeapon.subscribe(weaponName => this.weaponName = weaponName)
 
     // this.route.params.subscribe({
     //   next: (param) => {

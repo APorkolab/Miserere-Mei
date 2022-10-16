@@ -11,6 +11,15 @@ const PlaceSchema = mongoose.Schema({
 	opponentName: {
 		type: String,
 	},
+	opponenthealth: {
+		type: Number,
+	},
+	opponentMinDamage: {
+		type: Number,
+	},
+	opponentMaxDamage: {
+		type: Number,
+	},
 	decision1: {
 		type: String,
 		required: true

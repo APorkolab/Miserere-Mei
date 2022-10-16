@@ -35,7 +35,7 @@ const AtlasUploader = async (model, fileName) => {
 };
 
 (async () => {
-	// AtlasUploader(place, 'places');
+	AtlasUploader(place, 'places');
 	// AtlasUploader(player, 'player');
 
 	// UsersList.forEach(async user => {
