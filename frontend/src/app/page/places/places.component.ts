@@ -74,6 +74,9 @@ export class PlacesComponent implements OnInit {
           this.data.changeCurrentBattleState(true);
         } else {
           this.data.changeMessage('Nincs');
+          this.data.changeMonsterMinDamage(0);
+          this.data.changeMonsterMaxDamage(0);
+          this.data.changeMonsterHealth(0);
           this.data.changeCurrentBattleState(false);
         }
         console.log(data);

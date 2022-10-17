@@ -134,8 +134,8 @@ export class BattleComponent implements OnInit {
     return (
       Math.floor(
         Math.random() *
-        (enemy.maxDamage - enemy.minDamage)
-      ) + enemy.minDamage + 3
+        (this.monsterMaxDamage - this.monsterMinDamage)
+      ) + this.monsterMinDamage
     );
   }
 
@@ -164,7 +164,7 @@ export class BattleComponent implements OnInit {
   }
 
   enemyHealthCheck(enemy: Enemy) {
-    if (this.enemyHealth <= 0) {
+    if (this.enemyHealth <= 1) {
       this.data.changeMonsterMaxDamage(0);
       this.data.changeMonsterMinDamage(0);
       this.data.changeMonsterHealth(0);
@@ -190,7 +190,7 @@ export class BattleComponent implements OnInit {
 
     this.roundNumbers.nativeElement.innerHTML = `<br><b>A(z) ${this.roundNumber}. harci kör eseményei:</b>`;
     this.damagePlayer.nativeElement.innerHTML = `${this.roundDamageByPlayer} sebzést okoztál az ellenségnek.<br>`;
-    this.damageEnemy.nativeElement.innerHTML = `Az ellenfeled ${this.roundDamageByPlayer} sebzést okozott neked.<br>`;
+    this.damageEnemy.nativeElement.innerHTML = `Az ellenfeled ${this.roundDamageByEnemy} sebzést okozott neked.<br>`;
   }
 
 }
