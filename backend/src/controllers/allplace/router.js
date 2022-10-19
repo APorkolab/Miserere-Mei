@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Place = require('../../models/place');
+const allplace = require('../../models/place');
 
-const controller = require('../base/controller')(Place);
+const controller = require('../base/controller')(allplace);
 
 
 
@@ -30,7 +30,7 @@ router.patch('/select/:id', (req, res, next) => {
 });
 
 // Delete 
-router.delete('/select/:id', (req, res, next) => {
+router.delete('/:id', (req, res, next) => {
 	return controller.delete(req, res, next);
 });
 

@@ -40,7 +40,7 @@ const authencticateJwt = require('./models/auth/authenticate');
 
 //For production -->normal working, with authentication, please comment out this block if you want to run to the integration tests
 
-app.use('/all-place', authencticateJwt, require('./controllers/all-place/router'));
+app.use('/allplace', authencticateJwt, require('./controllers/allplace/router'));
 app.use('/place', require('./controllers/place/router'));
 app.use('/player', require('./controllers/player/router'));
 // app.use('/family-members', authencticateJwt, require('./controllers/family-member/router'));

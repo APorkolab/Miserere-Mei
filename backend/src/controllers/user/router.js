@@ -29,7 +29,7 @@ router.patch('/select/:id', (req, res, next) => {
 });
 
 // Delete 
-router.delete('/select/:id', (req, res, next) => {
+router.delete('/:id', (req, res, next) => {
 	return controller.delete(req, res, next);
 });
 

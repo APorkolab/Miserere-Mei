@@ -10,13 +10,13 @@ import { ConfigService } from './config.service';
   providedIn: 'root',
 })
 export class BaseService<
-  T extends { _id: string | number; [key: string]: any }
+  T extends { _id: string | number;[key: string]: any }
 > {
   apiUrl: string = environment.apiUrl;
   entity: string = '';
   list$: BehaviorSubject<T[]> = new BehaviorSubject<T[]>([]);
 
-  constructor(private http: HttpClient, public config: ConfigService) {}
+  constructor(private http: HttpClient, public config: ConfigService) { }
 
   getAll(): Observable<T[]> {
     return this.http.get<T[]>(`${this.apiUrl}/${this.entity}`);
@@ -47,7 +47,7 @@ export class BaseService<
 
   update(entity: T): Observable<T> {
     return this.http.patch<T>(
-      `${this.apiUrl}/${this.entity}/${entity._id}`,
+      `${this.apiUrl}/${this.entity}/select/${entity._id}`,
       entity
     );
   }

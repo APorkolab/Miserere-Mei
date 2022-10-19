@@ -54,7 +54,7 @@ const routes: Routes = [
     },
   },
   {
-    path: 'all-place',
+    path: 'allplace',
     component: AllPlaceViewerComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
@@ -62,7 +62,7 @@ const routes: Routes = [
     },
   },
   {
-    path: 'all-place/select/:id',
+    path: 'allplace/select/:id',
     component: AllPlaceEditorComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
@@ -70,7 +70,7 @@ const routes: Routes = [
     },
   },
   {
-    path: 'all-place/select/`0`',
+    path: 'allplace/select/`0`',
     component: AllPlaceEditorComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
@@ -103,4 +103,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

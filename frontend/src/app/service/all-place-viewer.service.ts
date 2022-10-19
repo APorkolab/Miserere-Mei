@@ -10,6 +10,6 @@ import { ConfigService } from './config.service';
 export class AllPlaceViewerService extends BaseService<Place> {
   constructor(http: HttpClient, config: ConfigService) {
     super(http, config);
-    this.entity = 'all-place';
+    this.entity = 'allplace';
   }
 }

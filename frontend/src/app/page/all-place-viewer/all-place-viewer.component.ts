@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AllPlace } from 'src/app/model/all-place';
+import { AllPlace } from 'src/app/model/allplace';
 import { AllPlaceViewerService } from 'src/app/service/all-place-viewer.service';
 import { ConfigService } from 'src/app/service/config.service';
 import { NotificationService } from 'src/app/service/notification.service';
@@ -14,16 +14,16 @@ import { PlaceService } from 'src/app/service/place.service';
 export class AllPlaceViewerComponent implements OnInit {
   columns = this.config.placesTableColumns;
   list$ = this.allPlaceViewerService.getAll();
-  entity = 'all-place';
+  entity = 'allplace';
 
   constructor(
     private config: ConfigService,
     private allPlaceViewerService: AllPlaceViewerService,
     private router: Router,
     private notifyService: NotificationService
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   showSuccessDelete() {
     this.notifyService.showSuccess(
@@ -40,7 +40,7 @@ export class AllPlaceViewerComponent implements OnInit {
   }
 
   onSelectOne(allPlace: AllPlace): void {
-    this.router.navigate(['/all-place', 'select', allPlace._id]);
+    this.router.navigate(['/allplace', 'select', allPlace._id]);
   }
 
   onDeleteOne(allPlace: AllPlace): void {

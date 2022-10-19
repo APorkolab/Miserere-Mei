@@ -1,4 +1,4 @@
-import { AllPlace } from './all-place';
+import { AllPlace } from './allplace';
 
 describe('AllPlace', () => {
   it('should create an instance', () => {

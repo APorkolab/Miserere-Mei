@@ -569,20 +569,7 @@
     "decision2": "",
     "decision3": "",
     "decision4": "",
-    "furtherLocation1": "underconstruction",
-    "furtherLocation2": "",
-    "furtherLocation3": "",
-    "furtherLocation4": ""
-  },
-  {
-    "location": "underconstruction",
-    "narrationZoneText": "A történet ezen része még nincs leprogramozva. Kérlek, használd a választógombot, hogy a már kidolgozott játéktérre kerülj!",
-    "opponentName": "",
-    "decision1": "Vissza a kereszteződéshez.",
-    "decision2": "",
-    "decision3": "",
-    "decision4": "",
-    "furtherLocation1": "wasteland_002",
+    "furtherLocation1": "wasteland_087_inTheDesert_shipwreck01",
     "furtherLocation2": "",
     "furtherLocation3": "",
     "furtherLocation4": ""
@@ -792,7 +779,7 @@
     "decision4": "A raktárépülethez menekülsz.",
     "furtherLocation1": "barricade_054_surrender",
     "furtherLocation2": "barricade_055_fightuntildeath",
-    "furtherLocation3": "underconstruction2",
+    "furtherLocation3": "wasteland_118",
     "furtherLocation4": "warehouse_056_warehousechoices"
   },
   {
@@ -803,10 +790,10 @@
     "decision2": "",
     "decision3": "",
     "decision4": "",
-    "furtherLocation1": "feroceshut_042_05",
-    "furtherLocation2": "underconstruction2",
-    "furtherLocation3": "underconstruction2",
-    "furtherLocation4": "healthCheck"
+    "furtherLocation1": "GameOver",
+    "furtherLocation2": "",
+    "furtherLocation3": "",
+    "furtherLocation4": ""
   },
   {
     "location": "barricade_055_fightuntildeath",
@@ -1354,7 +1341,7 @@
     "decision1": "Átvizsgálod a termet.",
     "decision2": "Továbbmész a gyengélkedőre.",
     "decision3": "Továbbmész a hídra.",
-    "decision4": "Továbbmész a gépházba.",
+    "decision4": "",
     "furtherLocation1": "wasteland_096_inTheDesert_shipwreck10",
     "furtherLocation2": "wasteland_099_inTheDesert_shipwreck13",
     "furtherLocation3": "wasteland_103_inTheDesert_shipwreck17",
@@ -1407,13 +1394,13 @@
     "decision2": "",
     "decision3": "",
     "decision4": "",
-    "furtherLocation1": "wasteland_103_inTheDesert_shipwreck17",
+    "furtherLocation1": "wasteland_140_inTheDesert_shipwreck18",
     "furtherLocation2": "",
     "furtherLocation3": "",
     "furtherLocation4": ""
   },
   {
-    "location": "wasteland_103_inTheDesert_shipwreck17",
+    "location": "wasteland_140_inTheDesert_shipwreck18",
     "narrationZoneText": "Cantus és a csapata kikászálódott a hajóroncsból. Egy már elmúlt korszak iránti nosztalgiával néznek végig a hajótest maradványain, majd pillanatnyi hezitálás után újra a vándorút felé veszik az irányt.",
     "opponentName": "",
     "decision1": "Vissza a vándorútra.",
@@ -1518,7 +1505,7 @@
   },
   {
     "location": "wasteland_111_cantusvillage07",
-    "narrationZoneText": "A csapat kimerült a napi eseményektől és a halál közelségétől, ezért úgy döntöttek, hogy megvárják a késő délutáni, a tiszteletükre szervezettt tábortűzi összejövetelt. A lányok és fiúk vidáman énekeltek: Bassus magasan a saját hangtartományán felül megpróbálta elaőadni az Éjkirálynő áriáját, miközben a helyi kisgyermekek a tűz körül szaladgáltak. A vidám éneklés hamarost elfeledtette a faluval a közelmúlt borzalmait. Már éppen pitymallani kezdett, amikor a távolban puskalövések zaja törte meg a vidám hangulatot. Cantus mesterségesen nyugalmat erőltetett magára, azonban az ösztönei már megsúgták az első pillanatban: Falsetto a nyomukban van.",
+    "narrationZoneText": "A csapat kimerült a napi eseményektől és a halál közelségétől, ezért úgy döntöttek, hogy megvárják a késő délutáni, a tiszteletükre szervezett tábortűzi összejövetelt. A lányok és fiúk vidáman énekeltek: Bassus magasan a saját hangtartományán felül megpróbálta elaőadni az Éjkirálynő áriáját, miközben a helyi kisgyermekek a tűz körül szaladgáltak. A vidám éneklés hamarost elfeledtette a faluval a közelmúlt borzalmait. Már éppen pitymallani kezdett, amikor a távolban puskalövések zaja törte meg a vidám hangulatot. Cantus mesterségesen nyugalmat erőltetett magára, azonban az ösztönei már megsúgták az első pillanatban: Falsetto a nyomukban van.",
     "opponentName": "",
     "decision1": "Bevárod a harcosokat és harcolsz.",
     "decision2": "Menekülsz.",
@@ -1609,7 +1596,7 @@
   },
   {
     "location": "wasteland_119_irinaOasis01",
-    "narrationZoneText": "A lépész helytelensége azonnal megnyilvánult, amikor egyszerre csak egy sziklafal állta útjukat. Cantus megvakarta a fejét és gondolkodni kezdett: bizonyára van valamiféle helyes kombináció, ami sikeresen továbbjuttat bennünket ezen a misztikus próbán.",
+    "narrationZoneText": "A lépés helytelensége azonnal megnyilvánult, amikor egyszerre csak egy sziklafal állta útjukat. Cantus megvakarta a fejét és gondolkodni kezdett: bizonyára van valamiféle helyes kombináció, ami sikeresen továbbjuttat bennünket ezen a misztikus próbán.",
     "opponentName": "",
     "decision1": "Vissza az oázis elejére.",
     "decision2": "",
@@ -1727,10 +1714,7 @@
   {
     "location": "wasteland_127_irinaOasis10",
     "narrationZoneText": "Bár Cantus nem látta a szörnyet: valamiféle álcázott szerzet lehetett, akit a Nap fényes sugarai nem felfednek, hanem éppen ellenkezőleg: ellepleznek. Cantus tudta, hogy harcolnia kell, ha tovább akar jutni a küldetésében.",
-    "opponentName": "Láthatatlan kecske",
-    "opponenthealth": 55,
-    "opponentMinDamage": 8,
-    "opponentMaxDamage": 15,
+    "opponentName": "invisibleGoat",
     "decision1": "Győztesként haladsz tovább.",
     "decision2": "",
     "decision3": "",
