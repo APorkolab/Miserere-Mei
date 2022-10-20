@@ -576,7 +576,7 @@
   },
   {
     "location": "wasteland_037_ontheroad",
-    "narrationZoneText": "Cantus és a csapat közösen úgy döntöttek, hogy nem kockáztatják a küldetés sikerét és inkább azonnal útnak indulnak a nagyobb biztonságot nyújtó úton, ami persze jelentősen gyengítette a csapatot. Az országúton bandukolva látták a fékevesztett, esztelen pusztulás nyomait: a valamikori épületeknek már neve sem volt. A rozsdás autóroncsokban egykor élt emberek csontvázai nyugodtak: ők azok, akik nem tudtak időben elmenekülni a robbanás elől. A sivatagi gyér növényzet és a kóbor kutyák kísérték a rekkenő hőségben a csapatot. A valamikori gyorsforgalmi út mellett a föld egyszerre barnának és termékenynek látszik. A nap már lenyugodni készült, amikor a távolban egy gondozott kunyhó körvonalai tűntek fel. A csapat elcsigázott volt, mindenképpen muszáj volt ellátmányt szerezni a csapatnak.",
+    "narrationZoneText": "Cantus és a csapat közösen úgy döntöttek, hogy nem kockáztatják a küldetés sikerét és inkább azonnal útnak indulnak a nagyobb biztonságot nyújtó úton, ami persze jelentősen gyengítette a csapatot. Az országúton bandukolva látták a fékevesztett, esztelen pusztulás nyomait: a valamikori épületeknek már neve sem volt. A rozsdás autóroncsokban egykor élt emberek csontvázai nyugodtak: ők azok, akik nem tudtak időben elmenekülni a robbanás elől. A sivatagi gyér növényzet és a kóbor kutyák kísérték a rekkenő hőségben a csapatot. A valamikori gyorsforgalmi út mellett a föld egyszerre barnának és termékenynek látszik. A nap már lenyugodni készült, amikor a távolban egy gondozott kunyhó körvonalai tűntek fel. A csapat elcsigázott volt, mindenképpen muszáj volt ellátmányt szerezniük.",
     "opponentName": "",
     "decision1": "Megnézed az ismeretlen építményt és a környékét, de nem mész be.",
     "decision2": "Megpróbálsz beosonni a hátsó ajtón.",
@@ -615,7 +615,7 @@
   },
   {
     "location": "feroceshut_040_03",
-    "narrationZoneText": "A fészer tartalmában első ránézésre semmiféle rendszert nem lehetett meglátni. Rozsdás sövényvágó olló, fakósárga gumikacsa, és elrohadt vetőmag egyaránt küzdött a helyért ebben a talpalatnyi kis bodegában.Nem kizárt, hogy Cantus esetleg találhatna valami érdekeset, ha jobban bepiszkolja a kezét.",
+    "narrationZoneText": "A fészer tartalmában első ránézésre semmiféle rendszert nem lehetett meglátni. Rozsdás sövényvágó olló, fakósárga gumikacsa, és elrohadt vetőmag egyaránt küzdött a helyért ebben a talpalatnyi kis bodegában. Nem kizárt, hogy Cantus esetleg találhatna valami érdekeset, ha jobban bepiszkolja a kezét.",
     "opponentName": "",
     "decision1": "Visszatérsz a küldetéshez: belopakodsz a hátsó ajtón.",
     "decision2": "Visszatérsz a küldetéshez: bekopogsz a bejárati ajtón.",
@@ -637,11 +637,12 @@
     "furtherLocation1": "feroceshut_042_05",
     "furtherLocation2": "feroceshut_044_06",
     "furtherLocation3": "",
-    "furtherLocation4": ""
+    "furtherLocation4": "",
+    "objectFound": "AK-47"
   },
   {
     "location": "feroceshut_042_05",
-    "narrationZoneText": "Cantus épület oldalához lapult, lábait egymás elé téve közelítette meg a hátsó ajtót. Odaérve látta, hogy a falapot csak a jó ég tudja mi tartotta a helyén: könnyen megadta magát még a szelíd kihajtásra is. Bent aztán a recsegő padló jelentette a legnagyobb kihívást.A ház belseje szegényes, de tiszta volt: a kataklizma előtti bútorok és a helységben terjengő fura szaga egyszerre csapták meg Cantus orrát. Az asztalnál egy fiatal, csinos nő ült: addig maga elé bámult, majd ahogyan a férfi egyre közelebb ért, Cantusra nézett. - Nem szükséges lopakodnod, Cantus! Hozd a többieket is, beszélnünk kell! Sietve hozzátette: - Feroce vagyok.",
+    "narrationZoneText": "Cantus épület oldalához lapult, lábait egymás elé téve közelítette meg a hátsó ajtót. Odaérve látta, hogy a falapot csak a jó ég tudja mi tartotta a helyén: könnyen megadta magát még a szelíd kihajtásra is. Bent aztán a recsegő padló jelentette a legnagyobb kihívást. A ház belseje szegényes, de tiszta volt: a kataklizma előtti bútorok és a helységben terjengő fura szag egyszerre csapták meg Cantus orrát. Az asztalnál egy fiatal, csinos nő ült: addig maga elé bámult, majd ahogyan a férfi egyre közelebb ért, Cantusra nézett. - Nem szükséges lopakodnod, Cantus! Hozd a többieket is, beszélnünk kell! Sietve hozzátette: - Feroce vagyok.",
     "opponentName": "",
     "decision1": "Engedelmeskedsz.",
     "decision2": "Megtámadod.",
@@ -654,7 +655,7 @@
   },
   {
     "location": "feroceshut_043_05",
-    "narrationZoneText": "Cantus udvariasan,de röviden ellátmányt kért Ferocétól, aki egy egyszerű bólintással helybenhagyta a kérést. Feroce megértően bólintott.-Hosszú utat tettetek meg és még több mindennel kell megküzdenetek.- Hozd a többieket is, Cantus, mert beszélnünk kell.",
+    "narrationZoneText": "Cantus udvariasan és röviden ellátmányt kért Ferocétól, aki egy egyszerű bólintással helybenhagyta a kérést. Feroce megértően bólintott. - Hosszú utat tettetek meg és még több mindennel kell megküzdenetek. - Hozd a többieket is, Cantus, mert beszélnünk kell.",
     "opponentName": "",
     "decision1": "Sodródsz az eseményekkel.",
     "decision2": "",
@@ -667,7 +668,7 @@
   },
   {
     "location": "feroceshut_044_06",
-    "narrationZoneText": "Cantus, a csapat vezetője úgy döntött, hogy legjobb, ha nem kockáztatnak és jószándékukat mutatva egyenest bekopognak a házigazdához. A kunyhó recsegő tornáca amúgy sem titkolta volna sokáig a csapat jelenlétét. A ház a környékhez képest meglepően jó állapotban volt: ez rögvest látszott a verandán kirakott zöld növényekről. Cantus rövid kopogására egy csinos, húszas éveiben járó hölgy nyitott ajtót:- Üdvözöllek, Cantus! Feroce vagyok, s már vártalak benneteket. A csapat meg sem tudott lepődni, a fiatalasszony máris betessékelt mindenkit a kunyhójába.",
+    "narrationZoneText": "Cantus, a csapat vezetője úgy döntött, hogy legjobb, ha nem kockáztatnak és jószándékukat mutatva egyenest bekopognak a házigazdához. A kunyhó recsegő tornáca amúgy sem titkolta volna sokáig a csapat jelenlétét. A ház a környékhez képest meglepően jó állapotban volt: ez rögvest látszott a verandán kirakott zöld növényekről. Cantus rövid kopogására egy csinos, húszas éveiben járó hölgy nyitott ajtót: - Üdvözöllek, Cantus! Feroce vagyok, már vártalak benneteket. A csapatnak még meglepődni sem volt ideje, a fiatalasszony máris betessékelt mindenkit a kunyhójába.",
     "opponentName": "",
     "decision1": "Várod, hogy mi történik.",
     "decision2": "Adjon Isten, öreganyám! - köszöntöd.",
@@ -693,7 +694,7 @@
   },
   {
     "location": "feroceshut_046_08",
-    "narrationZoneText": "Feroce szája széles mosolyba futott a köszöntés hallatán.-Aha, szóval már tudod, hogy ki vagyok?Cantus bólintott.Hallott már legendákat egy boszorkányról, aki a Pusztulás Földjét lakja már évszázadok óta. Azt mondják, hogy olyan régen itt él, hogy személyesen látta a kataklizmát. - Gyere, Cantus, hozd a többieket is. Beszélnünk kell! - ismételte meg a kérését.",
+    "narrationZoneText": "Feroce szája széles mosolyba futott a köszöntés hallatán. - Aha, szóval már tudod, hogy ki vagyok? Cantus bólintott. Hallott már legendákat egy boszorkányról, aki a Pusztulás Földjét lakja már évszázadok óta. Azt mondják, hogy olyan régen itt él, hogy személyesen látta a kataklizmát. - Gyere, Cantus, hozd a többieket is. Beszélnünk kell! - ismételte meg a kérését.",
     "opponentName": "",
     "decision1": "Megtámadod.",
     "decision2": "Ételt kérsz tőle.",
@@ -706,7 +707,7 @@
   },
   {
     "location": "feroceshut_047_09",
-    "narrationZoneText": "Cantus nem bízott meg az asszonyban, így azonnal fegyvert rántott és az asszonyra fogta.Feroce arca elkomorodott, majd a mutató és középső ujjával, lágyan a férfi felé suhintott. Cantus lebénult: sehogyan sem tudott mozogni, tagjai mint súlyos sziklafejek, megmozdítathatatlanul megmakacsolták magukat. Feroce nem kívánt bosszút, de idegességét nem rejtette véka alá.-Ez az én világom, Zsoldos. - morrantotta. - Itt nem árthatsz nekem, világos?Most feloldom az átkomat rólad, de a fegyvereid hatástalanok lesznek, amíg itt vagy. Néhány percbe telt, amíg a boszorkány kiment a csapat tagjaiért, addig Cantus kővé dermedve várta a sorsát. A bejárati ajtó nyitódásával bénultsága elmúlt, újra ura volt a saját testének.Feroce az asztalhoz invitált mindenkit, Cantus nem tehetett mást, mint hogy engedelmeskedjen.",
+    "narrationZoneText": "Cantus nem bízott meg az asszonyban, így azonnal fegyvert rántott és ráfogta. Feroce arca elkomorodott, majd a mutató és középső ujjával, lágyan a férfi felé suhintott. Cantus lebénult: sehogyan sem tudott mozogni, tagjai mint súlyos sziklafejek, megmozdítathatatlanul megmakacsolták magukat. Feroce nem kívánt bosszút, de idegességét nem rejtette véka alá. - Ez az én világom, Zsoldos. - morrantotta. - Itt nem árthatsz nekem, világos? Most feloldom az átkomat rólad, de a fegyvereid hatástalanok lesznek, amíg itt vagy. Néhány percbe telt, amíg a boszorkány kiment a csapat tagjaiért, addig Cantus kővé dermedve várta a sorsát. A bejárati ajtó nyitódásával bénultsága elmúlt, újra ura volt a saját testének. Feroce az asztalhoz invitált mindenkit, Cantus nem tehetett mást, mint hogy engedelmeskedjen.",
     "opponentName": "",
     "decision1": "Asztalhoz ülsz.",
     "decision2": "",
@@ -719,7 +720,7 @@
   },
   {
     "location": "feroceshut_048_10",
-    "narrationZoneText": "A boszorkány keserűen felnevetett. - Nem. Ez a ti harcotok. Ma éjszaka még itt alhattok, nem esik bántódásotok, kaptok tőlem ellátmányt és tanácsokat is, de aztán magatokra maradtok. Cantus és a többiek keserűen ízlelgették a boszorka szavait. Senki sem szólt, csak a piszkossárga gyertyaláng ásítozott az asztalnál ülőkre. A csendet végül maga Feroce törte meg: - Falsetto gyenge ember: vérzékeny és idegbeteg, de rendkívül ravasz. Nemsokára csapdába csal majd benneteket, jól vigyázz! Cantus egyáltalán nem tudta, hogy mennyire bízhat meg az idegenben. Nem tudhatják, hogy ezek az információk a bosszúálló anyai szavai vagy pedig a hadúr katonájának édesanyja akarja így félrevezetni az ellenséget? Sok volt a kérdőjel. Feroce a vacsora végén elbúcsúzott, majd lefektette a társaságot a szoba valamennyi sarkába. Az éjszaka csendes, túl csendes volt, csak a saját mozgolódásukat hallották.  [A játékállás elmentésre került és jó körülmények miatt az életerőpontjaid is visszaálltak eredeti értékükre.]",
+    "narrationZoneText": "A boszorkány keserűen felnevetett. - Nem. Ez a ti harcotok. Ma éjszaka még itt alhattok, nem esik bántódásotok, kaptok tőlem ellátmányt és tanácsokat is, de aztán magatokra maradtok. Cantus és a többiek keserűen ízlelgették a boszorka szavait. Senki sem szólt, csak a piszkossárga gyertyaláng ásítozott az asztalnál ülőkre. A csendet végül maga Feroce törte meg: - Falsetto gyenge ember: vérzékeny és idegbeteg, de rendkívül ravasz. Nemsokára csapdába csal majd benneteket, jól vigyázz! Cantus egyáltalán nem tudta, hogy mennyire bízhat meg az idegenben. Nem tudhatják, hogy ezek az információk a bosszúálló anyai szavai vagy pedig a hadúr katonájának édesanyja akarja így félrevezetni az ellenséget? Sok volt a kérdőjel. Feroce a vacsora végén elbúcsúzott, majd lefektette a társaságot a szoba valamennyi sarkába. Az éjszaka csendes, túl csendes volt, csak a saját mozgolódásukat hallották.",
     "opponentName": "",
     "decision1": "Új napra ébredsz.",
     "decision2": "",
@@ -732,7 +733,7 @@
   },
   {
     "location": "feroceshut_049_11",
-    "narrationZoneText": "Cantus korán reggel ébredt: Ferocét nem látta sehol sem. Gyorsan felébresztette a fiatalokat, majd rájuk parancsolva gyors indulásra kényszerítette őket. A hajnali sivatag még hűvös volt, de lehetséges, hogy a gyors elindulás miatt, de a környéken sehol sem láttak ellenfeleket. A felébredés után 200 szívdobbanás elteltével már az úton voltak, de a csapat még jó ideig nem tudta kiverni a fejéből a boszorkányt.",
+    "narrationZoneText": "Cantus korán reggel ébredt: Ferocét nem látta sehol sem. Gyorsan felébresztette a fiatalokat, majd rájuk parancsolva sebes indulásra kényszerítette őket. A hajnali sivatag még hűvös volt, de lehetséges, hogy a hirtelen elindulás miatt, de a környéken sehol sem láttak ellenfeleket. A felébredés után 200 szívdobbanás elteltével már az úton voltak, de a csapat még jó ideig nem tudta kiverni a fejéből a boszorkányt.",
     "opponentName": "",
     "decision1": "Útra kelsz.",
     "decision2": "",
@@ -745,7 +746,7 @@
   },
   {
     "location": "wasteland_051_secondcrossroad",
-    "narrationZoneText": "A nap sugarai éppen csak megcsillannak a horizonton, amikor Cantus és a csapata már úton van. Az út eseménytelennek látszik, csak néhány veszett kutya közelíti meg a csapatot, de amint Cantus rájuk fogja a fegyverét, máris eloldalognak. Már a nap már magasan jár, amikor hőseink egy újabb kereszteződéshez érkeznek. Valamikor tömeges karambol lehetett és rengeteg elhagyott kocsi zárja el az utat. Cantus Planus jól ismeri ezt a környéket: Délkelet felé van az egyszerűen Barrikádnak nevezett blokád, amit még a katonaság emelt a kataklizma után. Nehezen átjárható és a Pusztaság Földjének határához vezet. Délnyugat felé Cantus saját faluja található, ahol a szülei is élnek. -Jó lenne meglátogatni őket, de egészen biztos volt abban, hogy nem most van ennek az ideje. Északkeletre az Irina oázis van, amit a helyiek igyekeznek minél messzebb elkerülni: a mondák szerint az oázis egy misztikus útvesztő színhelye.Cantusnak és a csapatnak ki kellett választania az útirányt.",
+    "narrationZoneText": "A nap sugarai éppen csak megcsillantak a horizonton, de Cantus és a csapatát a reggel már úton találta. Az út eseménytelennek látszott, csak néhány veszett kutya közelítette meg a csapatot, de amint Cantus rájuk fogta a fegyverét, máris eloldalogtak. Már a nap már magasan jár, amikor hőseink egy újabb kereszteződéshez érkeznek. Valamikor tömeges karambol lehetett és rengeteg elhagyott kocsi zárta el az utat. Cantus Planus jól ismerte ezt a környéket: délkelet felé volt az egyszerűen Barrikádnak nevezett blokád, amit még a katonaság emelt a kataklizma kitörésekor. A nehezen átjárható terep a Pusztaság Földjének határához vezet. Délnyugat felé Cantus saját faluja található, ahol a szülei is éltek valaha. Északkeletre az Irina oázis volt, amit a helyiek igyekeznek minél messzebb elkerülni: a mondák szerint az oázis egy misztikus útvesztő színhelye. Cantusnak és a csapatának ki kellett választania az útirányt.",
     "opponentName": "",
     "decision1": "A Barrikád felé veszed az irányt.",
     "decision2": "Délnyugatra tartasz, Cantus falujába.",
@@ -758,7 +759,7 @@
   },
   {
     "location": "wasteland_052_tothebarricade",
-    "narrationZoneText": "A Barrikád eléréséhez körülbelül félnapnyi erőltetett menet szükséges, így a csapat csak a délutáni, lenyugvó nap sugarainál éri el a Barrikádot. Szerencsére ételt és italt bőségesen kaptak Ferocétól, a boszorkánytól.Bassus és Tenor közösen kezdtek bele egy idegennyelvű nótába, s az embert próbáló tempó ellenére a Superia-lányok kedve is megfelelő.Cantus azonban nem volt elégedett: pontosan tudta, hogy ez az útjuk legveszélyesebb állomása. Eddig sikeresen elkerülték az őrült Falsettot és csapatait, de most itt a legvédtelenebbek.Ahogy közeledtek a Barrikád felé, pontosan látták, hogy miért kapta a nevét?A háromembernyi magasságban és beláthatatlan messzeségben összehordott autóroncsok, szobordarabok, villanypóznák, harckocsik és katonai járművek, s még ki tudja mik baljóslatú emlékműve áthatolhatatlan gezemicét képzett a sivatag közepén. Valaha a katonaság építette a hajdan még buja Pusztulás Földjének védelmére, de végül a katonák kudarcot vallottak. Az akadályuk viszont vészjósló mementóként azóta is itt van. Cantus tudta, hogy nincs értelme megmászni, csak megkerülni lehet ezt az útakadályt. Cantus kis pihenőt engedélyezett a csapatnak, amíg gondolkodott.",
+    "narrationZoneText": "A Barrikád eléréséhez körülbelül félnapnyi erőltetett menet volt szükséges, így a csapat csak a délutáni, lenyugvó nap sugarainál érte el a Barrikádot. Szerencsére ételt és italt bőségesen kaptak Ferocétól, a boszorkánytól. Bassus és Tenor közösen kezdtek bele egy idegennyelvű nótába, s az embert próbáló tempó ellenére a Superia-lányok kedve is megfelelőnek bizonyult. Cantus azonban nem volt elégedett: pontosan tudta, hogy ez az útjuk legveszélyesebb állomása. Eddig sikeresen elkerülték az őrült Falsettot és csapatait, de itt voltak a legvédtelenebbek. Ahogy közeledtek a Barrikád felé, pontosan látták, hogy miről kapta a nevét. A háromembernyi magasságban és beláthatatlan messzeségben összehordott autóroncsok, szobordarabok, villanypóznák, harckocsik és katonai járművek, s még ki tudja mik? - baljóslatú emlékműve áthatolhatatlan gezemicét képzett a sivatag közepén. Valaha a katonaság építette a hajdan még buja Pusztulás Földjének védelmére, de végül a fegyveresek kudarcot vallottak. Az akadályuk viszont vészjósló mementóként azóta is itt van. Cantus tudta, hogy nincs értelme megmászni, csak megkerülni lehet ezt az útakadályt. Cantus kis pihenőt engedélyezett a csapatnak, amíg gondolkodott.",
     "opponentName": "",
     "decision1": "Felméred a Barrikádot.",
     "decision2": "",
@@ -771,7 +772,7 @@
   },
   {
     "location": "barricade_053_barricadechoices",
-    "narrationZoneText": "Cantus kis tűnődés után intett a csapatnak, hogy kövessék őt. A lovak semmiből jövő dobogása halálra rémítette a csapatot. Tudták, most komoly bajba kerültek.Cantus képzettebb szemmel felmérte a közeledő ellenséget: háromtucatnyi harcos, jól felszerelkezve követte a nyomaikat. Legelől Falsetto lovagolt, arcán tébolyult mosoly ült: harci kiáltásaitól a csapat többi tagjának meghűlt a vér az ereiben.-Csapda! - nyilalt belé a következtetés. - Hát erre figyelmeztetett a boszorkány!Cantus tudta, hogy innen már nincs visszatérés.Kétségbeesetten járatta a tekintetét szerte a sivatagi horizonton. Hosszan menekülni, rohanni, a Barrikádot futva megkerülni nem volt értelme: a lovasok percek alatt beérnék őket.Cantus végigvette a lehetőségeit: körülbelül másfél percnyi rohanásra egy raktárépület látszódott a látóhatáron.Cantus és a csapat talán elérhetnének az Irinia oázisig, ahol talán el tudnának bújni.Harcolhatnék is. - gondolta. - Talán sikerülne megfutamítanom őket.Legvégső esetben pedig megadhatjuk magunkat.",
+    "narrationZoneText": "Cantus kis tűnődés után intett a csapatnak, hogy kövessék őt. A lovak semmiből jövő dobogása halálra rémítette a csapatot. Tudták, most komoly bajba kerültek. Cantus képzettebb szemmel felmérte a közeledő ellenséget: háromtucatnyi harcos, jól felszerelkezve követte a nyomaikat. Legelől Falsetto lovagolt, arcán tébolyult mosoly ült: harci kiáltásaitól a csapat többi tagjának meghűlt a vér az ereiben. -Csapda! - nyilalt belé a következtetés. - Hát erre figyelmeztetett a boszorkány! Cantus tudta, hogy innen már nincs visszatérés. Kétségbeesetten járatta a tekintetét szerte a sivatagi horizonton. Hosszan menekülni, rohanni, a Barrikádot futva megkerülni nem volt értelme: a lovasok percek alatt beérnék őket. Cantus végigvette a lehetőségeit: körülbelül másfél percnyi rohanásra egy raktárépület látszódott a látóhatáron. Cantus és a csapat talán elérhetnének az Irinia oázisig, ahol talán el tudnának bújni. - Harcolhatnék is. - gondolta. - Talán sikerülne megfutamítanom őket. Legvégső esetben pedig meg is adhatjuk magunkat.",
     "opponentName": "",
     "decision1": "Megadod magadat.",
     "decision2": "Felveszed a harcot.",
@@ -784,7 +785,7 @@
   },
   {
     "location": "barricade_054_surrender",
-    "narrationZoneText": "Cantus úgy döntött, hogy nincs értelme a további harcoknak: Falsettot nem lehet legyőzni a saját fegyvereivel. -Megadom magam! - üvöltötte a férfi, miközben eldobta a fegyvereit. A csapat szétfutott: többen megpróbáltak elbújni egy-egy roncsban, de Falsetto emberei hamarosan az egész csapatot összefogdosták. Cantust az egyik katona ütötte le a puskatusával, majd a még eszméletlen férfit megkötözték.Falsetto a már mozgásképtelen Cantushoz jött oda.A megkötözött Cantus büszke testtartása Falsettot a régi önmagára emlékeztette, amikor még erős, érces hangon prédikálta Isten igéjét. A hadúr a kezében tartott puskával teljes erőből ütötte vesén Cantust, aki a szörnyű fájdalom következtében a földre esett. Jártányi ereje sem maradt. Itt a vég. -Hogy nyomorultul halj meg, elmondom, hogy mit fogok csinálni, miután élve elégettelek a felszereléseddel együtt. A védenceid holttestét majd egyesével lógatom fel a bunkerom elejére. Az életműved semmivé lesz. Az embereknek nincs szüksége a művészetre, csak a kenyér kell nekik. De megesküszöm neked itt és most, hogy ennek ellenére én az emberiségből kivágom a kultúrát, mint ahogyan egy gennyes sebet tisztítok ki – ezzel a bozótvágó késsel.Falsetto nem spórolt az éghető anyaggal: az összes általa birtokolt mennyiséget, négyüvegnyit locsolt szét belőle a zsoldos elpusztítására, s néhány régi bútort is hozott, melynek illata Gregorió kalyibájára emlékeztette Cantust. Meggyújtása után az öreg faanyag hatalmas fekete füstöt okádott, melyet messze lehetett látni a pusztában, még a gunyorosan röhögő Falsetto emberei is fuldokoltak a kunyhó körül. Cantus nem ordított egészen két lélegzetvételnyi ideig, aztán már igen. Miután elkezdett fulladozni, gondolatai már nem törődtek a bujkáló csapattagokkal, csak azt akarta, hogy gyorsan legyen vége az egésznek.",
+    "narrationZoneText": "Cantus úgy döntött, hogy nincs értelme a további harcoknak: Falsettot nem lehet legyőzni a saját fegyvereivel. -Megadom magam! - üvöltötte a férfi, miközben eldobta a fegyvereit. A csapat szétfutott: többen megpróbáltak elbújni egy-egy roncsban, de Falsetto emberei hamarosan az egész csapatot összefogdosták. Cantust az egyik katona ütötte le a puskatusával, majd a még eszméletlen férfit meg is kötözték. Falsetto a már mozgásképtelen Cantushoz jött oda. A megkötözött Cantus büszke testtartása Falsettot a régi önmagára emlékeztette, amikor még erős, érces hangon prédikálta Isten igéjét. A hadúr a kezében tartott puskával teljes erőből ütötte vesén Cantust, aki a szörnyű fájdalom következtében a földre esett. Jártányi ereje sem maradt. Itt a vég. - Hogy nyomorultul halj meg, elmondom, hogy mit fogok csinálni, miután élve elégettelek a felszereléseddel együtt. A védenceid holttestét majd egyesével lógatom fel a bunkerom elejére. Az életműved semmivé lesz. Cantus nem ordított egészen két lélegzetvételnyi ideig, aztán már igen. Miután elkezdett fulladozni, gondolatai már nem törődtek a bujkáló csapattagokkal, csak azt akarta, hogy gyorsan legyen vége az egésznek.",
     "opponentName": "",
     "decision1": "Meghaltál.",
     "decision2": "",
@@ -813,7 +814,7 @@
   },
   {
     "location": "warehouse_056_warehousechoices",
-    "narrationZoneText": "A raktárépület romos külseje nem sok jót sejtetett a csapattal. Cantus jól tudta, hogy az idemenekülés csak pillanatnyi, ideiglenes megnyugvást hozhat.  A raktárépület ajtaját nagy döndüléssel, együttes erővel sikerült felszakítani, s rögvest látszott, hogy az épületet nem lehet megvédeni a vademberektől.Cantus mindössze 10-15 szívdobbanásnyi idő után csattanást hallott a fejük felül, majd lángok csaptak fel a raktárépületben.Falsetto Molotov-koktélokat vetett be, hogy kifüstölje a csapatot a raktárházból.Cantusnak azonnal döntenie kellett.",
+    "narrationZoneText": "A raktárépület romos külseje nem sok jót sejtetett a csapattal. Cantus jól tudta, hogy az idemenekülés csak pillanatnyi, ideiglenes megnyugvást hozhat. A raktárépület ajtaját nagy döndüléssel, együttes erővel sikerült felszakítani, s rögvest látszott, hogy az épületet nem lehet megvédeni a vademberektől. Cantus mindössze 10-15 szívdobbanásnyi idő után csattanást hallott a fejük felül, majd lángok csaptak fel a raktárépületben.Falsetto Molotov-koktélokat vetett be, hogy kifüstölje a csapatot a raktárházból. Cantusnak azonnal döntenie kellett.",
     "opponentName": "",
     "decision1": "Kiszöksz és az Irina oázishoz menekülsz.",
     "decision2": "Kirohansz és felveszed a harcot.",
@@ -826,7 +827,7 @@
   },
   {
     "location": "warehouse_057_tothebackroom",
-    "narrationZoneText": "Cantus hamar belátta, hogy nincs esélyük a raktárépület éghető áruval telített helyiségében. Arra készültek, hogy tovább hátrálnak a személyzeti szobába, vagy valamilyen kisebb terembe, amit le tudnak zárni.Rövid keresgélés után találtak egy szobát, ami valamikor talán öltöző lehetett, de a terem közepe - kit tudja mikor? - egyszerűen beszakadt.Időközben Falsetto néhány őrült katonája feltépte a raktár ajtaját, majd - dacára a lángoknak - feléjük szaladt.",
+    "narrationZoneText": "Cantus hamar belátta, hogy nincs esélyük a raktárépület éghető áruval telített helyiségében. Arra készültek, hogy tovább hátrálnak a személyzeti szobába, vagy valamilyen kisebb terembe, amit le tudnak zárni. Rövid keresgélés után találtak egy szobát, ami valamikor talán öltöző lehetett, de a terem közepe - kit tudja mikor? - egyszerűen beszakadt. Időközben Falsetto néhány őrült katonája feltépte a raktár ajtaját, majd - dacára a lángoknak - feléjük szaladt.",
     "opponentName": "",
     "decision1": "Eltorlaszolod az ajtót.",
     "decision2": "Beugrasz a mélyedésbe.",
@@ -839,20 +840,20 @@
   },
   {
     "location": "warehouse_058_waitingfordeath",
-    "narrationZoneText": "Cantus úgy gondolta, hogy a katonák - látván az épület teljes pusztulását - félúton megfordulnak és elindulnak majd a táboruk felé. Sajnos azonban Falsetto nem adta ilyen könnyen a szabadulást.Ahogyan a Molotov-koktélok elsőként elérték a régen megreccsent tetőszerkezetet, szinte azonnal berobbantak a lángok.A féktelen tűz egyre fenyegetőbben tornyosult a csapattagok fölé.Cantus próbált a ruháival ideiglenesen megálljt parancsolni az elkerülhetetlen végnek, de sajnos már nem volt menekvés számukra. A katonák csak azután indultak haza, hogy zsákba gyűjtötték a csapattagok elszenesedett csontjait.",
+    "narrationZoneText": "Cantus úgy gondolta, hogy a katonák - látván az épület teljes pusztulását - félúton megfordulnak és elindulnak majd a táboruk felé. Sajnos azonban Falsetto nem adta ilyen könnyen a szabadulást. Ahogyan a Molotov-koktélok elsőként elérték a régen megreccsent tetőszerkezetet, szinte azonnal berobbantak a lángok. A féktelen tűz egyre fenyegetőbben tornyosult a csapattagok fölé. Cantus próbált a ruháival ideiglenesen megálljt parancsolni az elkerülhetetlen végnek, de sajnos már nem volt menekvés számukra. A katonák csak azután indultak haza, hogy zsákba gyűjtötték a csapattagok elszenesedett csontjait.",
     "opponentName": "",
     "decision1": "Meghaltál.",
     "decision2": "",
     "decision3": "",
     "decision4": "",
-    "furtherLocation1": "game_over",
+    "furtherLocation1": "GameOver",
     "furtherLocation2": "",
     "furtherLocation3": "",
     "furtherLocation4": ""
   },
   {
     "location": "warehouse_059_thebackroomblock",
-    "narrationZoneText": "Az ajtón nem volt zár, így csak egy rozoga padot és néhány fém öltözőszekrényt tudtak odatolni.A katonák időközben az ajtó elé értek és be akartak jutni az öltözőbe, de a rögtönzött ajtótorlasz útjukat állta.",
+    "narrationZoneText": "Az ajtón nem volt zár, így a hőseink csak egy rozoga padot és néhány fém öltözőszekrényt tudtak odatolni. A katonák időközben az ajtó elé értek és be akartak jutni az öltözőbe, de a rögtönzött ajtótorlasz útjukat állta.",
     "opponentName": "",
     "decision1": "Beugrasz a mélyedésbe.",
     "decision2": "",
@@ -865,7 +866,7 @@
   },
   {
     "location": "warehouse_060_thebackroomjump",
-    "narrationZoneText": "Cantus és a csapat többi tagja nem tudta, hogy hová vezet az alagút, de nem volt más választásuk: menniük kellett. A füst most már egyre határozottabban mászott be az ajtó alatt, s félő volt, hogy pár pillanat alatt megfulladnak.Úgy hallatszódott, hogy a katonák feladták az üldözésüket és inkább a saját életüket mentve elhagyták a raktárat.Először Cantus ugrott, majd a többiek.",
+    "narrationZoneText": "Cantus és a csapat többi tagja nem tudta, hogy hová vezet az alagút, de nem volt más választásuk: menniük kellett. A füst most már egyre határozottabban mászott be az ajtó alatt, s félő volt, hogy pár pillanat alatt megfulladnak. Úgy hallatszódott, hogy a katonák feladták az üldözésüket és inkább a saját életüket mentve elhagyták a raktárat. Először Cantus ugrott, majd a többiek.",
     "opponentName": "",
     "decision1": "Szétnézel a mélyedésben.",
     "decision2": "",
@@ -878,7 +879,7 @@
   },
   {
     "location": "metrotunnel_061_choices",
-    "narrationZoneText": "A mélyedés egy valamikori metróalagútba vezetett. A szuroksötét környezetet csak a valószínűleg napelemmel működő vészlámpák enyhe, pislákoló fénye köhintette be.Cantus  alig látott valamit.Egyetlen jó van a mostani helyzetben: a lángok és a füst legalább elkerülik a csapatot.- Mit tegyek? - morfondírozott Cantus.",
+    "narrationZoneText": "A mélyedés egy valamikori metróalagútba vezetett. A szuroksötét környezetet csak a valószínűleg napelemmel működő vészlámpák enyhe, pislákoló fénye köhintette be. Cantus  alig látott valamit. Egyetlen jó van a mostani helyzetben: a lángok és a füst legalább elkerülik a csapatot.- Mit tegyek? - morfondírozott Cantus.",
     "opponentName": "",
     "decision1": "Hallgatózol.",
     "decision2": "Tapogatózva elindulsz a járatban.",
@@ -891,7 +892,7 @@
   },
   {
     "location": "metrotunnel_066_shootinthedark",
-    "narrationZoneText": "A lövésed az évtizedek óta málladozó betonfalba csapódik. A pillanatnyi világosság megmutatja, hogy az alagút egyenesen előre visz.",
+    "narrationZoneText": "A lövés az évtizedek óta málladozó betonfalba csapódik. A pillanatnyi világosság megmutatja, hogy az alagút egyenesen előre visz.",
     "opponentName": "",
     "decision1": "Hallgatózol.",
     "decision2": "Tapogatózva elindulsz a járatban.",
@@ -904,7 +905,7 @@
   },
   {
     "location": "takeANap",
-    "narrationZoneText": "A távolból, alig hallhatóan egy férfi dörgő hangja hallatszik: – Itt vannak, tudom! – kiált ördögi hangon. – Találjátok meg őket! Találjátok meg mindet! Holtan akarom látni őket!A fenyegetésnek csupán egyetlen haszna lehetett: segített a az útirány meghatározásában.",
+    "narrationZoneText": "A távolból, alig hallhatóan egy férfi dörgő hangja hallatszik: – Itt vannak, tudom! – kiált ördögi hangon. – Találjátok meg őket! Találjátok meg mindet! Holtan akarom látni őket!A fenyegetésnek csupán egyetlen haszna lehetett: segített az útirány meghatározásában.",
     "opponentName": "",
     "decision1": "A hang irányába mész.",
     "decision2": "",
@@ -930,7 +931,7 @@
   },
   {
     "location": "metrotunnel_064_endofthetunnel",
-    "narrationZoneText": "A sötétben az ember időérzékelése teljesen csalóka. Lehetséges, hogy fél órát, de az is lehet, hogy órákat szédelgett a Zsoldos és csapata az alagutakban.Egyszerre csak cérnavékony fény szűrődik be az alagút végén.",
+    "narrationZoneText": "A sötétben az ember időérzékelése teljesen csalóka. Lehetséges, hogy fél órát, de az is lehet, hogy órákat szédelgett a Zsoldos és csapata az alagutakban. Egyszerre csak cérnavékony fény szűrődik be az alagút végén.",
     "opponentName": "",
     "decision1": "Kikukucskálsz.",
     "decision2": "Kirohansz.",
@@ -943,7 +944,7 @@
   },
   {
     "location": "metrotunnel_065_waiting",
-    "narrationZoneText": "A várakozás rendkívül unalmas. Néhány, teljes csendben eltöltött pillanat után egérkaparászást hallasz.A rágcsálók egyre közelebb érnek.",
+    "narrationZoneText": "A várakozás rendkívül unalmas. Néhány, teljes csendben eltöltött pillanat után egérkaparászást hallasz. A rágcsálók egyre közelebb érnek.",
     "opponentName": "Egy csapat patkány",
     "opponenthealth": 23,
     "opponentMinDamage": 3,
@@ -959,14 +960,14 @@
   },
   {
     "location": "metrotunnel_068_shootoutthetunnel",
-    "narrationZoneText": "Bár Cantus lövése azonnali és végezetes volt, de a dörrenésre felfigyeltek a közelben levő harcosok is.A túlerő hamar legyűrte hőseinket, akik sorsa pár perccel később megpecsételődött.",
+    "narrationZoneText": "Bár Cantus lövése azonnali és végezetes volt, de a dörrenésre felfigyeltek a közelben levő harcosok is. A túlerő hamar legyűrte hőseinket, akik sorsa pár perccel később megpecsételődött.",
     "opponentName": "",
     "decision1": "Meghaltál.",
     "decision2": "",
     "decision3": "",
     "decision4": "",
-    "furtherLocation1": "FalsettoFirstSight_1",
-    "furtherLocation2": "healthCheck",
+    "furtherLocation1": "GameOver",
+    "furtherLocation2": "",
     "furtherLocation3": "",
     "furtherLocation4": ""
   },
@@ -985,7 +986,7 @@
   },
   {
     "location": "metrotunnel_070_runawayfromwarehouse",
-    "narrationZoneText": "A csapat ki akarta használni a meglepetés erejét, így nyakába vette a lábát. Az egyetlen menekülési lehetőség az, ha sikerül kikerülni a keresőcsapat látóteréből: az egyre sötétesebbé váló sivatag megfelelőnek látszik erre. Cantus a környék alapján nagyjából be tudja tájolni, hogy merre kell menniük a Sokárok-hágó felé.",
+    "narrationZoneText": "A csapat ki akarta használni a meglepetés erejét, így nyakába vette a lábát. Az egyetlen menekülési lehetőség az volt, ha sikerül kikerülniük a keresőcsapat látóteréből: az egyre sötétesebbé váló sivatag megfelelőnek látszott erre. Cantus a környék alapján nagyjából be tudta tájolni, hogy merre kell menniük a Sokárok-hágó felé.",
     "opponentName": "",
     "decision1": "Menekülsz a Barrikádról.",
     "decision2": "",
@@ -998,7 +999,7 @@
   },
   {
     "location": "manyditchespass_071_runaway",
-    "narrationZoneText": "A csapat egyre elkeseredettebben loholt a Sokárok-hágó felé, azonban Falsetto és emberei egyre inkább a nyomukban voltak. A sivatag kegyetlen és haragos útitárs: még a legnagyobb igyekezet ellenére is hamar kifárasztotta a csapatot. Cantus próbálta viszonozni Falsetto embereinek támadását, de sajnos a létszámfölény hamar meglátszódott. Az egyik golyó centikkel Cantus nyaka mögött elhúzva a mögötte loholó Tenor vállába fúródott. Ez volt a jel arra, hogy az elcsigázott és végletekig kizsigerelt csapat nem tudta tovább folytatni: kezüket feltartva megadták magukat.  A Zsoldos kétségbeesetten nézett a távolba, ahol egy emberi település körvonalai látszódtak. Ahogyan meg tudta mondani egy pillantásból, a falu nem egy korábbi település romjaira épülhetett, hanem primitív kunyhóit a semmi közepére húzták fel. - Olyan közel voltunk már! – sóhajtott fel, ahogyan fegyverét kicsavarták és a térde belső oldalára rúgva térdre kényszerítették. Falsetto alig bírta titkolni elégedettségét: izgatott óvodásként pattant le a lováról és azonnal talpra rántotta Cantust. Túláradó örömében hevesen gesztikulált, kapkodta a levegőt, csak dadogott. Hosszú percekig tartó bizonytalanság után, Falsetto végül előrántotta a macsétáját, hogy a saját igazságát szolgáltatva pontot tegyen az egész végére:",
+    "narrationZoneText": "A csapat egyre elkeseredettebben loholt a Sokárok-hágó felé, azonban Falsetto és emberei egyre inkább a nyomukban voltak. A sivatag kegyetlen és haragos útitárs: még a legnagyobb igyekezet ellenére is hamar kifárasztotta a csapatot. Cantus próbálta viszonozni Falsetto embereinek támadását, de sajnos a létszámfölény hamar meglátszódott. Az egyik golyó centikkel Cantus nyaka mögött elhúzott el és a mögötte loholó Tenor vállába fúródott. Ez volt a jel arra, hogy az elcsigázott és végletekig kizsigerelt csapat nem tudta tovább folytatni: kezüket feltartva megadták magukat. A Zsoldos kétségbeesetten nézett a távolba, ahol egy emberi település körvonalai látszódtak. Ahogyan meg tudta mondani egy pillantásból, a falu nem egy korábbi település romjaira épülhetett, hanem primitív kunyhóit a semmi közepére húzták fel. - Olyan közel voltunk már! – sóhajtott fel, ahogyan fegyverét kicsavarták és a térde belső oldalára rúgva térdre kényszerítették. Falsetto alig bírta titkolni elégedettségét: izgatott kisgyermekként pattant le a lováról és azonnal talpra rántotta Cantust. Túláradó örömében hevesen gesztikulált, kapkodta a levegőt, csak dadogott. Hosszú percekig tartó bizonytalanság után, Falsetto végül előrántotta a macsétáját, hogy a saját igazságát szolgáltatva pontot tegyen az egész végére:",
     "opponentName": "",
     "decision1": "Behunyod a szemed és a várod a végét.",
     "decision2": "",
@@ -1024,7 +1025,7 @@
   },
   {
     "location": "nativevillage_073_choices",
-    "narrationZoneText": "Amikor lehúzták a kámzsát a fejükről, Cantus tudta, hogy a lehető legrosszabb helyen vannak, ahol csak lehetnek. Azt mondják, hogy a hegyi törzsek mindenkit felkoncolnak, aki csak keresztezi az útjukat. A környéken jól ismert eset volt, amikor egy jól felfegyverzett csapat erőszakkal akart áttörni a Sokárok-hágón, lőfegyvereket is vittek magukkal, s fejenként tíz-tíz tárat hozzá. Végül senki sem tért vissza közülük. Cantus jól ismerte az esetet: nyolc szélviharral ezelőtt történt meg, a csapat vezetője maga a testvére volt. Cantus dühös volt, amikor visszagondolt Gregorió szavaira: „Superiáéknál megvan minden, ami nekik kellhet”. – Bolond öreg, magadat sem tudtad megmenteni!",
+    "narrationZoneText": "Amikor lehúzták a kámzsát a fejükről, Cantus tudta, hogy a lehető legrosszabb helyen vannak, ahol csak lehetnek. Azt mondják, hogy a hegyi törzsek mindenkit felkoncolnak, aki csak keresztezi az útjukat. A környéken jól ismert eset volt, amikor egy jól felfegyverzett csapat erőszakkal akart áttörni a Sokárok-hágón, lőfegyvereket is vittek magukkal, s fejenként tíz-tíz tárat hozzá. Végül senki sem tért vissza közülük. Cantus jól ismerte az esetet: nyolc szélviharral ezelőtt történt meg, a csapat vezetője maga a testvére volt. Cantus dühös volt, amikor visszagondolt Gregorió szavaira: - Superiáéknál megvan minden, ami nekik kellhet. – Bolond öreg, magadat sem tudtad megmenteni!",
     "opponentName": "",
     "decision1": "Körbenézel.",
     "decision2": "Megpróbálod kiszabadítani a kezedet.",
@@ -1050,20 +1051,20 @@
   },
   {
     "location": "nativevillage_075_attacktheguards",
-    "narrationZoneText": "Cantus úgy gondolta, hogy felesleges megvárnia, amíg lefőzik a húst a csontjairól. Utolsó erejével fejjel a bejárat felé futott, hogy az ajtó előtt váró őrt kilökje az egyensúlyából. A terve addig sikerült: a meglepődött férfi a hátára esett, s a társa egy pillanatra meglepődöttségében nem is tudott mit reagálni. Cantus ösztönösen cselekedett: a hátán fekvő férfit egy fejrúgással tette ártalmatlanná, az éppen támadni készülő társát pedig nem túl elegáns, de hatásos fogással lefejelte. Megpróbált lopakodni, de idegen terepen ez nem ment könnyen. Körülbelül ötvenlépésnyire juthatott, közel a falu határához, amikor vállába fúródott az egyik nyílvessző. A következő szintén nem ért létfontosságú szervet, de az izmaiban terjedő fájdalom máris tudatta vele: kígyóméreg került a szervezetébe. A Zsoldos még húsz szívdobbanásig volt eszméleténél, majd még ugyanennyi időt lélegzett, mielőtt végzett volna vele a méreg.",
+    "narrationZoneText": "Cantus úgy gondolta, hogy felesleges megvárnia, amíg lefőzik a húst a csontjairól. Utolsó erejével fejjel a bejárat felé futott, hogy az ajtó előtt váró őrt kilökje az egyensúlyából. A terve addig a pontig sikerült: a meglepődött férfi a hátára esett, s a társa egy pillanatra meglepődöttségében nem is tudott mit reagálni. Cantus ösztönösen cselekedett: a hátán fekvő férfit egy fejre mért rúgással tette ártalmatlanná, az éppen támadni készülő társát pedig nem túl elegáns, de hatásos fogással lefejelte. Megpróbált lopakodni, de idegen terepen ez nem ment könnyen. Körülbelül ötvenlépésnyire juthatott, közel a falu határához, amikor vállába fúródott az egyik nyílvessző. A következő szintén nem ért létfontosságú szervet, de az izmaiban terjedő fájdalom máris tudatta vele: kígyóméreg került a szervezetébe. A Zsoldos még húsz szívdobbanásig volt eszméleténél, majd még ugyanennyi időt lélegzett, mielőtt végzett volna vele a méreg. Kalandod itt véget ért.",
     "opponentName": "",
     "decision1": "Meghaltál.",
     "decision2": "",
     "decision3": "",
     "decision4": "",
-    "furtherLocation1": "healthCheck",
+    "furtherLocation1": "GameOver",
     "furtherLocation2": "",
     "furtherLocation3": "",
     "furtherLocation4": ""
   },
   {
     "location": "nativevillage_076_lookingaround",
-    "narrationZoneText": "A bennszülöttek a valamikori határőrök és a latin bevándorlók utódai lehettek. Sajátos keveréknyelvüket egyetlen kívülálló sem beszélte: igaz, beavatatlanoknak nem is volt lehetősége beszédbe elegyedni velük. A bennszülöttek nem látszottak „civilizáltnak”: ruhájuk egyszerű ágyékkötő volt, primitív kunyhóik bejáratát ellenségeik kifőzött koponyájával díszítették. A valamikori tűzfegyverek rozsdás roncsai a falu házai mellett várták az örökkévalóságot.",
+    "narrationZoneText": "A bennszülöttek a valamikori határőrök és a latin bevándorlók utódai lehettek. Sajátos keveréknyelvüket egyetlen kívülálló sem beszélte: igaz, beavatatlanoknak nem is volt lehetősége beszédbe elegyedni velük. A bennszülöttek nem látszottak civilizáltnak: ruhájuk egyszerű ágyékkötő volt, primitív kunyhóik bejáratát ellenségeik kifőzött koponyájával díszítették. A valamikori tűzfegyverek rozsdás roncsai a falu házai mellett várták az örökkévalóságot.",
     "opponentName": "",
     "decision1": "Megpróbálod kiszabadítani a kezedet.",
     "decision2": "Vársz.",
@@ -1076,7 +1077,7 @@
   },
   {
     "location": "nativevillage_077_waitingforprincess",
-    "narrationZoneText": "Cantus nem mert cselekedni. Tudta, hogy talán a legkisebb mozdulat is kiprovokálhatja az ellenük irányuló gyűlöletet. A felszerelésüket elvették, mindössze a rajtuk levő ruhával rendelkeztek.  Körülbelül egy délelőtt telhetett el, amikor az őket őrző harcosok lázas sietséggel és izgalommal beszéltek valamiről. Cantus és a többiek számára a testtartásuk és viselkedésük arra utalt, hogy valamiféle döntésre juthattak a sorsukat illetően.  Végül igazuk lett, hiszen nem sokkal később egy jelentős kíséret látogatta meg őket. Egy fiatal lány, - talán olyan fiatal, mint a rábízott lányok – s az őt kísérő testőrség tagjai vették az irányt a börtönkunyhó felé. Hangjukat már húszlépésnyi távolságról hallani lehetett.",
+    "narrationZoneText": "Cantus nem mert cselekedni. Tudta, hogy talán a legkisebb mozdulat is kiprovokálhatja az ellenük irányuló gyűlöletet. A felszerelésüket elvették, mindössze a rajtuk levő ruhával rendelkeztek. Körülbelül egy délelőtt telhetett el, amikor az őket őrző harcosok lázas sietséggel és izgalommal beszéltek valamiről. Cantus és a többiek számára a testtartásuk és viselkedésük arra utalt, hogy valamiféle döntésre juthattak a sorsukat illetően.  Végül igazuk lett, hiszen nem sokkal később egy jelentős kíséret látogatta meg őket. Egy fiatal lány, - talán olyan fiatal, mint a rábízott lányok – s az őt kísérő testőrség tagjai vették az irányt a börtönkunyhó felé. Hangjukat már húszlépésnyi távolságról hallani lehetett.",
     "opponentName": "",
     "decision1": "Megpróbálod kiszabadítani a kezedet.",
     "decision2": "Vársz.",
@@ -1102,7 +1103,7 @@
   },
   {
     "location": "nativevillage_079_singfortheirlives",
-    "narrationZoneText": "A Zsoldos szeme felcsillant, amikor eszébe ötlöttek Gregorió szavai: „Superiáéknál megvan minden, ami nekik kellhet”. Megértette az öreg pap utalását. - Gyerünk, énekeljetek valamit! - súgta kurtán a csapatnak. Tenor vette át a szót tőle. - Miserere, első öt ütem. – parancsolta embereinek. - „Miserere mei, Deus” – énekelték egyszerre, mégis máshogy – valamilyen már elveszett, ismeretlen nyelven.  Cantus agya rezonált, mellkasa összeszorult. Torka egyszerre kiszáradt, végtagjai remegtek. Valami földöntúli eufória, eddig még nem megtapasztalt érzés kerítette hatalmába, ahogyan ez az öt idegen egy régen elpusztult nép szavait parancsolta a szobába.  – Mintha szellemet idéznének. – gondolta. Ez az ismeretlen erő sokkal hatalmasabb volt, mint ő: a halott pap égi varázslénye, melyben Cantus nem hitt, a hangok által egyszerre mégis életre kelt és a harcosok fölé magasodott egy pillanatra.  Az érzés körbefogta és szinte megdelejezte a szobában levőket. A hercegnő arca felderült, ahogyan kezével verte a taktust: szelleme újra felfrissítette a testét.  A szedett-vedett társaság hirtelen, mintha repült volna. Az idegenek arca elsápadt és térdre estek a megkötözöttek előtt.",
+    "narrationZoneText": "A Zsoldos szeme felcsillant, amikor eszébe ötlöttek Gregorió szavai: Superiáéknál megvan minden, ami nekik kellhet. Megértette az öreg pap utalását. - Gyerünk, énekeljetek valamit! - súgta kurtán a csapatnak. Tenor vette át a szót tőle. - Miserere, első öt ütem. – parancsolta embereinek. - Miserere mei, Deus – énekelték egyszerre, mégis máshogy – valamilyen már elveszett, ismeretlen nyelven. Cantus agya rezonált, mellkasa összeszorult. Torka egyszerre kiszáradt, végtagjai remegtek. Valami földöntúli eufória, eddig még nem megtapasztalt érzés kerítette hatalmába, ahogyan ez az öt idegen egy régen elpusztult nép szavait parancsolta a szobába.  – Mintha szellemet idéznének. – gondolta. Ez az ismeretlen erő sokkal hatalmasabb volt, mint ő: a halott pap égi varázslénye, melyben Cantus nem hitt, a hangok által egyszerre mégis életre kelt és a harcosok fölé magasodott egy pillanatra.  Az érzés körbefogta és szinte megdelejezte a szobában levőket. A hercegnő arca felderült, ahogyan kezével verte a taktust: szelleme újra felfrissítette a testét. A szedett-vedett társaság hirtelen, mintha repült volna. Az idegenek arca elsápadt és térdre estek a megkötözöttek előtt.",
     "opponentName": "",
     "decision1": "Vársz a végső döntésre.",
     "decision2": "",
@@ -1115,20 +1116,20 @@
   },
   {
     "location": "nativevillage_080_waitforfinaldecision",
-    "narrationZoneText": "A hercegnő várakozásteljes tekintete néhány pillanat múltával szánalmat mutatott, majd egyértelmű megvetés ütközött ki az orcáján. Néhány gyors, a csapat számára érhetetlen parancs kiadása után a testőrei társaságában elhagyta a kunyhót. A még mindig hallgatag Cantus és a csapat hamarosan azt is megtudta, hogy mit parancsolt a hercegnő az őröknek: torkuk elmetszésével haláluk gyors és fájdalommentes volt.",
+    "narrationZoneText": "A hercegnő várakozásteljes tekintete néhány pillanat múltával szánalmat mutatott, majd egyértelmű megvetés ütközött ki az orcáján. Néhány gyors, a csapat számára érhetetlen parancs kiadása után a testőrei társaságában elhagyta a kunyhót. A még mindig hallgatag Cantus és a csapat hamarosan azt is megtudta, hogy mit parancsolt a hercegnő az őröknek: torkuk elmetszésével haláluk gyors és fájdalommentes volt. Kalandod itt véget ért.",
     "opponentName": "",
-    "decision1": "Valami felriasztott",
+    "decision1": "Meghaltál.",
     "decision2": "",
     "decision3": "",
     "decision4": "",
-    "furtherLocation1": "healthCheck",
+    "furtherLocation1": "GameOver",
     "furtherLocation2": "",
     "furtherLocation3": "",
     "furtherLocation4": ""
   },
   {
     "location": "nativevillage_081_theylive",
-    "narrationZoneText": "- Azonnal oldozzátok el őket! – mondta a hercegnő, majd az utasítását közös nyelven is közölte. A csapat egy pillanat alatt szabad lett. - Hát ti vagytok azok! Az énekesek! Cantus nem ismerte ezt az archaikus szót. - Elnézésedet kérem, de nekünk küldetésünk van. El kell vinnünk a zenét a Prédikátorok Könyvtárába. A hercegnő hidegen bólintott. - Mi őrizzük a Sokárok-hágót, mely a Prédikátorok Könyvtárába vezet. A Könyvtár őrzőivel azonban már jóideje nem tudtunk beszélni. - Akkor miért nem mentetek el hozzájuk? – érdeklődött Cantus. - Azért, mert nekünk őriznünk kell a hágót. Sem többet, sem kevesebbet nem tehetünk. Az őseink feladata. Továbbá azt is feladatunk, hogy átengedjünk mindenkit, aki a Könyvtárat akarja gazdagítani: így ti szabadon elmehettek.",
+    "narrationZoneText": "- Azonnal oldozzátok el őket! – mondta a hercegnő, majd az utasítását közös nyelven is közölte. A csapat egy pillanat alatt szabad lett. - Hát ti vagytok azok! Az énekesek! Cantus nem ismerte ezt az archaikus szót. - Elnézésedet kérem, de nekünk küldetésünk van. El kell vinnünk a zenét a Prédikátorok Könyvtárába. A hercegnő hidegen bólintott. - Mi őrizzük a Sokárok-hágót, mely a Prédikátorok Könyvtárába vezet. A Könyvtár őrzőivel azonban már jóideje nem tudtunk beszélni. - Akkor miért nem mentetek el hozzájuk? – érdeklődött Cantus. - Azért, mert nekünk őriznünk kell a hágót. Sem többet, sem kevesebbet nem tehetünk. Az őseink hagyták ránk ezt a küldetést. Továbbá azt is feladatunk, hogy átengedjünk mindenkit, aki a Könyvtárat akarja gazdagítani: így ti szabadon elmehettek.",
     "opponentName": "",
     "decision1": "Útnak indulsz a Prédikátorok Könyvtárához.",
     "decision2": "",
@@ -1141,7 +1142,7 @@
   },
   {
     "location": "libraryofpreachers__082_road1",
-    "narrationZoneText": "A csapat pontos útbaigazítással és a visszakapott fegyvereikkel együtt távozott a bennszülött faluból. Még most sem hitték el, hogy ép bőrrel megúszták.  A Sokárok-hágó sok harcos és valamikori civil sírhelye volt. Maga a hegyszoros ötszáz lépésre terpeszkedett túl a Pusztulás Földjén. Látványa nem jelentett nagy változatosságot: a hely stratégiai fontosságú katonai támaszpont lehetett. Cantus szinte a saját szemeivel látta, ahogy a törmelékkel teli senkiföldjén a valamikori mesterlövészállások lakói semmisítik meg hajdanvolt áldozataikat a kocsikból és más hulladékból emelt barikádok mögött.  A csapat katonai bázis keleti kapujával szemben egy kiégett kávézó romjai közt telepedett le.",
+    "narrationZoneText": "A csapat pontos útbaigazítással és a visszakapott fegyvereikkel együtt távozott a bennszülött faluból. Még most sem hitték el, hogy ép bőrrel megúszták. A Sokárok-hágó sok harcos és valamikori civil sírhelye volt. Maga a hegyszoros ötszáz lépésre terpeszkedett túl a Pusztulás Földjén. Látványa nem jelentett nagy változatosságot: a hely stratégiai fontosságú katonai támaszpont lehetett. Cantus szinte a saját szemeivel látta, ahogy a törmelékkel teli senkiföldjén a valamikori mesterlövészállások lakói semmisítik meg hajdanvolt áldozataikat a kocsikból és más hulladékból emelt barikádok mögött. A csapat a bázis keleti kapujával szemben egy kiégett kávézó romjai közt telepedett le.",
     "opponentName": "",
     "decision1": "Folytatod az utadat.",
     "decision2": "",
@@ -1199,10 +1200,10 @@
     "decision2": "THE END",
     "decision3": "THE END",
     "decision4": "THE END",
-    "furtherLocation1": "restartgame",
-    "furtherLocation2": "restartgame",
-    "furtherLocation3": "restartgame",
-    "furtherLocation4": "restartgame"
+    "furtherLocation1": "GameBeginning",
+    "furtherLocation2": "GameBeginning",
+    "furtherLocation3": "GameBeginning",
+    "furtherLocation4": "GameBeginning"
   },
   {
     "location": "wasteland_087_inTheDesert_shipwreck01",
