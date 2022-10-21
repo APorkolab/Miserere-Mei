@@ -63,6 +63,10 @@ export class BattleComponent implements OnInit {
   monsterMaxDamageSubscription!: Subscription;
   monsterHealthSubscription!: Subscription;
   subscription!: Subscription;
+
+  inventory!: any[];
+  inventorySubscription!: Subscription;
+
   constructor(
     private notifyService: NotificationService,
     private route: ActivatedRoute,
@@ -83,28 +87,9 @@ export class BattleComponent implements OnInit {
     this.playerMaxDamageSubscription = this.data.currentPlayerMaxDamage.subscribe(playerMaxDamage => this.playerMaxDamage = playerMaxDamage)
     this.playerBulletsNumberSubscription = this.data.currentPlayerBulletsNumber.subscribe(playerBulletsNumber => this.playerBulletsNumber = playerBulletsNumber)
     this.playerWeaponSubscription = this.data.currentWeapon.subscribe(weaponName => this.weaponName = weaponName)
-
-    // this.route.params.subscribe({
-    //   next: (param) => {
-    //     this.player$ = this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
-    //     return this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
-    //   },
-    // });
-    // this.player$.subscribe({
-    //   next: (player) => (this.player = player ? player : this.player),
-    // });
+    this.inventorySubscription = this.data.currentPlayerInventory.subscribe(inventory => this.inventory = inventory);
   }
 
-  // onSelectOne(player: Player): void {
-  //   this.router.navigate(['/', 'player', player._id]);
-  // }
-
-  // onUpdate(player: Player) {
-  //   this.playerService.update(player).subscribe({
-  //     next: (category) => console.log(category),
-  //     error: (err) => console.log(err),
-  //   });
-  // }
 
 
   oneRound(player: Player, enemy: Enemy) {
@@ -118,6 +103,7 @@ export class BattleComponent implements OnInit {
     this.data.changePlayerHealth(this.playerHealth -= this.roundDamageByEnemy);
     this.data.changeMonsterHealth(this.enemyHealth -= this.roundDamageByPlayer);
     this.healthCheck(player);
+    this.enemyHealthCheck(enemy);
     this.battleMessage();
   }
 
@@ -192,5 +178,6 @@ export class BattleComponent implements OnInit {
     this.damagePlayer.nativeElement.innerHTML = `${this.roundDamageByPlayer} sebzést okoztál az ellenségnek.<br>`;
     this.damageEnemy.nativeElement.innerHTML = `Az ellenfeled ${this.roundDamageByEnemy} sebzést okozott neked.<br>`;
   }
+
 
 }

@@ -21,27 +21,6 @@ export class PlayerComponent implements OnInit {
   @Output()
   player: Player = new Player();
 
-  // @Input()
-  // health!: number;
-  // @Output() healthChange = new EventEmitter<number>();
-
-  // @Input()
-  // weapon!: string;
-  // @Output() weaponChange = new EventEmitter<string>();
-
-  // @Input()
-  // minDamage!: number;
-  // @Output() minDamageChange = new EventEmitter<number>();
-
-  // @Input()
-  // maxDamage!: number;
-  // @Output() maxDamageChange = new EventEmitter<number>();
-
-  // @Input()
-  // bulletsNumber!: number;
-  // @Output() bulletsNumberChange = new EventEmitter<number>();
-
-
   weaponName!: string;
   playerMinDamage !: number;
   playerMaxDamage !: number;
@@ -63,6 +42,22 @@ export class PlayerComponent implements OnInit {
   monsterMaxDamageSubscription!: Subscription;
   monsterHealthSubscription!: Subscription;
 
+  inventory = [
+    {
+      name: 'Gyógyszer',
+      numberOfItems: 2,
+      description: '20 ÉP-ot gyógyít',
+      effect: '+20ÉP'
+    },
+    {
+      name: 'Lőszer',
+      numberOfItems: 2,
+      description: '10 töltényt ad',
+      effect: '+15ÉP'
+    },
+  ]
+
+  inventorySubscription!: Subscription;
 
   constructor(
     private notifyService: NotificationService,
@@ -70,7 +65,7 @@ export class PlayerComponent implements OnInit {
     private router: Router,
     public placeService: PlaceService,
     public playerService: PlayerService,
-    private data: BattleService
+    public data: BattleService
   ) { }
 
   ngOnInit(): void {
@@ -83,31 +78,8 @@ export class PlayerComponent implements OnInit {
     this.playerMaxDamageSubscription = this.data.currentPlayerMaxDamage.subscribe(playerMaxDamage => this.playerMaxDamage = playerMaxDamage)
     this.playerBulletsNumberSubscription = this.data.currentPlayerBulletsNumber.subscribe(playerBulletsNumber => this.playerBulletsNumber = playerBulletsNumber)
     this.playerWeaponSubscription = this.data.currentWeapon.subscribe(weaponName => this.weaponName = weaponName)
-
-    // this.route.params.subscribe({
-    //   next: (param) => {
-    //     this.player$ = this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
-    //     return this.playerService.getPlayer('63429c0c2a50f89e873e0ede');
-    //   },
-    // });
-    // this.player$.subscribe({
-    //   next: (player) => (this.player = player ? player : this.player),
-    // });
+    this.data.changePlayerInventory(this.inventory);
+    this.inventorySubscription = this.data.currentPlayerInventory.subscribe(inventory => this.inventory = inventory);
   }
 
-  // healthCheck(player: Player): void {
-  //   if (this.health <= 0) {
-  //     this.router.navigate(['/', 'place', 'warehouse_058_waitingfordeath']);
-  //   }
-  // }
-
-  // randomDamage(player: Player) {
-  //   this.healthCheck(player);
-  //   return (
-  //     Math.floor(
-  //       Math.random() *
-  //         (player.currentWeaponMaxDamage - player.currentWeaponMinDamage)
-  //     ) + player.currentWeaponMinDamage
-  //   );
-  // }
 }

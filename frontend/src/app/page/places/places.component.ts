@@ -10,6 +10,7 @@ import { ConfigService } from 'src/app/service/config.service';
 import { NotificationService } from 'src/app/service/notification.service';
 import { PlayerService } from 'src/app/service/player.service';
 import { BattleService } from 'src/app/service/battle.service';
+import { Item } from 'src/app/model/item';
 
 @Component({
   selector: 'app-places',
@@ -17,6 +18,8 @@ import { BattleService } from 'src/app/service/battle.service';
   styleUrls: ['./places.component.scss'],
 })
 export class PlacesComponent implements OnInit {
+
+
   @Input()
   currentPlace!: Place;
   // @Input()
@@ -27,9 +30,6 @@ export class PlacesComponent implements OnInit {
 
   @Output() selectOne: EventEmitter<Place> = new EventEmitter<Place>();
   @Output() deleteOne: EventEmitter<Place> = new EventEmitter<Place>();
-
-  // @Input()
-  // @Output()
 
   monsterName = '';
 
@@ -43,22 +43,30 @@ export class PlacesComponent implements OnInit {
   monsterMaxDamageSubscription!: Subscription;
   monsterHealthSubscription!: Subscription;
 
+  inventory!: any[];
+  inventorySubscription!: Subscription;
+
+
+
   constructor(
     private notifyService: NotificationService,
     private route: ActivatedRoute,
     private router: Router,
     public placeService: PlaceService,
     public playerService: PlayerService,
-    private data: BattleService
+    public data: BattleService
   ) { }
 
   ngOnInit(): void {
     this.getPlace(this.route.snapshot.params['location']);
+    // this.data.addItem(this.inventory);
     this.monsterMinDamageSubscription = this.data.currentMinDamage.subscribe(monsterMinDamage => this.monsterMinDamage = monsterMinDamage)
     this.monsterMaxDamageSubscription = this.data.currentMaxDamage.subscribe(monsterMaxDamage => this.monsterMaxDamage = monsterMaxDamage)
     this.monsterHealthSubscription = this.data.currentMonsterHealth.subscribe(monsterHealth => this.monsterHealth = monsterHealth)
     this.monsterSubscription = this.data.currentMessage.subscribe(message => this.monsterName = message)
     this.inBattleSubscription = this.data.currentBattleState.subscribe((state: boolean) => this.inBattle = state)
+
+    this.inventorySubscription = this.data.currentPlayerInventory.subscribe(inventory => this.inventory = inventory);
   }
 
 
@@ -89,5 +97,7 @@ export class PlacesComponent implements OnInit {
     this.monsterSubscription.unsubscribe();
     this.inBattleSubscription.unsubscribe();
   }
+
+
 
 }
