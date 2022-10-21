@@ -15,4 +15,5 @@ export class Place {
   furtherLocation2: string = '';
   furtherLocation3: string = '';
   furtherLocation4: string = '';
+  objectFound: string = '';
 }

@@ -11,6 +11,7 @@ import { NotificationService } from 'src/app/service/notification.service';
 import { PlayerService } from 'src/app/service/player.service';
 import { BattleService } from 'src/app/service/battle.service';
 import { Item } from 'src/app/model/item';
+import { throws } from 'assert';
 
 @Component({
   selector: 'app-places',
@@ -87,7 +88,10 @@ export class PlacesComponent implements OnInit {
           this.data.changeMonsterHealth(0);
           this.data.changeCurrentBattleState(false);
         }
-        console.log(data);
+        // console.log(data);
+        if (this.currentPlace.objectFound) {
+          this.data.addItem(this.currentPlace.objectFound);
+        }
       },
       error: (e) => console.error(e),
     });

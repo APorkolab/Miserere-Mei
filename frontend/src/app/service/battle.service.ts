@@ -103,9 +103,18 @@ export class BattleService {
     this.playerInventory.next(data);
   }
 
-  addItem(dataObj: any) {
+  //Inventory functions 
+
+  addItem(dataObj: string) {
     const currentValue = this.playerInventory.value;
-    const updatedValue = [...currentValue, dataObj];
+    let obj = {
+      name: dataObj,
+      numberOfItems: 1,
+      description: 'Cantus még nem tudja, hogy mire lesz jó a tárgy...',
+      effect: '+15ÉP'
+    }
+    const updatedValue = [...currentValue, obj];
+    this.message.showInfo('Cantus felvett egy ' + dataObj + '-t', 'Miserere Mei v.1.0.0');
     this.playerInventory.next(updatedValue);
   }
 
@@ -123,14 +132,25 @@ export class BattleService {
         break;
       case "Lőszer":
         if (this.playerBulletsNumber.value >= 15) {
-          this.message.showInfo('Cantus fegyvere tele van töltve. Nem lehet újratölteni.', 'Miserere Mei v.1.0.0');
+          this.message.showInfo('Cantus fegyvere tele van. Nem szükséges újratölteni.', 'Miserere Mei v.1.0.0');
           break;
         } else {
           this.consumeItem(itemName);
           this.changePlayerBulletsNumber(this.playerBulletsNumber.value + 10);
           break;
         }
-
+      case "AK-47":
+        if (this.weaponName.value != 'AK-47 gépkarabély') {
+          this.changePlayerWeapon('AK-47 gépkarabély');
+          this.changePlayerMinDamage(5);
+          this.changePlayerMaxDamage(10);
+          this.consumeItem(itemName);
+          break;
+        } else {
+          this.consumeItem(itemName);
+          this.changePlayerBulletsNumber(this.playerBulletsNumber.value + 30);
+          break;
+        }
       default:
         this.message.showError('Ezt a tárgyat nem így kell használni!', 'Miserere Mei v.1.0.0');
     }
