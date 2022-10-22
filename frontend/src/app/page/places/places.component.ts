@@ -12,6 +12,7 @@ import { PlayerService } from 'src/app/service/player.service';
 import { BattleService } from 'src/app/service/battle.service';
 import { Item } from 'src/app/model/item';
 import { throws } from 'assert';
+import PerfectScrollbar from 'perfect-scrollbar';
 
 @Component({
   selector: 'app-places',
@@ -55,7 +56,7 @@ export class PlacesComponent implements OnInit {
     private router: Router,
     public placeService: PlaceService,
     public playerService: PlayerService,
-    public data: BattleService
+    public data: BattleService,
   ) { }
 
   ngOnInit(): void {
@@ -68,6 +69,8 @@ export class PlacesComponent implements OnInit {
     this.inBattleSubscription = this.data.currentBattleState.subscribe((state: boolean) => this.inBattle = state)
 
     this.inventorySubscription = this.data.currentPlayerInventory.subscribe(inventory => this.inventory = inventory);
+
+
   }
 
 

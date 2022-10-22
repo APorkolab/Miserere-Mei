@@ -111,7 +111,6 @@ export class BattleService {
       name: dataObj,
       numberOfItems: 1,
       description: 'Cantus még nem tudja, hogy mire lesz jó a tárgy...',
-      effect: '+15ÉP'
     }
     const updatedValue = [...currentValue, obj];
     this.message.showInfo('Cantus felvett egy ' + dataObj + '-t', 'Miserere Mei v.1.0.0');
@@ -164,7 +163,7 @@ export class BattleService {
     if (item.numberOfItems <= 1) {
       const index = this.playerInventory.value.indexOf(item);
       if (index > -1) {
-        this.message.showWarning(item.name + ' elfogyott.', 'Miserere Mei v.1.0.0')
+        // this.message.showWarning(item.name + ' elfogyott.', 'Miserere Mei v.1.0.0')
         this.playerInventory.value.splice(index, 1);
       }
     }
