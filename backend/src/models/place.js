@@ -46,6 +46,9 @@ const PlaceSchema = mongoose.Schema({
 	furtherLocation4: {
 		type: String,
 	},
+	objectFound: {
+		type: String,
+	},
 });
 
 module.exports = mongoose.model('Place', PlaceSchema);

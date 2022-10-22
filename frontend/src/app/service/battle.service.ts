@@ -109,12 +109,19 @@ export class BattleService {
     const currentValue = this.playerInventory.value;
     let obj = {
       name: dataObj,
-      numberOfItems: 1,
+      numberOfItems: 0,
       description: 'Cantus még nem tudja, hogy mire lesz jó a tárgy...',
     }
-    const updatedValue = [...currentValue, obj];
-    this.message.showInfo('Cantus felvett egy ' + dataObj + '-t', 'Miserere Mei v.1.0.0');
-    this.playerInventory.next(updatedValue);
+    if (currentValue.find(item => item.name === dataObj)) {
+      let item = currentValue.find(item => item.name === dataObj);
+      item.numberOfItems++;
+      this.message.showInfo('Cantusnak nincs szüksége még egy gépfegyverre. Kitárazta a töltényt és magához vette.', 'Miserere Mei v.1.0.0');
+    } else {
+      obj.numberOfItems = 1;
+      const updatedValue = [...currentValue, obj];
+      this.message.showInfo('Cantus felvett egy ' + dataObj + '-t', 'Miserere Mei v.1.0.0');
+      this.playerInventory.next(updatedValue);
+    }
   }
 
   inventoryUsing(itemName: string) {
@@ -143,6 +150,7 @@ export class BattleService {
           this.changePlayerWeapon('AK-47 gépkarabély');
           this.changePlayerMinDamage(5);
           this.changePlayerMaxDamage(10);
+          this.changePlayerBulletsNumber(30);
           this.consumeItem(itemName);
           break;
         } else {

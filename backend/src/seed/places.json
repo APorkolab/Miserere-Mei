@@ -273,7 +273,8 @@
     "furtherLocation1": "wasteland_008_gominewlights",
     "furtherLocation2": "",
     "furtherLocation3": "",
-    "furtherLocation4": ""
+    "furtherLocation4": "",
+    "objectFound": "Bányászfelszerelés"
   },
   {
     "location": "wasteland_007_gominewolights",
@@ -637,8 +638,7 @@
     "furtherLocation1": "feroceshut_042_05",
     "furtherLocation2": "feroceshut_044_06",
     "furtherLocation3": "",
-    "furtherLocation4": "",
-    "objectFound": "AK-47"
+    "furtherLocation4": ""
   },
   {
     "location": "feroceshut_042_05",
@@ -1802,5 +1802,18 @@
     "furtherLocation2": "wasteland_132",
     "furtherLocation3": "wasteland_131_irinaOasis14",
     "furtherLocation4": "wasteland_131_irinaOasis14"
+  },
+  {
+    "location": "GameOver",
+    "narrationZoneText": "A küldetés kudarcba fulladt.",
+    "opponentName": "",
+    "decision1": "A játék újrakezdése",
+    "decision2": "",
+    "decision3": "",
+    "decision4": "",
+    "furtherLocation1": "GameBeginning",
+    "furtherLocation2": "",
+    "furtherLocation3": "",
+    "furtherLocation4": ""
   }
 ]
