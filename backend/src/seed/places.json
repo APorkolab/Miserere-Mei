@@ -123,7 +123,7 @@
     "opponenthealth": 20,
     "opponentMinDamage": 2,
     "opponentMaxDamage": 6,
-    "decision1": "Felveszed a harcot",
+    "decision1": "Legyőzted az őrültet",
     "decision2": "",
     "decision3": "",
     "decision4": "",
@@ -134,7 +134,7 @@
   },
   {
     "location": "bonfire_001",
-    "narrationZoneText": "Cantus már jó fél napja vezette a csapatot a pusztában. Az énekesek csak minden erejüket bevetve tudták tartani a tempót. A határvidék még jó három nap folyamatos út volt a saját tempójában: a csapat viszont csak rövid ideig tudta tartani az iramot, így egy hétbe is telik, mire elérik a céljukat. A harcos megálljt parancsolt a csapatnak.  Az idő éppen alkonyodott, s a kopár fák lombjai fölött a tojássárga égi alkalmatosság már komótosan cammogott éjjeli pihenőhelyére. Cantus rövid távcsöves körülkémlelés után úgy döntött, hogy a környéken nem leselkedik veszély rájuk: Cantus csak egy rút, ritkás szőrű prérikutyát látott, aki lapítva oldalgott tőlük egyre távolabb. A környék bár kihaltnak tűnt, mégis élt. Cantus döntött. - Itt letáborozunk estére. A csapat nagy megelégedettséggel vette tudomásul, a pihenőt.",
+    "narrationZoneText": "Cantus már jó fél napja vezette a csapatot a pusztában. Az énekesek csak minden erejüket bevetve tudták tartani a tempót. A határvidék még jó három nap folyamatos út volt a saját tempójában: a csapat viszont csak rövid ideig tudta tartani az iramot, így egy hétbe is telik, mire elérik a céljukat. A harcos megálljt parancsolt a csapatnak.  Az idő éppen alkonyodott, s a kopár fák lombjai fölött a tojássárga égi alkalmatosság már komótosan cammogott éjjeli pihenőhelyére. Cantus rövid távcsöves körülkémlelés után úgy döntött, hogy a környéken nem leselkedik veszély rájuk: Cantus csak egy rút, ritkás szőrű prérikutyát látott, aki lapítva oldalgott tőlük egyre távolabb. A környék bár kihaltnak tűnt, mégis élt. Cantus döntött. - Itt letáborozunk estére. A csapat nagy megelégedettséggel vette tudomásul a pihenőt.",
     "opponentName": "",
     "decision1": "Folytatod a kalandodat",
     "decision2": "",
@@ -175,13 +175,13 @@
     "location": "wasteland_036_huntforlife",
     "narrationZoneText": "Cantus - köszönhetően a túlélési tapasztalatainak - ismerte az élelemszerzés csínját és bínját. Bármennyire is gyakorlott puskás volt is, a természet hatalmával ő sem vehette fel a versenyt. A környéken csak mérgező növényeket és egy félig felbomlott állattetemet talált. Nyilvánvalóvá vált, hogy a csapat nem maradhat itt, mivel a környék alkalmatlan a további maradásra.",
     "opponentName": "",
-    "decision1": "Megpróbálsz egy kis területen áttörni.",
-    "decision2": "Lopakodni próbálsz.",
-    "decision3": "Visszafordulsz.",
+    "decision1": "Éhesen és szomjasan a biztos ösvényen mész.",
+    "decision2": "Falsetto tábora felé mész, kelet felé.",
+    "decision3": "DNY-ra, a sivatag ismeretlen részére.",
     "decision4": "",
-    "furtherLocation1": "wasteland_032_falsettocamp02",
-    "furtherLocation2": "wasteland_033_falsettocamp03",
-    "furtherLocation3": "wasteland_003",
+    "furtherLocation1": "wasteland_037_ontheroad",
+    "furtherLocation2": "wasteland_031_falsettocamp01",
+    "furtherLocation3": "wasteland_005_totheunbeknown",
     "furtherLocation4": ""
   },
   {
@@ -404,7 +404,8 @@
     "furtherLocation1": "wasteland_018_inthemine_north7",
     "furtherLocation2": "wasteland_019_inthemine_north8",
     "furtherLocation3": "",
-    "furtherLocation4": ""
+    "furtherLocation4": "",
+    "objectFound": "Gyógyszer"
   },
   {
     "location": "wasteland_018_inthemine_north7",
@@ -1197,13 +1198,13 @@
     "narrationZoneText": "Cantus áhítattal hallgatta a rég meghalt Füst Milán archaikus szavait, majd megtörölte izzadt, mocsoktól fekete homlokát, majd a sarokba lökte a hátizsákját és a fegyvereit. - Ha nincsenek Prédikátorok, akkor nektek kell azzá válnotok.  Én örökké itt leszek veletek, hogy megvédjelek benneteket.",
     "opponentName": "",
     "decision1": "THE END",
-    "decision2": "THE END",
-    "decision3": "THE END",
-    "decision4": "THE END",
+    "decision2": "",
+    "decision3": "",
+    "decision4": "",
     "furtherLocation1": "GameBeginning",
-    "furtherLocation2": "GameBeginning",
-    "furtherLocation3": "GameBeginning",
-    "furtherLocation4": "GameBeginning"
+    "furtherLocation2": "",
+    "furtherLocation3": "",
+    "furtherLocation4": ""
   },
   {
     "location": "wasteland_087_inTheDesert_shipwreck01",
@@ -1226,10 +1227,10 @@
     "decision2": "Továbbmész a gyengélkedőre.",
     "decision3": "Továbbmész a hídra.",
     "decision4": "Továbbmész a gépházba.",
-    "furtherLocation1": "underconstruction",
-    "furtherLocation2": "",
-    "furtherLocation3": "",
-    "furtherLocation4": ""
+    "furtherLocation1": "wasteland_094_inTheDesert_shipwreck08",
+    "furtherLocation2": "wasteland_095_inTheDesert_shipwreck09",
+    "furtherLocation3": "wasteland_099_inTheDesert_shipwreck13",
+    "furtherLocation4": "wasteland_103_inTheDesert_shipwreck17"
   },
   {
     "location": "wasteland_089_inTheDesert_shipwreck03",
@@ -1281,7 +1282,8 @@
     "furtherLocation1": "wasteland_088_inTheDesert_shipwreck02",
     "furtherLocation2": "wasteland_089_inTheDesert_shipwreck03",
     "furtherLocation3": "wasteland_090_inTheDesert_shipwreck04",
-    "furtherLocation4": ""
+    "furtherLocation4": "",
+    "objectFound": "Bányászfelszerelés (delete)"
   },
   {
     "location": "wasteland_093_inTheDesert_shipwreck07",
@@ -1805,13 +1807,13 @@
   },
   {
     "location": "GameOver",
-    "narrationZoneText": "A küldetés kudarcba fulladt.",
+    "narrationZoneText": "A küldetés kudarcba fulladt. A játék 3 másodperc múlva automatikusan újraindul. Lépj ki a böngészőből, ha ezt nem szeretnéd.",
     "opponentName": "",
-    "decision1": "A játék újrakezdése",
+    "decision1": " ",
     "decision2": "",
     "decision3": "",
     "decision4": "",
-    "furtherLocation1": "GameBeginning",
+    "furtherLocation1": " ",
     "furtherLocation2": "",
     "furtherLocation3": "",
     "furtherLocation4": ""
