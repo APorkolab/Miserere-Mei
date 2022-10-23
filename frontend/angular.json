@@ -35,9 +35,11 @@
               "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.js",
               "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
               "./src/assets/js/core/popper.min.js",
+              "./src/assets/js/plugins/perfect-scrollbar.min.js",
+              "./src/assets/js/plugins/smooth-scrollbar.min.js",
               "./src/assets/js/soft-ui-dashboard.min.js",
               "./src/assets/js/plugins/buttons.js"
             ]
