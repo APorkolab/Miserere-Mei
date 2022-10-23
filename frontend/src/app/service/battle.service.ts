@@ -16,7 +16,6 @@ export class BattleService {
   private inBattle = new BehaviorSubject<boolean>(false);
   currentBattleState = this.inBattle.asObservable();
 
-
   //Monster data
 
   private monsterName = new BehaviorSubject('Nincs');
@@ -106,20 +105,39 @@ export class BattleService {
   //Inventory functions 
 
   addItem(dataObj: string) {
-    const currentValue = this.playerInventory.value;
-    let obj = {
-      name: dataObj,
-      numberOfItems: 0,
-      description: 'Cantus még nem tudja, hogy mire lesz jó a tárgy...',
-    }
-    if (currentValue.find(item => item.name === dataObj)) {
-      let item = currentValue.find(item => item.name === dataObj);
-      item.numberOfItems++;
-      this.message.showInfo('Cantusnak nincs szüksége még egy gépfegyverre. Kitárazta a töltényt és magához vette.', 'Miserere Mei v.1.0.0');
+    if (dataObj.includes('(delete)')) {
+      const deleteArray = dataObj.split(" ");
+      this.deleteItem(deleteArray[0]);
     } else {
-      obj.numberOfItems = 1;
-      const updatedValue = [...currentValue, obj];
-      this.message.showInfo('Cantus felvett egy ' + dataObj + '-t', 'Miserere Mei v.1.0.0');
+      const currentValue = this.playerInventory.value;
+      let obj = {
+        name: dataObj,
+        numberOfItems: 0,
+        description: 'Cantus még nem tudja, hogy mire lesz jó a tárgy...',
+      }
+      if (currentValue.find(item => item.name === dataObj)) {
+        let item = currentValue.find(item => item.name === dataObj);
+        item.numberOfItems++;
+        this.message.showInfo('Cantusnak nincs szüksége még egy gépfegyverre. Kitárazta a töltényt és magához vette.', 'Miserere Mei v.1.0.0');
+      } else {
+        obj.numberOfItems = 1;
+        const updatedValue = [...currentValue, obj];
+        this.message.showInfo('Cantus felvett egy ' + dataObj + '-t', 'Miserere Mei v.1.0.0');
+        this.playerInventory.next(updatedValue);
+      }
+    }
+  }
+
+  deleteItem(dataObj: string) {
+    const currentValue = this.playerInventory.value;
+    if (this.playerInventory.value.find(item => item.name === dataObj)) {
+      let item = this.playerInventory.value.find(item => item.name === dataObj);
+      const index = this.playerInventory.value.indexOf(item);
+      if (index > -1) {
+        this.playerInventory.value.splice(index, 1);
+      }
+      const updatedValue = [...currentValue];
+      this.message.showInfo('Cantus elveszette: ' + dataObj, 'Miserere Mei v.1.0.0');
       this.playerInventory.next(updatedValue);
     }
   }

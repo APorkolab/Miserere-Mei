@@ -91,9 +91,16 @@ export class PlacesComponent implements OnInit {
           this.data.changeMonsterHealth(0);
           this.data.changeCurrentBattleState(false);
         }
-        // console.log(data);
+        console.log(data);
         if (this.currentPlace.objectFound) {
           this.data.addItem(this.currentPlace.objectFound);
+        }
+
+        if (this.currentPlace.location === 'GameOver') {
+          setTimeout(() => {
+            this.getPlace('GameBeginning');
+            window.location.reload();
+          }, 3000);
         }
       },
       error: (e) => console.error(e),

@@ -34,10 +34,13 @@ export class BattleComponent implements OnInit {
   enemy$!: Observable<Enemy>;
   enemy: Enemy = new Enemy();
 
+
+
+  //Player data
   playerHealth = this.player.protagonistHealthPoint;
   weaponName = this.player.currentWeaponName;
-  playerMinDamage = this.player.currentWeaponMinDamage;
-  playerMaxDamage = this.player.currentWeaponMaxDamage;
+  playerMinDamage !: number;
+  playerMaxDamage !: number;
   playerBulletsNumber = this.player.playerAmmo;
   playerMinDamageSubscription!: Subscription;
   playerMaxDamageSubscription!: Subscription;
@@ -46,7 +49,7 @@ export class BattleComponent implements OnInit {
   playerBulletsNumberSubscription!: Subscription;
 
 
-
+  //Moster data
   monsterName!: string;
   enemyHealth = this.enemy.monsterhealth;
   monsterMinDamage = this.enemy.minDamage;
@@ -90,8 +93,6 @@ export class BattleComponent implements OnInit {
     this.inventorySubscription = this.data.currentPlayerInventory.subscribe(inventory => this.inventory = inventory);
   }
 
-
-
   oneRound(player: Player, enemy: Enemy) {
     this.roundNumber += 1;
     this.inBattle = true;
@@ -111,8 +112,8 @@ export class BattleComponent implements OnInit {
     return (
       Math.floor(
         Math.random() *
-        (player.currentWeaponMaxDamage - player.currentWeaponMinDamage)
-      ) + player.currentWeaponMinDamage
+        (this.playerMaxDamage - this.playerMinDamage)
+      ) + this.playerMinDamage
     );
   }
 

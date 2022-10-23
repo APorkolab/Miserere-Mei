@@ -45,7 +45,7 @@ export class PlayerComponent implements OnInit {
   inventory = [
     {
       name: 'Gyógyszer',
-      numberOfItems: 2,
+      numberOfItems: 1,
       description: '20 ÉP-ot gyógyít',
       effect: '+20ÉP'
     },

@@ -1,6 +1,6 @@
 {
   "name": "miserere-mei",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,6 +9,7 @@
     "test": "ng test"
   },
   "private": true,
+  "homepage": "https://miserere.porkolab.digital",
   "dependencies": {
     "@angular/animations": "^14.2.4",
     "@angular/common": "^14.2.4",
@@ -29,6 +30,7 @@
     "ngx-toastr": "^15.1.0",
     "perfect-scrollbar": "^1.5.5",
     "rxjs": "~7.5.6",
+    "smooth-scrollbar": "^8.8.1",
     "tslib": "^2.4.0",
     "zone.js": "~0.11.4"
   },

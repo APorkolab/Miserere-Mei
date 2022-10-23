@@ -34,6 +34,7 @@ export class ConfigService {
     { key: 'furtherLocation2', title: '2nd further location' },
     { key: 'furtherLocation3', title: '3rd further location' },
     { key: 'furtherLocation4', title: '4th further location' },
+    { key: 'objectFound', title: 'Object found' },
   ];
 
   usersTableColumn: INgxTableColumn[] = [
@@ -44,5 +45,5 @@ export class ConfigService {
     { key: 'role', title: 'Role' },
     { key: 'password', title: 'Encrypted password' },
   ];
-  constructor() {}
+  constructor() { }
 }
