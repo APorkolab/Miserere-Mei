@@ -144,7 +144,7 @@ A program ezen felül:
  - Helyszínszerkesztő és a form teljes mezővalidációja hozzáadva,
  - Felhasználói fiókok és a user form teljes mezővalidációja hozzáadva,
  - Teljes játéktér immár végigjátszható,
- - Mellékküldetések elkészültek
+ - Mellékküldetések elkészültek,
  - Leltár elkészült,
  - Helyszínszövegek MongoDB Atlas felhőadatbázisban vannak eltárolva.
  - Tárgyak használata lehetséges.
@@ -223,7 +223,7 @@ Dr. Porkoláb Ádám (adam@porkolab.digital)
   
 ## **6. Felhasznált technológiák**
  - *Grafika, design:* Midjourney AI ([https://www.midjourney.com/home/](https://www.midjourney.com/home/)),
- - *Kiindulásási HTML template:* Creative Tim [(https://www.creative-tim.com/product/soft-ui-dashboard](%28https://www.creative-tim.com/product/soft-ui-dashboard)),
+ - *Kiindulásási HTML template:* Creative Tim ([https://www.creative-tim.com/product/soft-ui-dashboard](https://www.creative-tim.com/product/soft-ui-dashboard)),
  - *Szövegekhez használt HTML template:* Baris Senkal ([https://github.com/barissenkal/Short-Story-HTML-Template](https://github.com/barissenkal/Short-Story-HTML-Template)),
  - *Forbidden (403) hibához használt HTML template:* Blissful Lemon ([https://codepen.io/ablissfullemon/pen/zJepap](https://codepen.io/ablissfullemon/pen/zJepap))
 
