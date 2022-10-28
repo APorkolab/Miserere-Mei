@@ -24,22 +24,22 @@ In addition, the program contains:
  - Location editor and full form field validation added,
  - User accounts and full field validation of user form added,
  - Full game space is now playable,
- - Side missions completed
+ - Side missions completed,
  - Inventory completed,
  - Location texts are stored in MongoDB Atlas cloud database.
  - Objects can be used.
  - Combat system is ready.
  - Storage and removal of opponents from the battlefield resolved.
- - Unified, AI-generated location maps.
+ - Unified, AI-generated location maps added.
 
 #### *v0.8*
- - Main mission route can be played through,
+ - Only the route of main mission can be played,
  - Spring Boot backend completed,
  - Angular 12 frontend partially completed.
  - Location texts saved to XML file.
  - Combat system functional, but buggy.
- - One kind of final adversary type is in place.
- - Using stock photos as location drawings.
+ - One kind of enemy type is available.
+ - Using only stock photos as location drawings.
 
 ## **2. Install the application**
 
@@ -100,7 +100,7 @@ Dr. Ádám Porkoláb (adam@porkolab.digital)
 
 ## **6. Technologies used**
  - *Graphics, design:* Midjourney AI ([https://www.midjourney.com/home/](https://www.midjourney.com/home/)),
- - *Initial HTML template:* Creative Tim [(https://www.creative-tim.com/product/soft-ui-dashboard](%28https://www.creative-tim.com/product/soft-ui-dashboard)),
+ - *Initial HTML template:* Creative Tim ([https://www.creative-tim.com/product/soft-ui-dashboard](https://www.creative-tim.com/product/soft-ui-dashboard)),
  - *HTML template:* Baris Senkal ([https://github.com/barissenkal/Short-Story-HTML-Template](https://github.com/barissenkal/Short-Story-HTML-Template)),
  - *HTML template used for Forbidden (403) error:* Blissful Lemon ([https://codepen.io/ablissfullemon/pen/zJepap](https://codepen.io/ablissfullemon/pen/zJepap))
 
