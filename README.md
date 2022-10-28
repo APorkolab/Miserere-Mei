@@ -15,6 +15,31 @@ In addition, the program contains:
  - a scene editor,
  - user accounts,
  - a user editor.
+ 
+ ### **1.1. Version history**
+#### *v1.0*
+
+ - Backend ported to Node.JS + Express.JS platform.
+ - Frontend rewritten on Angular 14 base. 
+ - Location editor and full form field validation added,
+ - User accounts and full field validation of user form added,
+ - Full game space is now playable,
+ - Side missions completed
+ - Inventory completed,
+ - Location texts are stored in MongoDB Atlas cloud database.
+ - Objects can be used.
+ - Combat system is ready.
+ - Storage and removal of opponents from the battlefield resolved.
+ - Unified, AI-generated location maps.
+
+#### *v0.8*
+ - Main mission route can be played through,
+ - Spring Boot backend completed,
+ - Angular 12 frontend partially completed.
+ - Location texts saved to XML file.
+ - Combat system functional, but buggy.
+ - One kind of final adversary type is in place.
+ - Using stock photos as location drawings.
 
 ## **2. Install the application**
 
@@ -93,8 +118,6 @@ Written,developed, hosted by Ádám Dr. Porkoláb  - Hootie in Bootee Studio
 - Continuation?
 
 
-
-
 # Dokumentáció -- Miserere Mei - The Precarious Trails to the Library of Preachers v.1.0.0
 
 ## **1. Az alkalmazás célja**
@@ -112,6 +135,31 @@ A program ezen felül:
  - helyszínszerkesztőt,
  - felhasználói fiókokat,
  - felhasználószerkesztőt is tartalmaz.
+ 
+ ### **1.1.  Verziótörténet**
+#### *v1.0*
+
+ - Backend Node.JS + Express.JS platformra átportolva.
+ - Frontend Angular 14-es alapon újraírva. 
+ - Helyszínszerkesztő és a form teljes mezővalidációja hozzáadva,
+ - Felhasználói fiókok és a user form teljes mezővalidációja hozzáadva,
+ - Teljes játéktér immár végigjátszható,
+ - Mellékküldetések elkészültek
+ - Leltár elkészült,
+ - Helyszínszövegek MongoDB Atlas felhőadatbázisban vannak eltárolva.
+ - Tárgyak használata lehetséges.
+ - Harcrendszer elkészült.
+ - Ellenfelek tárolása és harctérről való kivonása megoldott.
+ - Egységes, AI generált helyszínrajzok.
+
+#### *v0.8*
+ - Főküldetés útvonala végigjátszható,
+ - Spring Boot backend elkészült,
+ - Angular 12-es frontend részben elkészült.
+ - Helyszínszövegek XML fájlba mentve.
+ - Harcrendszer működőképes, de bugos.
+ - Egyfajta, végleges ellenféltípus van.
+ - Stockfotók használata helyszínrajzként.
 
 ## **2. Az alkalmazás telepítése**
 
