@@ -22,8 +22,8 @@ mongoose.connect(`mongodb+srv://${user}:${pass}@${host}`, {
 		useUnifiedTopology: true,
 	})
 	.then(
-		// require('./seed/seeder'), // Seed the database, ONLY ONCE MUST RUN
-		// logger.info('Data has been seeded into the database.'),
+		require('./seed/seeder'), // Seed the database, ONLY ONCE MUST RUN
+		logger.info('Data has been seeded into the database.'),
 		conn => logger.info('Connected to MongoDB Atlas'),
 	).catch(err => logger.error(err));
 

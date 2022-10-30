@@ -4611,7 +4611,7 @@ fieldset:disabled .btn {
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-font-size: 1.125rem;
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23344767' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23344767' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E color='black'");
   --bs-navbar-toggler-border-color: rgba(52, 71, 103, .1);
   --bs-navbar-toggler-border-radius: 0.5rem;
   --bs-navbar-toggler-focus-width: 0.2rem;
@@ -4695,8 +4695,8 @@ fieldset:disabled .btn {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
   font-size: var(--bs-navbar-toggler-font-size);
   line-height: 1;
-  color: var(--bs-navbar-color);
-  background-color: transparent;
+  color: black;
+  /* background-color: transparent; */
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border-radius: var(--bs-navbar-toggler-border-radius);
   transition: var(--bs-navbar-toggler-transition)
@@ -4704,7 +4704,8 @@ fieldset:disabled .btn {
 
 @media (prefers-reduced-motion:reduce) {
   .navbar-toggler {
-    transition: none
+    transition: none;
+    color: black;
   }
 }
 
@@ -4724,6 +4725,7 @@ fieldset:disabled .btn {
   height: 1.5em;
   vertical-align: middle;
   background-image: var(--bs-navbar-toggler-icon-bg);
+  color: black;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 100%
@@ -5082,7 +5084,7 @@ fieldset:disabled .btn {
   --bs-navbar-brand-color: #fff;
   --bs-navbar-brand-hover-color: #fff;
   --bs-navbar-toggler-border-color: hsla(0, 0%, 100%, .1);
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,0, 0, 0)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
 }
 
 .card {
@@ -22140,7 +22142,7 @@ hr.horizontal.gray-light {
 }
 
 .navbar.navbar-transparent .navbar-toggler .navbar-toggler-icon .navbar-toggler-bar {
-  background: #fff
+  background: black;
 }
 
 .navbar.navbar-transparent .navbar-collapse {
@@ -22197,7 +22199,7 @@ hr.horizontal.gray-light {
   width: 22px;
   height: 1px;
   border-radius: 1px;
-  background: #6c757d;
+  background: black;
   transition: all .2s;
   margin: 0 auto
 }

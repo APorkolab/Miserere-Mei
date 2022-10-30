@@ -1,9 +1,11 @@
 .navbar {
   box-shadow: $navbar-box-shadow;
+  color: black;
 
   .navbar-brand {
     color: $dark;
   }
+
   .nav-link {
     color: $dark;
     padding: $navbar-nav-link-padding;
@@ -19,69 +21,78 @@
 
   &.navbar-transparent {
     .nav-link {
-      &, i {
-        color: $white;
+
+      &,
+      i {
+        color: $dark;
       }
 
 
       &:hover,
       &:focus {
-        color: rgba($white, .75);
+        color: rgba($dark, .75);
       }
     }
 
     .navbar-toggler {
       .navbar-toggler-icon {
         .navbar-toggler-bar {
-          background: $white;
+          background: black;
         }
       }
     }
 
-    .navbar-collapse{
+    .navbar-collapse {
       border-radius: $border-radius-xl;
     }
   }
 
   &.navbar-dark {
+
     .navbar-collapse.show,
-    .navbar-collapse.collapsing
-    {
-      .dropdown-header.text-dark{
-        color: $white !important;
+    .navbar-collapse.collapsing {
+      .dropdown-header.text-dark {
+        color: black !important;
       }
     }
   }
-  .sidenav-toggler-inner{
+
+  .sidenav-toggler-inner {
     width: $sidenav-toggler-width;
-    .sidenav-toggler-line{
+
+    .sidenav-toggler-line {
       transition: $sidenav-toggler-line-transition;
-      background: $body-color;
+      background: black;
       border-radius: $border-radius-xs;
       position: relative;
       display: block;
       height: $sidenav-toggler-line-height;
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin-bottom: $sidenav-toggler-line-margin-bottom;
       }
     }
   }
-  .g-sidenav-show.g-sidenav-pinned &{
-    .sidenav-toggler-inner{
+
+  .g-sidenav-show.g-sidenav-pinned & {
+    .sidenav-toggler-inner {
+
       .sidenav-toggler-line:first-child,
       .sidenav-toggler-line:last-child {
-          width: $sidenav-toggler-line-active-width;
-          transform: $sidenav-toggler-line-transform;
+        width: $sidenav-toggler-line-active-width;
+        transform: $sidenav-toggler-line-transform;
       }
     }
   }
 }
 
 .navbar-light {
-  background-color: $white !important;
-  .navbar-toggler{
+  background-color: black !important;
+
+  .navbar-toggler {
     border: none;
-    &:focus{
+
+    &:focus {
       box-shadow: none;
     }
   }
@@ -90,6 +101,7 @@
 .navbar-toggler {
   .navbar-toggler-icon {
     background-image: none;
+    color: black;
 
     .navbar-toggler-bar {
       display: $navbar-toggler-bar-display;
@@ -138,18 +150,19 @@
       }
 
       .navbar-collapse.collapsing {
-        background: $white;
+        background: black;
       }
 
       .navbar-collapse.show {
-        background: $white;
+        background: black;
+
         .nav-link,
         i {
           color: $dark;
         }
       }
     }
-  
+
     .g-sidenav-show & {
       &:not(.sidenav).navbar-main {
         .navbar-collapse {
@@ -200,6 +213,7 @@
     }
   }
 }
+
 @include media-breakpoint-down(sm) {
   .navbar-nav {
     .nav-item {

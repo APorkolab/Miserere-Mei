@@ -8,17 +8,16 @@ import { AuthService } from 'src/app/service/auth.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  public isCollapsed = false;
+  mobile: boolean = false;
 
   constructor(public auth: AuthService) { }
 
   ngOnInit(): void {
 
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar')!);
+    if (window.screen.width <= 390) { // 768px portrait
+      this.mobile = true;
     }
 
   }
-
 }

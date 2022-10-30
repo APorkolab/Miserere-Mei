@@ -192,8 +192,8 @@
     "decision2": "Lopakodni próbálsz.",
     "decision3": "",
     "decision4": "",
-    "furtherLocation1": "FalsettoFirstSight_1",
-    "furtherLocation2": "",
+    "furtherLocation1": "wasteland_032_falsettocamp02",
+    "furtherLocation2": "wasteland_033_falsettocamp03",
     "furtherLocation3": "",
     "furtherLocation4": ""
   },
@@ -639,7 +639,8 @@
     "furtherLocation1": "feroceshut_042_05",
     "furtherLocation2": "feroceshut_044_06",
     "furtherLocation3": "",
-    "furtherLocation4": ""
+    "furtherLocation4": "",
+    "objectFound": "AK-47"
   },
   {
     "location": "feroceshut_042_05",
@@ -892,15 +893,28 @@
     "furtherLocation4": ""
   },
   {
-    "location": "metrotunnel_066_shootinthedark",
-    "narrationZoneText": "A lövés az évtizedek óta málladozó betonfalba csapódik. A pillanatnyi világosság megmutatja, hogy az alagút egyenesen előre visz.",
+    "location": "metrotunnel_061_choices",
+    "narrationZoneText": "A mélyedés egy valamikori metróalagútba vezetett. A szuroksötét környezetet csak a valószínűleg napelemmel működő vészlámpák enyhe, pislákoló fénye köhintette be. Cantus  alig látott valamit. Egyetlen jó van a mostani helyzetben: a lángok és a füst legalább elkerülik a csapatot.- Mit tegyek? - morfondírozott Cantus.",
     "opponentName": "",
     "decision1": "Hallgatózol.",
     "decision2": "Tapogatózva elindulsz a járatban.",
-    "decision3": "",
+    "decision3": "Lősz egyet, hátha a torkolattűzben látszódik valami.",
     "decision4": "",
     "furtherLocation1": "metrotunnel_062_harking",
     "furtherLocation2": "metrotunnel_063_groping",
+    "furtherLocation3": "metrotunnel_066_shootinthedark",
+    "furtherLocation4": ""
+  },
+  {
+    "location": "metrotunnel_062_harking",
+    "narrationZoneText": "Teljes csönd honolt az alagútban, csak apró lábak szorgos szaladgálását lehetett hallani. Emberi zajoknak - leszámítva a saját lélegzésüket - nem lehettek fültanúi.",
+    "opponentName": "",
+    "decision1": "Tapogatózva elindulsz a járatban.",
+    "decision2": "Lősz egyet, hátha a torkolattűzben látszódik valami.",
+    "decision3": "",
+    "decision4": "",
+    "furtherLocation1": "metrotunnel_063_groping",
+    "furtherLocation2": "metrotunnel_066_shootinthedark",
     "furtherLocation3": "",
     "furtherLocation4": ""
   },
@@ -940,6 +954,19 @@
     "decision4": "",
     "furtherLocation1": "metrotunnel_067_peekoutthetunnel",
     "furtherLocation2": "metrotunnel_070_runawayfromwarehouse",
+    "furtherLocation3": "",
+    "furtherLocation4": ""
+  },
+  {
+    "location": "metrotunnel_067_peekoutthetunnel",
+    "narrationZoneText": "Úgy tűnik, hogy a veszély elmúlt: egyetlen katonát sem lehet látni Cantus aktuális helyéről. - Előjöhettek! - morogja a katona.",
+    "opponentName": "",
+    "decision1": "Kirohansz.",
+    "decision2": "",
+    "decision3": "",
+    "decision4": "",
+    "furtherLocation1": "metrotunnel_070_runawayfromwarehouse",
+    "furtherLocation2": "",
     "furtherLocation3": "",
     "furtherLocation4": ""
   },
@@ -1217,7 +1244,7 @@
     "furtherLocation1": "wasteland_088_inTheDesert_shipwreck02",
     "furtherLocation2": "wasteland_089_inTheDesert_shipwreck03",
     "furtherLocation3": "wasteland_090_inTheDesert_shipwreck04",
-    "furtherLocation4": "wasteland_091_inTheDesert_shipwreck05"
+    "furtherLocation4": "wasteland_092_inTheDesert_shipwreck06"
   },
   {
     "location": "wasteland_088_inTheDesert_shipwreck02",
@@ -1259,21 +1286,8 @@
     "furtherLocation4": ""
   },
   {
-    "location": "wasteland_091_inTheDesert_shipwreck05",
-    "narrationZoneText": "A helyszín csapdának tűnt Cantus számára. Nem szeretett volna embereket elveszíteni vagy ő maga megsebesülni, éppen ezért gyors döntést hozott: - Vissza! Vissza a sivatagba!",
-    "opponentName": "",
-    "decision1": "Visszabotorkálsz az útra.",
-    "decision2": "Mégis inkább behatolsz a roncsba.",
-    "decision3": "",
-    "decision4": "",
-    "furtherLocation1": "wasteland_037_ontheroad",
-    "furtherLocation2": "wasteland_088_inTheDesert_shipwreck02",
-    "furtherLocation3": "",
-    "furtherLocation4": ""
-  },
-  {
     "location": "wasteland_092_inTheDesert_shipwreck06",
-    "narrationZoneText": "Cantus nem akart a lékbe bemászni, inkább úgy döntött, hogy a nála levő bányászfelszerelés segítségével felmászik a hajó tetejére. Sajnos az elöregedett mászófelszerelés számára azonban túl sok volt már a napi kétszeri használat: Cantus még félútig sem jutott, amikor a kötél elszakadt. A harcos ösztönösen tompított az esést, azonban még így is jócskán megütötte magát.",
+    "narrationZoneText": "Cantus nem akart a lékbe bemászni, inkább úgy döntött, hogy a nála levő bányászfelszerelés segítségével felmászik a hajó tetejére. Sajnos az elöregedett mászófelszerelés számára azonban túl sok volt már a napi kétszeri használat: Cantus még félútig sem jutott, amikor a kötél elszakadt. A harcos ösztönösen tompította az esést, azonban még így is jócskán megütötte magát.",
     "opponentName": "",
     "decision1": "Bemászol a léken keresztül.",
     "decision2": "Nem kockáztatsz.",
@@ -1387,7 +1401,8 @@
     "furtherLocation1": "wasteland_103_inTheDesert_shipwreck17",
     "furtherLocation2": "",
     "furtherLocation3": "",
-    "furtherLocation4": ""
+    "furtherLocation4": "",
+    "objectFound": "AK-47"
   },
   {
     "location": "wasteland_103_inTheDesert_shipwreck17",
@@ -1478,7 +1493,8 @@
     "furtherLocation1": "wasteland_109_cantusvillage05",
     "furtherLocation2": "wasteland_111_cantusvillage07",
     "furtherLocation3": "wasteland_051_secondcrossroad",
-    "furtherLocation4": ""
+    "furtherLocation4": "",
+    "objectFound": "Lőszer"
   },
   {
     "location": "wasteland_109_cantusvillage05",
@@ -1522,11 +1538,14 @@
   {
     "location": "wasteland_112_cantusvillage08",
     "narrationZoneText": "Cantus úgy döntött, hogy nincs értelme menekülni: harcolni fog a legvégsőkig.",
-    "opponentName": "",
+    "opponentName": "Falsetto összes embere",
+    "opponenthealth": 50000,
+    "opponentMinDamage": 15,
+    "opponentMaxDamage": 30,
     "decision1": "Harcolsz",
-    "decision2": "Harcolsz",
-    "decision3": "Harcolsz",
-    "decision4": "Harcolsz",
+    "decision2": "",
+    "decision3": "",
+    "decision4": "",
     "furtherLocation1": "wasteland_112_cantusvillage08",
     "furtherLocation2": "",
     "furtherLocation3": "",
@@ -1717,12 +1736,15 @@
   {
     "location": "wasteland_127_irinaOasis10",
     "narrationZoneText": "Bár Cantus nem látta a szörnyet: valamiféle álcázott szerzet lehetett, akit a Nap fényes sugarai nem felfednek, hanem éppen ellenkezőleg: ellepleznek. Cantus tudta, hogy harcolnia kell, ha tovább akar jutni a küldetésében.",
-    "opponentName": "invisibleGoat",
+    "opponentName": "Láthatatlan kecske",
+    "opponenthealth": 50,
+    "opponentMinDamage": 5,
+    "opponentMaxDamage": 10,
     "decision1": "Győztesként haladsz tovább.",
     "decision2": "",
     "decision3": "",
     "decision4": "",
-    "furtherLocation1": "wasteland_131",
+    "furtherLocation1": "wasteland_133",
     "furtherLocation2": "",
     "furtherLocation3": "",
     "furtherLocation4": ""

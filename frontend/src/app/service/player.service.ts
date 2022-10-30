@@ -15,21 +15,4 @@ export class PlayerService extends BaseService<Player> {
     this.entity = 'player';
   }
 
-  // this.player$.subscribe({
-  //   next: (player) => {
-  //     if (player) {
-  //       this.router.navigate(['/']);
-  //     } else {
-  //       this.access_token$.next('');
-  //       sessionStorage.removeItem('login');
-  //     }
-  //     // this.router.navigate(['/', 'login']);
-  //   },
-  // });
 }
-
-// heathCheck() {
-//   if (this.player$ .value?.protagonistHealthPoint >= 0) {
-//     this.router.navigate(['/place/GameOver']);
-//   }
-// }

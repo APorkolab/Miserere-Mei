@@ -118,7 +118,7 @@ export class BattleService {
       if (currentValue.find(item => item.name === dataObj)) {
         let item = currentValue.find(item => item.name === dataObj);
         item.numberOfItems++;
-        this.message.showInfo('Cantusnak nincs szüksége még egy gépfegyverre. Kitárazta a töltényt és magához vette.', 'Miserere Mei v.1.0.0');
+        this.message.showInfo('Cantus felvett egy ' + dataObj + '-t', 'Miserere Mei v.1.0.0');
       } else {
         obj.numberOfItems = 1;
         const updatedValue = [...currentValue, obj];

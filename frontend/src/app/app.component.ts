@@ -10,16 +10,17 @@ import { ConfigService, IMenuItem } from './service/config.service';
 
 export class AppComponent {
   constructor(private config: ConfigService) {
-    // let win = navigator.platform.indexOf('Win') > -1;
-    // if (win && document.querySelector('#sidenav-scrollbar')) {
-    // }
   }
 
-  ngInit() {
-    Scrollbar.init(document.querySelector('#sidenav-scrollbar')!);
-
-    // Scrollbar.init(document.querySelector('#sidenav-scrollbar')!);
+  ngAfterViewInit() {
+    Scrollbar.init(document.querySelector('#scrollbar')!, {
+      damping: 0.5,
+      renderByPixels: true,
+      alwaysShowTracks: false,
+      continuousScrolling: true
+    });
   }
+
   title = 'MiserereMei';
   sidebar: IMenuItem[] = this.config.sidebarMenu;
 }
