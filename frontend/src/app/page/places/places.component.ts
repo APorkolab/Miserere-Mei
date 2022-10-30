@@ -61,7 +61,6 @@ export class PlacesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPlace(this.route.snapshot.params['location']);
-    // this.data.addItem(this.inventory);
     this.monsterMinDamageSubscription = this.data.currentMinDamage.subscribe(monsterMinDamage => this.monsterMinDamage = monsterMinDamage)
     this.monsterMaxDamageSubscription = this.data.currentMaxDamage.subscribe(monsterMaxDamage => this.monsterMaxDamage = monsterMaxDamage)
     this.monsterHealthSubscription = this.data.currentMonsterHealth.subscribe(monsterHealth => this.monsterHealth = monsterHealth)

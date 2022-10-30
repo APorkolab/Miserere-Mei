@@ -1,10 +1,9 @@
 <nav class="navbar navbar-expand-lg bg-light">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#">Miserere Mei V.1.0.0</a>
-		<button [ngClass]="!isCollapsed && !mobile ? 'navbar-toggler' : 'navbar-toggler-secondary'" type="button"
-			data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-			[attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed"
-			aria-controls="collapseExample">
+		<a class="navbar-brand" routerLink="/">Miserere Mei V.1.0.0</a>
+		<button type="button" class="btn btn-rounded" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation"
+			(click)="isCollapsed = !isCollapsed" aria-controls="collapseExample">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">

@@ -1,5 +1,10 @@
-<app-player></app-player>
-<div class="row mt-4">
+<div *ngIf="!(currentPlace)" class="load">
+	<img src="../../../assets/img/Rhombus.gif" alt="preloader" width="100">
+	<div>Loading... </div>
+</div>
+
+<app-player *ngIf="currentPlace"></app-player>
+<div class="row mt-4" *ngIf="currentPlace">
 	<div class="col-lg-7 mb-lg-0 mb-4">
 		<div class="card">
 			<div class="card-body p-3">
@@ -8,7 +13,7 @@
 						<div class="d-flex flex-column h-100">
 							<p class="mb-1 pt-2 text-bold">Miserere Mei v.1.0.0.</p>
 							<h5 class="font-weight-bolder">Helyszín leírása:</h5>
-							<p class="mb-5">{{currentPlace.narrationZoneText }}</p>
+							<p class="mb-5">{{currentPlace.narrationZoneText}}</p>
 							<a *ngIf="!inBattle && currentPlace.decision1 != ' '"
 								class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto">
 								<button class="btn btn-secondary" (click)="getPlace(currentPlace.furtherLocation1)">{{
@@ -68,7 +73,7 @@
 		</div>
 	</div>
 </div>
-<div class="col-lg-12">
+<div class="col-lg-12" *ngIf="currentPlace">
 	<div class="card z-index-2">
 		<div class="card-header pb-0">
 			<h6>Leltár</h6>
