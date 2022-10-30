@@ -1,23 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-<<<<<<< HEAD
-# compiled output
-/dist
-/tmp
-/out-tsc
-# Only exists if Bazel was run
-/bazel-out
-
-# dependencies
-/node_modules
-
-# profiling files
-chrome-profiler-events*.json
-speed-measure-plugin*.json
-
-# IDEs and editors
-/.idea
-=======
 # Compiled output
 /dist
 /tmp
@@ -31,7 +13,6 @@ yarn-error.log
 
 # IDEs and editors
 .idea/
->>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
 .project
 .classpath
 .c9/
@@ -39,11 +20,7 @@ yarn-error.log
 .settings/
 *.sublime-workspace
 
-<<<<<<< HEAD
-# IDE - VSCode
-=======
 # Visual Studio Code
->>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -51,19 +28,6 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
-<<<<<<< HEAD
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
-
-# System Files
-=======
 # Miscellaneous
 /.angular/cache
 .sass-cache/
@@ -74,6 +38,5 @@ testem.log
 /typings
 
 # System files
->>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
 .DS_Store
 Thumbs.db

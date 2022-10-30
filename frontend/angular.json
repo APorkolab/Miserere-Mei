@@ -3,11 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-<<<<<<< HEAD
-    "misere-frontend": {
-      "projectType": "application",
-      "schematics": {},
-=======
     "MiserereMei": {
       "projectType": "application",
       "schematics": {
@@ -18,7 +13,6 @@
           "strict": true
         }
       },
->>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -26,29 +20,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
-            "outputPath": "dist/misere-frontend",
-=======
             "outputPath": "dist/miserere-mei",
->>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-<<<<<<< HEAD
-            "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-=======
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
@@ -80,50 +56,12 @@
                   "maximumError": "4mb"
                 }
               ],
->>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-<<<<<<< HEAD
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "misere-frontend:build",
-            "port": 4200,
-            "proxyConfig": "proxy.conf.json"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "misere-frontend:build:production"
-            }
-          }
-=======
               "outputHashing": "all"
             },
             "development": {
@@ -148,16 +86,11 @@
             }
           },
           "defaultConfiguration": "development"
->>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<< HEAD
-            "browserTarget": "misere-frontend:build"
-=======
             "browserTarget": "MiserereMei:build"
->>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
           }
         },
         "test": {
@@ -167,46 +100,6 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-<<<<<<< HEAD
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "misere-frontend:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "misere-frontend:serve:production"
-            }
-          }
-        }
-      }
-    }},
-  "defaultProject": "misere-frontend"
-=======
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
@@ -219,5 +112,4 @@
   "cli": {
     "analytics": "5e1fa17e-f6f5-407e-a2b1-86952b8ada73"
   }
->>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
 }

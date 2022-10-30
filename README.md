@@ -1,4 +1,18 @@
-#Documentation -- Miserere Mei - The Precarious Trails to the Library of Preachers v.1.0.0
+# Documentation -- Miserere Mei - The Precarious Trails to the Library of Preachers v.1.0.0
+
+## **0. History of the game**
+
+The idea of a program called „Miserere Mei - The Precarious Trails to the Library of Preachers” grew out of an interesting thought experiment: is it possible to use modern tools to create a type of game, namely a text-based adventure game, once popular in the early days of computing that's enhanced with some of the features of video games published in the new millennium? "Miserere Mei" is an adventure game written in Java that I developed between September 2020 and late October 2020. 
+
+I developed the software as a thesis project fo the software developer NQR course organized by OKTÁV PLC.
+
+The game is set in the postapocalyptic world of the 2050's, in the Land of Desolation. The player controls a mercenary called Cantus Planus who gets a task from an old priest, Gregorio. According to the brief the soldier has to escort five youngsters: Altus, Tenor, Bassus and the Superia sisters to the Library of Preachers so that the librarians can record for posterity the music living in them and through them.  
+
+We follow their mission through a wild desert full of dangers, while Falsetto, the evil and ruthless warlord, learns about their task and wants to foil their plan. So the goal of the player is to lead the main characters safely to the Library of Preachers. 
+
+The game also build on the player taking risks: they can take the easier route if they want to, but they also have the choice to take greater risks and reap grater rewards.
+
+The game's stlye is influenced by the tradition of classic flipbooks and text-based adventure games of the early 90's. This means that there is a safe route and that the player has to engage in fights and the player's choices have a cruical role in the gameplay.
 
 ## **1. Purpose of the application**
 This application **Miserere Mei v.1.0.0** (full name: *Miserere Mei - The Precarious Trails to the Library of Preachers v.1.0.0*) is a text adventure game.

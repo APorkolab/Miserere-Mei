@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { PlaceComponent } from './components/place/place.component';
-
-
-const routes: Routes = [{ path: 'place', component: PlaceComponent }];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-=======
 import { ContactComponent } from './page/contact/contact.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -114,6 +102,5 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
->>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
 })
 export class AppRoutingModule { }

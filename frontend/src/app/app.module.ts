@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { PlaceComponent } from './components/place/place.component';
-import { PlaceService } from './services/place.service';
-=======
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -37,24 +27,10 @@ import { SorterPipe } from './pipe/sorter.pipe';
 import { MapComponent } from './page/map/map.component';
 import { PlayerComponent } from './page/battle/player/player.component';
 import { BattleComponent } from './page/battle/battle.component';
->>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
 
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    PlaceComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
-  ],
-  providers: [PlaceService],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-=======
     ForbiddenComponent,
     PrefaceComponent,
     ContactComponent,
@@ -96,4 +72,3 @@ export class AppModule {
   sidebar: IMenuItem[] = this.config.sidebarMenu;
   constructor(private config: ConfigService) { }
 }
->>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
