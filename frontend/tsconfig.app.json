@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+>>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
