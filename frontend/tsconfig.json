@@ -1,23 +1,53 @@
+<<<<<<< HEAD
+=======
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+>>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
 {
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+<<<<<<< HEAD
+=======
+     "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+>>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+<<<<<<< HEAD
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
     "lib": [
       "es2018",
+=======
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2020",
+    "module": "es2020",
+    "lib": [
+      "es2020",
+>>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
       "dom"
     ]
   },
   "angularCompilerOptions": {
+<<<<<<< HEAD
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
+=======
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+>>>>>>> 9f07836a94e805e2b507156ed16fd1e7aa15f0cd
   }
 }

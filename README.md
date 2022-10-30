@@ -1,85 +1,240 @@
-# Miserere Mei - The Precarious Trails to the Library of Preachers v0.8
-A retro, Hungarian adventure game. Written, programmed by Dr. Porkoláb Ádám. The game can be further developed with the author's permission but the software may not be sold.
+#Documentation -- Miserere Mei - The Precarious Trails to the Library of Preachers v.1.0.0
 
-## History of the game
+## **1. Purpose of the application**
+This application **Miserere Mei v.1.0.0** (full name: *Miserere Mei - The Precarious Trails to the Library of Preachers v.1.0.0*) is a text adventure game.
+The idea for "Miserere Mei - The Precarious Trails to the Library of Preachers" came from an interesting thought experiment: is it possible to use modern tools to bring some of the features of video games from the millennium to a basically old game type, the text adventure game, which was created in the early days of computing?
 
-The idea of a program called „Miserere Mei - The Precarious Trails to the Library of Preachers” grew out of an interesting thought experiment: is it possible to use modern tools to create a type of game, namely a text-based adventure game, once popular in the early days of computing that's enhanced with some of the features of video games published in the new millennium? "Miserere Mei" is an adventure game written in Java that I developed between September 2020 and late October 2020. 
+In its style, the programme builds on the tradition of classic "page-turners" and text adventure games from the post-changeover era. So: there is a safe route for the software too. In the program, the user has to fight and the player's decisions play an essential role in the gameplay.
 
-I developed the software as a thesis project fo the software developer NQR course organized by OKTÁV PLC.
+The game can be played in about half an hour, though, once the right route has been taken.
 
-The game is set in the postapocalyptic world of the 2050's, in the Land of Desolation. The player controls a mercenary called Cantus Planus who gets a task from an old priest, Gregorio. According to the brief the soldier has to escort five youngsters: Altus, Tenor, Bassus and the Superia sisters to the Library of Preachers so that the librarians can record for posterity the music living in them and through them.  
+The game is set in the post-apocalyptic world of the 2050s, the Land of Destruction. In the game, you control a mercenary, Cantus Planus, who is given a mission by an old priest, Gregorio. The mission is to escort 5 young men - Altus, Tenor, Bassus and the Superia sisters - to the Library of Preachers so that the music they and they "live" can be "recorded" by the librarians for posterity. Their mission takes them through the wild, cruel desert, with countless trials and tribulations, and even the ruthless and unforgiving warlord of the area, Falsetto, learns of the mission and wants to prevent it. The aim of the programme, therefore, is for the player to get the game's protagonists to the Library of Preachers safe and sound.
 
-We follow their mission through a wild desert full of dangers, while Falsetto, the evil and ruthless warlord, learns about their task and wants to foil their plan. So the goal of the player is to lead the main characters safely to the Library of Preachers. 
+In addition, the program contains:
 
-The game also build on the player taking risks: they can take the easier route if they want to, but they also have the choice to take greater risks and reap grater rewards.
+ - a scene editor,
+ - user accounts,
+ - a user editor.
+ 
+ ### **1.1. Version history**
+#### *v1.0*
 
-The game's stlye is influenced by the tradition of classic flipbooks and text-based adventure games of the early 90's. This means that there is a safe route and that the player has to engage in fights and the player's choices have a cruical role in the gameplay.
+ - Backend ported to Node.JS + Express.JS platform.
+ - Frontend rewritten on Angular 14 base. 
+ - Location editor and full form field validation added,
+ - User accounts and full field validation of user form added,
+ - Full game space is now playable,
+ - Side missions completed,
+ - Inventory completed,
+ - Location texts are stored in MongoDB Atlas cloud database.
+ - Objects can be used.
+ - Combat system is ready.
+ - Storage and removal of opponents from the battlefield resolved.
+ - Unified, AI-generated location maps added.
 
-The game can be completed in about half an hour if the player takes the appropriate route, however, the planned side quests and secondary locations have not been added yet.  
+#### *v0.8*
+ - Only the route of main mission can be played,
+ - Spring Boot backend completed,
+ - Angular 12 frontend partially completed.
+ - Location texts saved to XML file.
+ - Combat system functional, but buggy.
+ - One kind of enemy type is available.
+ - Using only stock photos as location drawings.
 
-## Main specifications of the game
+## **2. Install the application**
 
-The software is currently on version 0.8.  
+1. If you do not have the Git version control software installed, download and install the version for your operating system from https://git-scm.com.
 
-The structure of the project is currently two parts. 
+2. If you do not have the NodeJS runtime environment installed, download and install the version marked "LTS" from https://nodejs.org/en/.
 
-One is a Java backend application based on a Spring, and the other is a Typescript-based application based on Angular. At the backend part of the project, you must specify the dev profile name in the runtime configuration to make it easier to access web services during development. The parameter passed on the command line should be:
-> -Dspring.profiles.active=dev
+3. If you do not have the Angular framework installed on your system, do so by issuing the `npm i -g @angular/cli` command in PowerShell.
 
-This setting is needed to start the backend in the IntelliJ Idea.
+4. clone the contents of the GitHub repository. So in PowerShell, issue the following command:
 
-## Spring Backend
-I have assembled a basic Spring project with https://start.spring.io/. In this project I added some classes:
+   `git clone https://github.com/APorkolab/Nyelvszo-v.2.0.git`
 
-•	hu/porkolab/misere/config/DevWebConfig.java - This is a setup file, which controls the resources of this project. 
+5. Install the application dependencies:
 
-•	hu/porkolab/misere/data/model/Place.java - This is a simple class that is included in the example.
+   - Backend
 
-•	hu/porkolab/misere/resource/MiserereResource.java - This is the REST endpoint itself, this gets the incoming requests. 
+     - In the terminal, go to the /backend folder (`cd backend`) and run `npm i`.
 
-•	hu/porkolab/misere/service/PlaceService.java - This is a model of the game engine for the place changing ("walking").
+   - frontend
+     - On the terminal, go to the /frontend folder and run `npm i`.*
 
-•	hu/porkolab/misere/service/impl/PlaceServiceImpl.java - This is the implementation of the former service.
+6.1. For manual installation:
 
-•	hu/porkolab/misere/service/FightService.java - This is a model of the game engine for the fight system.
+   - In the terminal, issue the `ng build` command.
 
-•	hu/porkolab/misere/service/impl/FightServiceImpl.java - This is the implementation of the former service.
+   - The contents of the /frontend/dist/frontend folder must be copied to the /backend/public folder.
 
-•	hu/porkolab/misere/MiserereBackendApplication.java - This is the entry point of the application.
+   OR
 
-### The remaining tasks are:
+6.2. For automatic installation:
 
-• Actual implementation and correction of the fighting system, possibly the use of the former combat system as an external addiction and its possible expansion
+   - In the terminal, go to the /backend folder and run `npm run build`.
+   - It is important to install using only one of the methods.
 
-• Finish and implement the remaining scenes and story of the game.
+## **2. Configure the application**
 
-## Angular frontend
+- In the _/frontend/environments_ folder, configure the API endpoint path:
 
-The using frontend is required to install the NPM package manager: https://www.npmjs.com/get-npm
+  - _environment.ts_ file: http://127.0.0.1:3000/
+  - _environment.prod.ts_ file: http://localhost:3000/
 
-After this, it is advisable to install Visual Studio Code: https://code.visualstudio.com/
+## **3. Start the application**
 
-Opening the project library in Code, at the Terminal Menuplate, installation of addictions for the project is the first step: "NPM install"
+- Both the backend and the frontend can be started with the `npm start` command.
+- The current version of the game is available at [https://miserere.porkolab.digital/].
 
-After this, you can start the project with Angular CLI: NG Serve in the browser to open the application at the following address. http://localhost:4200
+## **4. Description of roles**
 
-I created the following items:
 
-•	src/app/components/place/place.component.* - The location "selector" interface.
+| |User |Editor |Administrator |
+| ------------ | ------------ | ------------ | ------------ |
+| Their value ("role") in the database | 1 | 2 | 3 |
+| Rights | You can view everything except the user table, but you cannot create, edit or delete entities.  | You can view all tables and edit, create or delete entities in any table except the user table. | You can view all tables and create, edit or delete any entities. |
 
-•	src/app/entities/place.ts - The data of the places store here.
+## **5. Contact information**
+Dr. Ádám Porkoláb (adam@porkolab.digital)
 
-•	src/app/services/place.service.ts - A service that retrieves the location data from the backend. 
+## **6. Technologies used**
+ - *Graphics, design:* Midjourney AI ([https://www.midjourney.com/home/](https://www.midjourney.com/home/)),
+ - *Initial HTML template:* Creative Tim ([https://www.creative-tim.com/product/soft-ui-dashboard](https://www.creative-tim.com/product/soft-ui-dashboard)),
+ - *HTML template:* Baris Senkal ([https://github.com/barissenkal/Short-Story-HTML-Template](https://github.com/barissenkal/Short-Story-HTML-Template)),
+ - *HTML template used for Forbidden (403) error:* Blissful Lemon ([https://codepen.io/ablissfullemon/pen/zJepap](https://codepen.io/ablissfullemon/pen/zJepap))
 
-•	proxy.conf.json - A proxy file for easier summoning to the backend. 
+## **7. Legal informations**
 
-The project is launched when the backend is running, then a "GameBeginning" location appears in the browser, displaying the properties of the site from the server. 
+Written,developed, hosted by Ádám Dr. Porkoláb  - Hootie in Bootee Studio 
+  
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 
-By clicking Furtherlocation1 or clicking Furtherlocation2,3,4, the "name" of the site calls the server and asks for the newer location.
+## **8. Plans for the next version:**
 
-### The remaining tasks are:
-• Develop further design and layouts.
+- Built-in sounds,
+- More opponents and objects,
+- Alternative endings,
+- Continuation?
 
-• In the event of a fight for each location, invocation, and handling of the fighting system. 
 
-## I'm waiting for ideas and opinions on adam<at]porkolab.digital e-mail address. 
+# Dokumentáció -- Miserere Mei - The Precarious Trails to the Library of Preachers v.1.0.0
+
+## **1. Az alkalmazás célja**
+Jelen alkalmazás a **Miserere Mei v.1.0.0** (teljes nevén: *Miserere Mei - The Precarious Trails to the Library of Preachers v.1.0.0*) egy szöveges kalandjáték.
+A „Miserere Mei - The Precarious Trails to the Library of Preachers” című program ötlete egy érdekes gondolatkísérletből indult ki: lehetséges-e modern eszközökkel, az ezredforduló után megjelent videojátékok néhány jellemzőjével felvértezni egy alapvetően régi, a számítástechnika őskorában megjelent játéktípust, a szöveges kalandjátékot?
+
+A program stílusában a klasszikus „lapozgatós könyvek” és a rendszerváltás utáni szöveges kalandjátékok hagyományaira épít. Tehát: a szoftver esetében is van egy biztonságos útvonal. A programban a felhasználónak harcolnia is kell és a játékmenet tekintetében lényegi szerepe van a játékos döntéseinek.
+
+A játék – a megfelelő útvonalat bejárva – bár körülbelül fél óra alatt kijátszható.
+
+A játék helyszíne a 2050-es évek posztapokaliptikus világa, a Pusztulás Földje. A játék-ban egy zsoldost, Cantus Planust irányíthatjuk, aki feladatot kap egy öreg paptól, Gregoriótól. A megbízás szerint a katonának el kell kísérnie 5 fiatal embert: Altust, Tenort, Bassust és a Superia-nővéreket a Prédikátorok Könyvtárába azért, hogy az általuk és bennük "élő" zenét a könyvtárosok „lejegyezhessék” az utókornak. A küldetésük a vad, kegyetlen sivatagon vezet keresztül számtalan megpróbáltatással, s emellett még a környék könyörtelen és kíméletlen hadura, Falsetto is tudomást szerez a megbízásról és meg akarja akadályozni azt. A program célja tehát, hogy a játékos a játék főszereplőit épen és egészségesen eljuttassa a Prédikátorok Könyvtárába.
+
+A program ezen felül:
+
+ - helyszínszerkesztőt,
+ - felhasználói fiókokat,
+ - felhasználószerkesztőt is tartalmaz.
+ 
+ ### **1.1.  Verziótörténet**
+#### *v1.0*
+
+ - Backend Node.JS + Express.JS platformra átportolva.
+ - Frontend Angular 14-es alapon újraírva. 
+ - Helyszínszerkesztő és a form teljes mezővalidációja hozzáadva,
+ - Felhasználói fiókok és a user form teljes mezővalidációja hozzáadva,
+ - Teljes játéktér immár végigjátszható,
+ - Mellékküldetések elkészültek,
+ - Leltár elkészült,
+ - Helyszínszövegek MongoDB Atlas felhőadatbázisban vannak eltárolva.
+ - Tárgyak használata lehetséges.
+ - Harcrendszer elkészült.
+ - Ellenfelek tárolása és harctérről való kivonása megoldott.
+ - Egységes, AI generált helyszínrajzok.
+
+#### *v0.8*
+ - Főküldetés útvonala végigjátszható,
+ - Spring Boot backend elkészült,
+ - Angular 12-es frontend részben elkészült.
+ - Helyszínszövegek XML fájlba mentve.
+ - Harcrendszer működőképes, de bugos.
+ - Egyfajta, végleges ellenféltípus van.
+ - Stockfotók használata helyszínrajzként.
+
+## **2. Az alkalmazás telepítése**
+
+1. Ha nincs telepítve a Git verziókezelő szoftver, akkor a https://git-scm.com weboldalról töltsük le és telepítsük fel a főoldalon megtalálható változatok közül az operációs rendszerünknek megfelelőt.
+
+2. Ha nincs telepítve a NodeJS futtatókörnyezet, akkor a https://nodejs.org/en/ weboldalról töltsük le és telepítsük fel a főoldalon található, "LTS" megjelölésű változatot.
+
+3. Ha nincs telepítve az Angular keretrendszer a rendszeren, akkor azt a PowerShell-ben kiadott `npm i -g @angular/cli` paranccsal ezt tegyük meg.
+
+4. Le kell klónozni az adott GitHub repository tartalmát. Tehát a PowerShell-ben a következő parancsot kell kiadni:
+
+   `git clone https://github.com/APorkolab/Nyelvszo-v.2.0.git`
+
+5. Telepíteni kell az alkalmazás függőségeit:
+
+   - Backend
+
+     - A terminálon be kell lépni a /backend mappába (`cd backend`) és futtatni az `npm i` parancsot.
+
+   - Frontend
+     - A terminálon be kell lépni a /frontend mappába és futtatni az `npm i` parancsot.*
+
+6.1. Manuális telepítés esetén:
+
+   - A terminálban ki kell adni az `ng build` parancsot.
+
+   - A /frontend/dist/frontend mappa tartalmát be kell másolni a /backend/public mappába.
+
+   VAGY
+
+6.2. Automatikus telepítés esetén:
+
+   - A terminálon be kell lépni a /backend mappába és futtatni az `npm run build` parancsot.
+   - Fontos, hogy csak az egyik módszer szerint kell telepíteni.
+
+## **2. Az alkalmazás konfigurálása**
+
+- A _/frontend/environments_ mappában be kell állítani az API végpont elérési útvonalát:
+
+  - _environment.ts_ állomány: http://127.0.0.1:3000/
+  - _environment.prod.ts_ állomány: http://localhost:3000/
+
+## **3. Az alkalmazás indítása**
+
+- Mind a backend, mind a frontend az `npm start` paranccsal indítható.
+- A játék aktuális verziója a [https://miserere.porkolab.digital/] címen elérhető.
+
+## **4. A szerepkörök leírása**
+
+
+|   |Felhasználó   |Szerkesztő   |Adminisztrátor   |
+| ------------ | ------------ | ------------ | ------------ |
+| Adatbázisban rögzített értékük ("role")  | 1  | 2  |  3 |
+| Jogaik                                    | A felhasználói táblázat kivételével mindent megtekinthet, de nem hozhat létre, szerkeszthet vagy törölhet entitásokat.  |  A minden táblázatot megtekinthet, és a felhasználói táblázat kivételével bármelyiket szerkesztheti, létrehozhat vagy törölhet entitásokat. |  Minden táblázatot megtekinthet, és bármely entitást létrehozhat, szerkeszthet vagy törölhet. |
+
+## **5. Kapcsolattartási információ**
+##### Webfejlesztés, design: Dr. Porkoláb Ádám
+ -   **A weboldallal és általános kérdésekkel, észrevételekkel kapcsolatban:**
+Dr. Porkoláb Ádám (adam@porkolab.digital)
+  
+  
+## **6. Felhasznált technológiák**
+ - *Grafika, design:* Midjourney AI ([https://www.midjourney.com/home/](https://www.midjourney.com/home/)),
+ - *Kiindulásási HTML template:* Creative Tim ([https://www.creative-tim.com/product/soft-ui-dashboard](https://www.creative-tim.com/product/soft-ui-dashboard)),
+ - *Szövegekhez használt HTML template:* Baris Senkal ([https://github.com/barissenkal/Short-Story-HTML-Template](https://github.com/barissenkal/Short-Story-HTML-Template)),
+ - *Forbidden (403) hibához használt HTML template:* Blissful Lemon ([https://codepen.io/ablissfullemon/pen/zJepap](https://codepen.io/ablissfullemon/pen/zJepap))
+
+## **7. Jogi információk**
+
+Írta, programozta, hostolja: Dr. Porkoláb Ádám - Hootie in Bootee Studio 
+  
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Licenc" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Ez a Mű a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Nevezd meg! - Ne add el! - Ne változtasd! 4.0 Nemzetközi Licenc</a> feltételeinek megfelelően felhasználható.
+
+## **8. Tervek a következő verzióhoz:**
+- Beépített hangok,
+- Több ellenfél és tárgy,
+- Alternatív befejezések,
+- Folytatás?

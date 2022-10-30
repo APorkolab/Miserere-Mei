@@ -1,0 +1,9 @@
+[
+  {
+    "protagonistHealthPoint": 100,
+    "playerAmmo": 15,
+    "currentWeaponName": "Beretta 92FS",
+    "currentWeaponMinDamage": 2,
+    "currentWeaponMaxDamage": 6
+  }
+]
