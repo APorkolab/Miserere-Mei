@@ -40,9 +40,6 @@
 						<span class="d-sm-inline">Térkép</span>
 					</a>
 				</li>
-				<!-- <li class="nav-item mt-3">
-					<h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Egyéb oldalak</h6>
-				</li> -->
 				<li class="nav-item">
 					<a routerLink="/contact" class="nav-link text-body font-weight-bold ">
 						<i class="ni ni-email-83 me-sm-1" aria-hidden="true"></i>
@@ -50,15 +47,16 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a routerLink="/login" class="nav-link text-body font-weight-bold ">
+					<a *ngIf="(user$ | async)" routerLink="/login" class="nav-link text-body font-weight-bold ">
+						<i class="ni ni-circle-08 me-sm-1" aria-hidden="true"></i>
+						<span class="d-sm-inline">Kijelentkezés</span>
+					</a>
+					<a *ngIf="!(user$ | async)" routerLink="/login" class="nav-link text-body font-weight-bold ">
 						<i class="ni ni-single-02 me-sm-1" aria-hidden="true"></i>
 						<span class="d-sm-inline">Bejelentkezés</span>
 					</a>
 				</li>
-
 			</ul>
-
-
 		</div>
 	</div>
 </nav>
