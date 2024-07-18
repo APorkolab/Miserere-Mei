@@ -1,34 +1,53 @@
-const mongoose = require('mongoose');
-const SALT_WORK_FACTOR = 10;
+const bcrypt = require('bcrypt');
 
-const UserSchema = mongoose.Schema({
-	firstName: {
-		type: String,
-		required: true
-	},
-	lastName: {
-		type: String,
-		required: true
-	},
-	email: {
-		type: String,
-		required: true,
-		index: {
-			unique: true,
+module.exports = (sequelize, DataTypes) => {
+	const User = sequelize.define('User', {
+		firstName: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		lastName: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		email: {
+			type: DataTypes.STRING,
+			allowNull: false,
+			unique: true
+		},
+		role: {
+			type: DataTypes.INTEGER,
+			allowNull: false
+		},
+		password: {
+			type: DataTypes.STRING,
+			allowNull: false
 		}
-	},
-	role: {
-		type: Number,
-		required: true
-	},
-	password: {
-		type: String,
-		required: true,
-		bcrypt: true
-	},
-});
+	}, {
+		hooks: {
+			beforeCreate: async (user) => {
+				if (user.password) {
+					const salt = await bcrypt.genSalt(10);
+					user.password = await bcrypt.hash(user.password, salt);
+				}
+			},
+			beforeUpdate: async (user) => {
+				if (user.password) {
+					const salt = await bcrypt.genSalt(10);
+					user.password = await bcrypt.hash(user.password, salt);
+				}
+			}
+		},
+		instanceMethods: {
+			validPassword: async function (password) {
+				return await bcrypt.compare(password, this.password);
+			}
+		}
+	});
 
+	User.prototype.validPassword = async function (password) {
+		return await bcrypt.compare(password, this.password);
+	};
 
-UserSchema.plugin(require('mongoose-bcrypt'));
-
-module.exports = mongoose.model('User', UserSchema);
+	return User;
+};

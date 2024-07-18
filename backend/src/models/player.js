@@ -1,29 +1,30 @@
-const mongoose = require('mongoose');
-const PlayerSchema = mongoose.Schema({
-	protagonistHealthPoint: {
-		type: Number,
-		required: true,
-		default: 100
-	},
-	playerAmmo: {
-		type: Number,
-		default: 15
-	},
-	currentWeaponName: {
-		type: String,
-		required: true,
-		default: 'Beretta 92FS'
-	},
-	currentWeaponMinDamage: {
-		type: Number,
-		required: true,
-		default: 2
-	},
-	currentWeaponMaxDamage: {
-		type: Number,
-		required: true,
-		default: 6
-	},
-});
+module.exports = (sequelize, DataTypes) => {
+	const Player = sequelize.define('Player', {
+		protagonistHealthPoint: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+			defaultValue: 100
+		},
+		playerAmmo: {
+			type: DataTypes.INTEGER,
+			defaultValue: 15
+		},
+		currentWeaponName: {
+			type: DataTypes.STRING,
+			allowNull: false,
+			defaultValue: 'Beretta 92FS'
+		},
+		currentWeaponMinDamage: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+			defaultValue: 2
+		},
+		currentWeaponMaxDamage: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+			defaultValue: 6
+		}
+	});
 
-module.exports = mongoose.model('Player', PlayerSchema);
+	return Player;
+};

@@ -1,16 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const Player = require('../../models/player');
+const {
+	Player
+} = require('../../models');
 
 const controller = require('../base/controller')(Player);
-
 
 // Create
 router.post('/', (req, res, next) => {
 	return controller.create(req, res, next);
 });
 
-//Read
+// Read
 router.get('/', (req, res, next) => {
 	return controller.findAll(req, res, next);
 });

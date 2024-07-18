@@ -1,49 +1,53 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../../models/user');
+const {
+	User
+} = require('../../models');
 const jwt = require('jsonwebtoken');
 
-//Post
+// Post
 router.post('/', async (req, res, next) => {
 	const {
 		email,
 		password
 	} = req.body;
 
-	const fMember = await User.findOne({
-		email
-	});
-
-	if (!fMember) {
-		res.sendStatus(404);
-		return res.json({
-			error: 'This user does not exist'
+	try {
+		const fMember = await User.findOne({
+			where: {
+				email
+			}
 		});
-	}
 
-	const valid = fMember.verifyPasswordSync(password);
-	if (valid) {
-		const accessToken = jwt.sign(
-			// _id: fMember._id,
-			// email: fMember.email,
-			// role: fMember.role,
-			{
-				email: fMember.email,
-				role: fMember.role
-			}, 'IWishICouldTellYouThatAndyFoughtTheGoodFight', {
-				expiresIn: '1h',
+		if (!fMember) {
+			return res.status(404).json({
+				error: 'This user does not exist'
 			});
+		}
 
-		res.json({
-			// success: true,
-			accessToken,
-			user: {
-				...fMember._doc,
-				password: ''
-			},
-		});
-	} else {
-		return res.sendStatus(401);
+		const valid = fMember.verifyPasswordSync(password);
+		if (valid) {
+			const accessToken = jwt.sign({
+					email: fMember.email,
+					role: fMember.role
+				},
+				'IWishICouldTellYouThatAndyFoughtTheGoodFight', {
+					expiresIn: '1h',
+				}
+			);
+
+			res.json({
+				accessToken,
+				user: {
+					...fMember.get(), // `_doc` helyett `get()` metódus
+					password: '' // Jelszó eltávolítása a válaszból
+				},
+			});
+		} else {
+			return res.sendStatus(401);
+		}
+	} catch (error) {
+		next(error);
 	}
 });
 

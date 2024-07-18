@@ -1,54 +1,55 @@
-const mongoose = require('mongoose');
-const PlaceSchema = mongoose.Schema({
-	location: {
-		type: String,
-		required: true
-	},
-	narrationZoneText: {
-		type: String,
-		required: true
-	},
-	opponentName: {
-		type: String,
-	},
-	opponenthealth: {
-		type: Number,
-	},
-	opponentMinDamage: {
-		type: Number,
-	},
-	opponentMaxDamage: {
-		type: Number,
-	},
-	decision1: {
-		type: String,
-		required: true
-	},
-	decision2: {
-		type: String,
-	},
-	decision3: {
-		type: String,
-	},
-	decision4: {
-		type: String,
-	},
-	furtherLocation1: {
-		type: String,
-		required: true
-	},
-	furtherLocation2: {
-		type: String,
-	},
-	furtherLocation3: {
-		type: String,
-	},
-	furtherLocation4: {
-		type: String,
-	},
-	objectFound: {
-		type: String,
-	},
-});
+module.exports = (sequelize, DataTypes) => {
+	const Place = sequelize.define('Place', {
+		location: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		narrationZoneText: {
+			type: DataTypes.TEXT,
+			allowNull: false
+		},
+		opponentName: {
+			type: DataTypes.STRING
+		},
+		opponenthealth: {
+			type: DataTypes.INTEGER
+		},
+		opponentMinDamage: {
+			type: DataTypes.INTEGER
+		},
+		opponentMaxDamage: {
+			type: DataTypes.INTEGER
+		},
+		decision1: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		decision2: {
+			type: DataTypes.STRING
+		},
+		decision3: {
+			type: DataTypes.STRING
+		},
+		decision4: {
+			type: DataTypes.STRING
+		},
+		furtherLocation1: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		furtherLocation2: {
+			type: DataTypes.STRING
+		},
+		furtherLocation3: {
+			type: DataTypes.STRING
+		},
+		furtherLocation4: {
+			type: DataTypes.STRING
+		},
+		objectFound: {
+			type: DataTypes.STRING
+		}
+	});
 
-module.exports = mongoose.model('Place', PlaceSchema);
+	return Place;
+};
