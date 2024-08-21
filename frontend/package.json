@@ -9,7 +9,7 @@
     "test": "ng test"
   },
   "private": true,
-  "homepage": "https://miserere.porkolab.hu",
+  "homepage": "https://api.miserere.porkolab.hu",
   "dependencies": {
     "@angular/animations": "^18.2.0",
     "@angular/cli": "^18.2.0",
