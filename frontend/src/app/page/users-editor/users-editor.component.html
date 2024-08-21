@@ -17,7 +17,7 @@
 								<input type="text" class="form-control" name="firstName" [(ngModel)]="user.firstName" required
 									pattern="^[a-űA-Űa-zA-Z \-\.,!()']{3,60}$">
 							</div>
-							<div [hidden]="userForm.controls['firstName']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="userForm.controls['firstName'].valid" class="alert alert-danger" role="alert">
 								The first name of the user must be at least 3 letters and must not contains numbers!
 							</div>
 						</div>
@@ -30,7 +30,7 @@
 								<input type="text" class="form-control" name="lastName" [(ngModel)]="user.lastName" required
 									pattern="^[a-űA-Űa-zA-Z \-\.,!()']{3,60}$">
 							</div>
-							<div [hidden]="userForm.controls['lastName']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="userForm.controls['lastName'].valid" class="alert alert-danger" role="alert">
 								The last name of the user must be at least 3 letters and must not contains numbers!
 							</div>
 						</div>
@@ -42,7 +42,7 @@
 							<div class="form-group">
 								<input type="email" class="form-control" name="email" [(ngModel)]="user.email" [email]="true">
 							</div>
-							<div [hidden]="userForm.controls['email']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="userForm.controls['email'].valid" class="alert alert-danger" role="alert">
 								The email of the user must be valid and unique!
 							</div>
 						</div>
@@ -55,7 +55,7 @@
 								<input type="number" class="form-control" name="role" [(ngModel)]="user.role" required
 									pattern="^[1-3]{1}$">
 							</div>
-							<div [hidden]="userForm.controls['role']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="userForm.controls['role'].valid" class="alert alert-danger" role="alert">
 								The role number of the user must be 1 (viewer), 2(archiver) or 3(administrator)!
 							</div>
 						</div>
@@ -69,7 +69,7 @@
 								<input type="password" class="form-control" name="password" [(ngModel)]="user.password" required
 									pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{7,}$">
 							</div>
-							<div [hidden]="userForm.controls['password']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="userForm.controls['password'].valid" class="alert alert-danger" role="alert">
 								For security reasons we store only the encryted password. When you add a new password of the family
 								member must be minimum 7 characters, must contains at least 1 letter and 1 number! Before save the
 								password will be automatically encrypted.

@@ -116,7 +116,7 @@
 												placeholder="Email" name="email" aria-label="Email" aria-describedby="email-addon"
 												[email]="true" required>
 										</div>
-										<div [hidden]="loginForm.controls['email']?.valid" class="alert alert-danger" role="alert">
+										<div [hidden]="loginForm.controls['email'].valid" class="alert alert-danger" role="alert">
 											Non-valid and unique email!
 										</div>
 										<label>Password</label>
@@ -125,7 +125,7 @@
 												placeholder="Password" name="password" aria-label="Password" aria-describedby="password-addon"
 												required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
 										</div>
-										<div [hidden]="loginForm.controls['password']?.valid" class="alert alert-danger" role="alert">
+										<div [hidden]="loginForm.controls['password'].valid" class="alert alert-danger" role="alert">
 											Non-valid password!
 										</div>
 										<!-- <div class="form-check form-switch">

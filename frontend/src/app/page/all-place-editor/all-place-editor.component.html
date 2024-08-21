@@ -17,7 +17,7 @@
 								<input type="text" class="form-control" name="location" [(ngModel)]="allplace.location" required
 									pattern="^[0-9a-zA-Z !@\#\$%\^&\*\(\)\-\=\_\+]+$">
 							</div>
-							<div [hidden]="placeForm.controls['location']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['location'].valid" class="alert alert-danger" role="alert">
 								The location name must contains only letters, numbers and special characters.
 							</div>
 						</div>
@@ -30,7 +30,7 @@
 								<input type="text" class="form-control" name="narrationZoneText"
 									[(ngModel)]="allplace.narrationZoneText" required>
 							</div>
-							<div [hidden]="placeForm.controls['narrationZoneText']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['narrationZoneText'].valid" class="alert alert-danger" role="alert">
 								The narration zone text of the place must contains only letters, numbers and special characters.
 							</div>
 						</div>
@@ -43,7 +43,7 @@
 								<input type="text" class="form-control" name="opponentName" [(ngModel)]="allplace.opponentName"
 									pattern="^[0-9a-űA-Ű !@\#\$%\^&\*\(\)\-\=\_\+\-]+$">
 							</div>
-							<div [hidden]="placeForm.controls['opponentName']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['opponentName'].valid" class="alert alert-danger" role="alert">
 								The opponent name must must contains only letters, numbers and special characters.
 							</div>
 						</div>
@@ -56,7 +56,7 @@
 								<input type="number" class="form-control" name="opponenthealth" [(ngModel)]="allplace.opponenthealth"
 									pattern="/(^\d{1,10}$)/g">
 							</div>
-							<div [hidden]="placeForm.controls['opponenthealth']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['opponenthealth'].valid" class="alert alert-danger" role="alert">
 								The opponent health must be integer.
 							</div>
 						</div>
@@ -69,7 +69,7 @@
 								<input type="number" class="form-control" name="opponentMinDamage"
 									[(ngModel)]="allplace.opponentMinDamage" pattern="/(^\d{1,10}$)/g">
 							</div>
-							<div [hidden]="placeForm.controls['opponentMinDamage']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['opponentMinDamage'].valid" class="alert alert-danger" role="alert">
 								The opponent minimum damage must be integer.
 							</div>
 						</div>
@@ -82,7 +82,7 @@
 								<input type="number" class="form-control" name="opponentMaxDamage"
 									[(ngModel)]="allplace.opponentMaxDamage" pattern="/(^\d{1,10}$)/g">
 							</div>
-							<div [hidden]="placeForm.controls['opponentMaxDamage']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['opponentMaxDamage'].valid" class="alert alert-danger" role="alert">
 								The opponent maximum damage must be integer.
 							</div>
 						</div>
@@ -95,7 +95,7 @@
 								<input type="text" class="form-control" name="decision1" [(ngModel)]="allplace.decision1" required
 									pattern="^[a-űA-Űa-zA-Z \-\.,!()']{3,60}$">
 							</div>
-							<div [hidden]="placeForm.controls['decision1']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['decision1'].valid" class="alert alert-danger" role="alert">
 								The first decision must contains only letters, numbers and special characters.
 							</div>
 						</div>
@@ -108,7 +108,7 @@
 								<input type="text" class="form-control" name="decision2" [(ngModel)]="allplace.decision2"
 									pattern="^[a-űA-Űa-zA-Z \-\.,!()']{3,60}$">
 							</div>
-							<div [hidden]="placeForm.controls['decision2']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['decision2'].valid" class="alert alert-danger" role="alert">
 								The second decision must contains only letters, numbers and special characters.
 							</div>
 						</div>
@@ -121,7 +121,7 @@
 								<input type="text" class="form-control" name="decision3" [(ngModel)]="allplace.decision3"
 									pattern="^[a-űA-Űa-zA-Z \-\.,!()']{3,60}$">
 							</div>
-							<div [hidden]="placeForm.controls['decision3']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['decision3'].valid" class="alert alert-danger" role="alert">
 								The third decision must contains only letters, numbers and special characters.
 							</div>
 						</div>
@@ -134,7 +134,7 @@
 								<input type="text" class="form-control" name="decision4" [(ngModel)]="allplace.decision4"
 									pattern="^[a-űA-Űa-zA-Z \-\.,!()']{3,60}$">
 							</div>
-							<div [hidden]="placeForm.controls['decision4']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['decision4'].valid" class="alert alert-danger" role="alert">
 								The fourth decision must contains only letters, numbers and special characters.
 							</div>
 						</div>
@@ -147,7 +147,7 @@
 								<input type="text" class="form-control" name="furtherLocation1" [(ngModel)]="allplace.furtherLocation1"
 									required pattern="^[a-űA-Űa-zA-Z \-\.,!()'\_0-9]{3,60}$">
 							</div>
-							<div [hidden]="placeForm.controls['furtherLocation1']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['furtherLocation1'].valid" class="alert alert-danger" role="alert">
 								The first further location must contains only letters, numbers and special characters.
 							</div>
 						</div>
@@ -160,7 +160,7 @@
 								<input type="text" class="form-control" name="furtherLocation2" [(ngModel)]="allplace.furtherLocation2"
 									pattern="^[a-űA-Űa-zA-Z \-\.,!()'\_0-9]{3,60}$">
 							</div>
-							<div [hidden]="placeForm.controls['furtherLocation2']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['furtherLocation2'].valid" class="alert alert-danger" role="alert">
 								The second further location must contains only letters, numbers and special characters.
 							</div>
 						</div>
@@ -173,7 +173,7 @@
 								<input type="text" class="form-control" name="furtherLocation3" [(ngModel)]="allplace.furtherLocation3"
 									pattern="^[a-űA-Űa-zA-Z \-\.,!()'\_0-9]{3,60}$">
 							</div>
-							<div [hidden]="placeForm.controls['furtherLocation3']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['furtherLocation3'].valid" class="alert alert-danger" role="alert">
 								The third further location must contains only letters, numbers and special characters.
 							</div>
 						</div>
@@ -186,7 +186,7 @@
 								<input type="text" class="form-control" name="furtherLocation4" [(ngModel)]="allplace.furtherLocation4"
 									pattern="^[a-űA-Űa-zA-Z \-\.,!()'\_0-9]{3,60}$">
 							</div>
-							<div [hidden]="placeForm.controls['furtherLocation4']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['furtherLocation4'].valid" class="alert alert-danger" role="alert">
 								The fourth further location must contains only letters, numbers and special characters.
 							</div>
 						</div>
@@ -199,7 +199,7 @@
 								<input type="text" class="form-control" name="objectFound" [(ngModel)]="allplace.objectFound"
 									pattern="^[a-űA-Űa-zA-Z \-\.,!()'\_0-9]{3,60}$">
 							</div>
-							<div [hidden]="placeForm.controls['objectFound']?.valid" class="alert alert-danger" role="alert">
+							<div [hidden]="placeForm.controls['objectFound'].valid" class="alert alert-danger" role="alert">
 								The fourth further location must contains only letters, numbers and special characters.
 							</div>
 						</div>

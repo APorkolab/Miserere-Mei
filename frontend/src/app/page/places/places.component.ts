@@ -11,7 +11,6 @@ import { NotificationService } from 'src/app/service/notification.service';
 import { PlayerService } from 'src/app/service/player.service';
 import { BattleService } from 'src/app/service/battle.service';
 import { Item } from 'src/app/model/item';
-import { throws } from 'assert';
 import PerfectScrollbar from 'perfect-scrollbar';
 
 @Component({
