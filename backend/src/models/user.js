@@ -29,6 +29,8 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: false
 		}
 	}, {
+		tableName: 'User',
+		freezeTableName: true,
 		hooks: {
 			beforeCreate: async (user) => {
 				if (user.password) {
@@ -43,7 +45,6 @@ module.exports = (sequelize, DataTypes) => {
 				}
 			}
 		},
-		freezeTableName: false,
 		timestamps: false
 	});
 
