@@ -7,11 +7,12 @@ import { ConfigService } from './config.service';
 import { Player } from '../model/player';
 import { Router } from '@angular/router';
 import { Place } from '../model/place';
+import { AllPlace } from '../model/allplace';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AllPlaceService extends BaseService<Place> {
+export class AllPlaceService extends BaseService<AllPlace> {
   constructor(http: HttpClient, config: ConfigService, player: PlayerService) {
     super(http, config);
     this.entity = 'allplace';

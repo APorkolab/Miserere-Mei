@@ -13,7 +13,7 @@ import { NotificationService } from 'src/app/service/notification.service';
 export class UsersEditorComponent implements OnInit {
   user$!: Observable<User>;
   user: User = new User();
-  entity = 'User';
+  entity = 'Users';
 
   constructor(
     private userService: UserService,

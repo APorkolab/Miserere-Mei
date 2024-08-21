@@ -1,3 +1,4 @@
+import { AllPlaceService } from './../../service/allplace.service';
 import { PlaceService } from 'src/app/service/place.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -14,12 +15,13 @@ import { Place } from 'src/app/model/place';
 })
 export class AllPlaceViewerComponent implements OnInit {
   columns = this.config.placesTableColumns;
-  list$: Observable<Place[]> = this.placeService.getAll();
+  list$: Observable<AllPlace[]> = this.allPlaceService.getAll();
   entity = 'allplace';
 
   constructor(
     private config: ConfigService,
     private placeService: PlaceService,
+    private allPlaceService: AllPlaceService,
     private router: Router,
     private notifyService: NotificationService
   ) { }
@@ -28,7 +30,7 @@ export class AllPlaceViewerComponent implements OnInit {
   }
 
   loadPlaces(): void {
-    this.list$ = this.placeService.getAll();
+    this.list$ = this.allPlaceService.getAll();
   }
 
   showSuccessDelete() {
