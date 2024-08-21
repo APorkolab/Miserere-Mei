@@ -5,6 +5,10 @@ const {
 } = require('./models');
 const seedDatabase = require('./seed/seeder');
 const cors = require('cors');
+const express = require('express');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const logger = require('./logger/logger');
 
 const app = express();
 
