@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, of } from 'rxjs';
-import { AllPlace } from 'src/app/model/allplace';
-import { AllPlaceService } from 'src/app/service/allplace.service';
-import { NotificationService } from 'src/app/service/notification.service';
+import { Observable } from 'rxjs';
+import { Place } from 'src/app/model/place';
 import { PlaceService } from 'src/app/service/place.service';
+import { NotificationService } from 'src/app/service/notification.service';
 
 @Component({
   selector: 'app-all-place-editor',
@@ -12,11 +11,12 @@ import { PlaceService } from 'src/app/service/place.service';
   styleUrls: ['./all-place-editor.component.scss'],
 })
 export class AllPlaceEditorComponent implements OnInit {
-  allplace$!: Observable<AllPlace>;
-  allplace: AllPlace = new AllPlace();
+  allplace$!: Observable<Place>;
+  allplace: Place = new Place();
   entity = 'allplace';
+
   constructor(
-    private placeService: AllPlaceService,
+    private placeService: PlaceService,
     private route: ActivatedRoute,
     private router: Router,
     private notifyService: NotificationService
@@ -25,29 +25,27 @@ export class AllPlaceEditorComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe({
       next: (param) => {
-        if (param['id'] == '0') {
-          return of(new AllPlace());
+        if (param['id'] !== '0') {
+          this.allplace$ = this.placeService.getOne(param['id']);
+          this.allplace$.subscribe({
+            next: (allplace) => (this.allplace = allplace || new Place()),
+          });
         }
-        this.allplace$ = this.placeService.getOne(param['id']);
-        return this.placeService.getOne(param['id']);
       },
-    });
-    this.allplace$.subscribe({
-      next: (allplace) => (this.allplace = allplace ? allplace : this.allplace),
     });
   }
 
-  onUpdate(allplace: AllPlace) {
+  onUpdate(allplace: Place) {
     this.placeService.update(allplace).subscribe({
-      next: (category) => this.router.navigate(['/', 'allplace']),
+      next: () => this.router.navigate(['/', 'allplace']),
       error: (err) => this.showError(err),
       complete: () => this.showSuccessEdit(),
     });
   }
 
-  onCreate(allplace: AllPlace) {
+  onCreate(allplace: Place) {
     this.placeService.create(allplace).subscribe({
-      next: (category) => this.router.navigate(['/', 'allplace']),
+      next: () => this.router.navigate(['/', 'allplace']),
       error: (err) => this.showError(err),
       complete: () => this.showSuccessCreate(),
     });
@@ -55,21 +53,21 @@ export class AllPlaceEditorComponent implements OnInit {
 
   showSuccessEdit() {
     this.notifyService.showSuccess(
-      `The place edited successfully!`,
+      'The place edited successfully!',
       'Miserere Mei v.1.0.0'
     );
   }
 
   showSuccessCreate() {
     this.notifyService.showSuccess(
-      `The place created successfully!`,
+      'The place created successfully!',
       'Miserere Mei v.1.0.0'
     );
   }
 
-  showError(err: String) {
+  showError(err: any) {
     this.notifyService.showError(
-      'Something went wrong. Details:' + err,
+      'Something went wrong. Details: ' + err,
       'Miserere Mei v.1.0.0'
     );
   }
