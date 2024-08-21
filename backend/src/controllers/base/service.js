@@ -1,6 +1,6 @@
 const {
 	Op
-} = require('sequelize'); // Győződj meg róla, hogy az Op operátort importálod a Sequelize-ból
+} = require('sequelize');
 
 module.exports = (model, populateList = []) => {
 	return {

@@ -61,13 +61,18 @@ export class AuthService {
           this.userSubject.next(response.user);
           this.accessTokenSubject.next(response.accessToken);
           sessionStorage.setItem('login', JSON.stringify(response));
+          alert('Sikeres bejelentkezés!');
+          console.log('Sikeres bejelentkezés!', response);
         })
       )
       .subscribe({
         next: () => {
           this.router.navigate(['/']);
         },
-        error: (err) => console.error('Login error:', err),
+        error: (err) => {
+          console.error('Login error:', err);
+          alert('Hiba történt a bejelentkezés során!');
+        },
       });
   }
 
