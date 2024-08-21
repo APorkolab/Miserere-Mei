@@ -15,14 +15,14 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a routerLink="/allplace" *ngIf="this.auth.user$.value?.role === 3"
+					<a routerLink="/allplace" *ngIf="(auth.user$ | async)?.role === 3"
 						class="nav-link text-body font-weight-bold ">
 						<i class="ni ni-istanbul me-sm-1" aria-hidden="true"></i>
 						<span class="d-sm-inline ">All place</span>
 					</a>
 				</li>
 				<li class="nav-item ">
-					<a routerLink="/users" *ngIf="this.auth.user$.value?.role === 3" class="nav-link text-body font-weight-bold ">
+					<a routerLink="/users" *ngIf="(auth.user$ | async)?.role === 3" class="nav-link text-body font-weight-bold ">
 						<i class="ni ni-user-run me-sm-1" aria-hidden="true"></i>
 						<span class="d-sm-inline ">Users</span>
 					</a>
@@ -46,11 +46,11 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a *ngIf="(user$ | async)" routerLink="/login" class="nav-link text-body font-weight-bold ">
+					<a *ngIf="auth.user$ | async" routerLink="/login" class="nav-link text-body font-weight-bold ">
 						<i class="ni ni-circle-08 me-sm-1" aria-hidden="true"></i>
 						<span class="d-sm-inline">Kijelentkezés</span>
 					</a>
-					<a *ngIf="!(user$ | async)" routerLink="/login" class="nav-link text-body font-weight-bold ">
+					<a *ngIf="!(auth.user$ | async)" routerLink="/login" class="nav-link text-body font-weight-bold ">
 						<i class="ni ni-single-02 me-sm-1" aria-hidden="true"></i>
 						<span class="d-sm-inline">Bejelentkezés</span>
 					</a>

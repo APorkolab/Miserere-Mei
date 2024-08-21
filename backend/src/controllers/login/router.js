@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt');
 const express = require('express');
 const router = express.Router();
 const {
@@ -25,7 +26,9 @@ router.post('/', async (req, res, next) => {
 			});
 		}
 
-		const valid = fMember.verifyPasswordSync(password);
+		// Aszinkron jelszó ellenőrzés
+		const valid = await bcrypt.compare(password, fMember.password);
+
 		if (valid) {
 			const accessToken = jwt.sign({
 					email: fMember.email,
@@ -39,8 +42,8 @@ router.post('/', async (req, res, next) => {
 			res.json({
 				accessToken,
 				user: {
-					...fMember.get(), // `_doc` helyett `get()` metódus
-					password: '' // Jelszó eltávolítása a válaszból
+					...fMember.get(),
+					password: ''
 				},
 			});
 		} else {

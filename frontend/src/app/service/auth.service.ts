@@ -2,7 +2,8 @@ import { User } from './../model/user';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
 export interface IAuthModel {
@@ -12,29 +13,33 @@ export interface IAuthModel {
 }
 
 export interface ILoginData {
-  email?: string;
-  password?: string;
+  email: string;
+  password: string;
 }
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  apiUrl: string = environment.apiUrl;
-  loginUrl: string = '';
+  private readonly apiUrl = environment.apiUrl;
+  private readonly loginUrl = `${this.apiUrl}/login`;
 
-  user$: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
+  private readonly userSubject = new BehaviorSubject<User | null>(null);
+  user$ = this.userSubject.asObservable();
 
-  access_token$: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  private readonly accessTokenSubject = new BehaviorSubject<string>('');
+  access_token$ = this.accessTokenSubject.asObservable();
 
   constructor(private http: HttpClient, private router: Router) {
-    this.loginUrl = `${this.apiUrl}/login`;
+    this.loadSessionData();
+  }
 
+  private loadSessionData(): void {
     const loginInfo = sessionStorage.getItem('login');
     if (loginInfo) {
-      const loginObject = JSON.parse(loginInfo);
-      this.access_token$.next(loginObject.accessToken);
-      this.user$.next(loginObject.user);
+      const loginObject: IAuthModel = JSON.parse(loginInfo);
+      this.accessTokenSubject.next(loginObject.accessToken);
+      this.userSubject.next(loginObject.user);
     }
 
     this.user$.subscribe({
@@ -42,26 +47,42 @@ export class AuthService {
         if (user) {
           this.router.navigate(['/']);
         } else {
-          this.access_token$.next('');
+          this.accessTokenSubject.next('');
           sessionStorage.removeItem('login');
         }
-        // this.router.navigate(['/', 'login']);
       },
     });
   }
 
   login(loginData: ILoginData): void {
-    this.http.post<IAuthModel>(this.loginUrl, loginData).subscribe({
-      next: (response: IAuthModel) => {
-        this.user$.next(response.user);
-        this.access_token$.next(response.accessToken);
-        sessionStorage.setItem('login', JSON.stringify(response));
-      },
-      error: (err) => console.error(err),
-    });
+    this.http.post<IAuthModel>(this.loginUrl, loginData)
+      .pipe(
+        tap((response: IAuthModel) => {
+          this.userSubject.next(response.user);
+          this.accessTokenSubject.next(response.accessToken);
+          sessionStorage.setItem('login', JSON.stringify(response));
+        })
+      )
+      .subscribe({
+        next: () => {
+          this.router.navigate(['/']);
+        },
+        error: (err) => console.error('Login error:', err),
+      });
   }
 
   logout(): void {
-    this.user$.next(null);
+    this.userSubject.next(null);
+    this.accessTokenSubject.next('');
+    sessionStorage.removeItem('login');
+    this.router.navigate(['/login']);
+  }
+
+  get isAuthenticated(): boolean {
+    return !!this.userSubject.value;
+  }
+
+  get accessToken(): string {
+    return this.accessTokenSubject.value;
   }
 }
