@@ -1,11 +1,4 @@
 const express = require('express');
-const httpErrors = require('http-errors');
-const config = require('config');
-const bodyParser = require('body-parser');
-const morgan = require('morgan');
-const cors = require('cors');
-const swaggerUi = require('swagger-ui-express');
-const YAML = require('yamljs');
 const logger = require('./logger/logger');
 const {
 	sequelize
