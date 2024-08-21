@@ -7,7 +7,6 @@ const seedDatabase = require('./seed/seeder');
 const cors = require('cors');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const logger = require('./logger/logger');
 
 const app = express();
 
