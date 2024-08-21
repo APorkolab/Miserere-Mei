@@ -4,6 +4,7 @@ const {
 	sequelize
 } = require('./models');
 const seedDatabase = require('./seed/seeder');
+const cors = require('cors');
 
 const app = express();
 
