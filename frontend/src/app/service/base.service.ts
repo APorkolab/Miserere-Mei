@@ -1,9 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Place } from '../model/place';
-import { Player } from '../model/player';
 import { ConfigService } from './config.service';
 
 @Injectable({
@@ -20,16 +18,6 @@ export class BaseService<
 
   getAll(): Observable<T[]> {
     return this.http.get<T[]>(`${this.apiUrl}/${this.entity}`);
-  }
-
-  // getOnePlace(locationName: String): Observable<Place> {
-  //   return this.http
-  //     .get<Place>('/places/' + locationName)
-  //     .pipe(map((response) => new Place()));
-  // }
-
-  getPlayer(_id: string | number): Observable<T> {
-    return this.http.get<T>(`${this.apiUrl}/${this.entity}/${_id}`);
   }
 
   getOne(_id: string | number): Observable<T> {
@@ -55,4 +43,10 @@ export class BaseService<
   delete(entity: T): Observable<T> {
     return this.http.delete<T>(`${this.apiUrl}/${this.entity}/${entity._id}`);
   }
+
+  // Optional: Hibakezelés hozzáadása
+  // handleError(error: any): Observable<never> {
+  //   console.error('An error occurred:', error);
+  //   return throwError(() => new Error('Something bad happened; please try again later.'));
+  // }
 }

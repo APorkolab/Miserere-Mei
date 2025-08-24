@@ -19,7 +19,7 @@
 			</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" *ngIf="this.auth.user$.value?.role === 3" routerLink="/allplace">
+			<a class="nav-link" *ngIf="(auth.user$ | async)?.role === 3" routerLink="/allplace">
 				<div
 					class="icon icon-shape icon-sm shadow border-radius-md bg-dark text-center me-2 d-flex align-items-center justify-content-center">
 					<i class="ni ni-istanbul"></i>
@@ -28,7 +28,7 @@
 			</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" *ngIf="this.auth.user$.value?.role === 3" routerLink="/users">
+			<a class="nav-link" *ngIf="(auth.user$ | async)?.role === 3" routerLink="/users">
 				<div
 					class="icon icon-shape icon-sm shadow border-radius-md bg-dark text-center me-2 d-flex align-items-center justify-content-center">
 					<i class="ni ni-user-run"></i>
@@ -58,7 +58,7 @@
 			<h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Egyéb oldalak</h6>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link  " routerLink="/contact">
+			<a class="nav-link" routerLink="/contact">
 				<div
 					class="icon icon-shape icon-sm shadow border-radius-md bg-dark text-center me-2 d-flex align-items-center justify-content-center">
 					<i class="ni ni-email-83"></i>
@@ -81,19 +81,7 @@
 	<div class="card card-background shadow-none card-background-mask-secondary" id="sidenavCard">
 		<div class="full-background" style="background-image: url('../../../assets/img/curved-images/white-curved.jpg')">
 		</div>
-		<!-- <div class="card-body text-start p-3 w-100">
-			<div
-				class="icon icon-shape icon-sm bg-white shadow text-center mb-3 d-flex align-items-center justify-content-center border-radius-md">
-				<i class="ni ni-glasses-2 text-dark text-gradient text-lg top-0" aria-hidden="true" id="sidenavCardIcon"></i>
-			</div>
-			<div class="docs-info">
-				<h6 class="text-white up mb-0">Ki lehet a szerző?</h6>
-				<p class="text-xs font-weight-bold">Please check our docs</p>
-				<a href="https://www.creative-tim.com/learning-lab/bootstrap/license/soft-ui-dashboard" target="_blank"
-					class="btn btn-white btn-sm w-100 mb-0">Documentation</a>
-			</div>
-		</div>
 	</div>
-	<a class="btn bg-gradient-secondary mt-3 w-100"
-		href="https://www.creative-tim.com/product/soft-ui-dashboard-pro?ref=sidebarfree">Játék újrakezdése</a>
-</div> -->
+	<a class="btn bg-gradient-secondary mt-3 w-100" href="https://www.miserere.porkolab.hu/place/GameBeginning">Játék
+		újrakezdése</a>
+</div>

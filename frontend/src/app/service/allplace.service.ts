@@ -6,6 +6,7 @@ import { BaseService } from './base.service';
 import { ConfigService } from './config.service';
 import { Player } from '../model/player';
 import { Router } from '@angular/router';
+import { Place } from '../model/place';
 import { AllPlace } from '../model/allplace';
 
 @Injectable({

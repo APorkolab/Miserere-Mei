@@ -21,6 +21,13 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/miserere-mei",
+            "allowedCommonJsDependencies": [
+              "core-js/es/array/from",
+              "core-js/es/map",
+              "core-js/es/object/assign",
+              "core-js/es/set",
+              "core-js/es/weak-map"
+            ],
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -76,13 +83,16 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "MiserereMei:build:production"
+              "buildTarget": "MiserereMei:build:production"
             },
             "development": {
-              "browserTarget": "MiserereMei:build:development"
+              "buildTarget": "MiserereMei:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +100,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "MiserereMei:build"
+            "buildTarget": "MiserereMei:build"
           }
         },
         "test": {

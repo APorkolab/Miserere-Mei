@@ -13,33 +13,33 @@ import { NotificationService } from 'src/app/service/notification.service';
 export class UsersEditorComponent implements OnInit {
   user$!: Observable<User>;
   user: User = new User();
-  entity = 'User';
+  entity = 'Users';
 
   constructor(
     private userService: UserService,
     private route: ActivatedRoute,
     private router: Router,
     private notifyService: NotificationService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe({
       next: (param) => {
         if (param['id'] == '0') {
-          return of(new User());
+          this.user = new User();  // Új felhasználó létrehozásánál
+        } else {
+          this.user$ = this.userService.getOne(param['id']);
+          this.user$.subscribe({
+            next: (user) => (this.user = user),
+          });
         }
-        this.user$ = this.userService.getOne(param['id']);
-        return this.userService.getOne(param['id']);
       },
-    });
-    this.user$.subscribe({
-      next: (user) => (this.user = user ? user : this.user),
     });
   }
 
   onUpdate(user: User) {
     this.userService.update(user).subscribe({
-      next: (category) => this.router.navigate(['/', 'users']),
+      next: () => this.router.navigate(['/', 'users']),
       error: (err) => this.showError(err),
       complete: () => this.showSuccessEdit(),
     });
@@ -47,7 +47,7 @@ export class UsersEditorComponent implements OnInit {
 
   onCreate(user: User) {
     this.userService.create(user).subscribe({
-      next: (category) => this.router.navigate(['/', 'users']),
+      next: () => this.router.navigate(['/', 'users']),
       error: (err) => this.showError(err),
       complete: () => this.showSuccessCreate(),
     });
@@ -67,9 +67,9 @@ export class UsersEditorComponent implements OnInit {
     );
   }
 
-  showError(err: String) {
+  showError(err: string) {
     this.notifyService.showError(
-      'Something went wrong. Details:' + err,
+      'Something went wrong. Details: ' + err,
       'Miserere Mei v.1.0.0'
     );
   }

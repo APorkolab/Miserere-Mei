@@ -1,43 +1,47 @@
-const place = require("../../models/place");
+const {
+	Op
+} = require('sequelize');
 
 module.exports = (model, populateList = []) => {
 	return {
-		findPlace: (location) => model.findOne({
-			"location": location
-		}).populate(),
+		findPlace: (location) => {
+			return model.findOne({
+				where: {
+					location
+				}
+			});
+		},
 		findAll: (params = {}) => {
 			if (Object.keys(params).length) {
-				Object.keys(params).map(key => {
+				Object.keys(params).forEach(key => {
 					params[key] = {
-						$regex: '.*' + params[key] + '.*',
-						$options: 'i'
+						[Op.like]: `%${params[key]}%`
 					};
 				});
-				return model.find(params).populate(...populateList);
+				return model.findAll({
+					where: params
+				});
 			}
-			return model.find(params).populate(...populateList);
+			return model.findAll();
 		},
-		findId: (id) => model.findById(id).populate(...populateList),
-		// findOne: (id) => model.findById(id).populate(),
-		update: (id, updateData) => model.findByIdAndUpdate(id, updateData, {
-			new: true
-		}),
+		findId: (id) => model.findByPk(id),
+		update: (id, updateData) => model.update(updateData, {
+			where: {
+				id
+			},
+			returning: true
+		}).then(([rowsUpdate, [updatedData]]) => updatedData),
 		create: async (body) => {
-			const newEntity = new model(body);
-			const error = newEntity.validateSync();
-			if (!error) {
-				const saved = await newEntity.save();
-				return model.findById(saved._id);
-			}
-			throw new Error(error);
+			const newEntity = await model.create(body);
+			return model.findByPk(newEntity.id);
 		},
 		delete: async (id) => {
-			const doc = await model.findByIdAndRemove(id);
+			const doc = await model.findByPk(id);
 			if (!doc) {
 				throw new Error('Not found');
 			}
-			return doc.delete();
+			await doc.destroy();
+			return doc;
 		}
-
 	};
-}
+};

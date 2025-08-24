@@ -1,42 +1,43 @@
-const mongoose = require('mongoose');
-const AllPlaceSchema = mongoose.Schema({
-	location: {
-		type: String,
-		required: true
-	},
-	narrationZoneText: {
-		type: String,
-		required: true
-	},
-	opponentName: {
-		type: String,
-	},
-	decision1: {
-		type: String,
-		required: true
-	},
-	decision2: {
-		type: String,
-	},
-	decision3: {
-		type: String,
-	},
-	decision4: {
-		type: String,
-	},
-	furtherLocation1: {
-		type: String,
-		required: true
-	},
-	furtherLocation2: {
-		type: String,
-	},
-	furtherLocation3: {
-		type: String,
-	},
-	furtherLocation4: {
-		type: String,
-	},
-});
+module.exports = (sequelize, DataTypes) => {
+	const AllPlace = sequelize.define('AllPlace', {
+		location: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		narrationZoneText: {
+			type: DataTypes.TEXT,
+			allowNull: false
+		},
+		opponentName: {
+			type: DataTypes.STRING
+		},
+		decision1: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		decision2: {
+			type: DataTypes.STRING
+		},
+		decision3: {
+			type: DataTypes.STRING
+		},
+		decision4: {
+			type: DataTypes.STRING
+		},
+		furtherLocation1: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		furtherLocation2: {
+			type: DataTypes.STRING
+		},
+		furtherLocation3: {
+			type: DataTypes.STRING
+		},
+		furtherLocation4: {
+			type: DataTypes.STRING
+		}
+	});
 
-module.exports = mongoose.model('AllPlace', AllPlaceSchema);
+	return AllPlace;
+};

@@ -7,9 +7,9 @@ import { AuthService, ILoginData } from 'src/app/service/auth.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  loginData: ILoginData = {};
+  loginData: ILoginData = { email: '', password: '' };
 
-  constructor(private auth: AuthService) {}
+  constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
     this.auth.logout();
