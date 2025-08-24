@@ -3,9 +3,10 @@ import Scrollbar from 'smooth-scrollbar';
 import { ConfigService, IMenuItem } from './service/config.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 
 export class AppComponent {

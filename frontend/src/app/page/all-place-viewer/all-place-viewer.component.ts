@@ -9,9 +9,10 @@ import { NotificationService } from 'src/app/service/notification.service';
 import { Place } from 'src/app/model/place';
 
 @Component({
-  selector: 'app-all-place-viewer',
-  templateUrl: './all-place-viewer.component.html',
-  styleUrls: ['./all-place-viewer.component.scss'],
+    selector: 'app-all-place-viewer',
+    templateUrl: './all-place-viewer.component.html',
+    styleUrls: ['./all-place-viewer.component.scss'],
+    standalone: false
 })
 export class AllPlaceViewerComponent implements OnInit {
   columns = this.config.placesTableColumns;

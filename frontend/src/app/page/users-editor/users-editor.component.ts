@@ -6,9 +6,10 @@ import { User } from 'src/app/model/user';
 import { NotificationService } from 'src/app/service/notification.service';
 
 @Component({
-  selector: 'app-users-editor',
-  templateUrl: './users-editor.component.html',
-  styleUrls: ['./users-editor.component.scss'],
+    selector: 'app-users-editor',
+    templateUrl: './users-editor.component.html',
+    styleUrls: ['./users-editor.component.scss'],
+    standalone: false
 })
 export class UsersEditorComponent implements OnInit {
   user$!: Observable<User>;

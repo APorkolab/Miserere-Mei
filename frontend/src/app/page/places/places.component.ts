@@ -14,9 +14,10 @@ import { Item } from 'src/app/model/item';
 import PerfectScrollbar from 'perfect-scrollbar';
 
 @Component({
-  selector: 'app-places',
-  templateUrl: './places.component.html',
-  styleUrls: ['./places.component.scss'],
+    selector: 'app-places',
+    templateUrl: './places.component.html',
+    styleUrls: ['./places.component.scss'],
+    standalone: false
 })
 export class PlacesComponent implements OnInit {
 
