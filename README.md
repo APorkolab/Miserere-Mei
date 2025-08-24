@@ -1,4 +1,12 @@
-# Documentation -- Miserere Mei - The Precarious Trails to the Library of Preachers v.1.0.0
+# Miserere Mei - The Precarious Trails to the Library of Preachers v.1.0.3
+
+[![Build](https://img.shields.io/github/actions/workflow/status/APorkolab/Miserere-Mei/ci.yml?branch=main)](../../actions)
+[![License](https://img.shields.io/badge/license-MIT-informational.svg)](LICENSE)
+[![Issues](https://img.shields.io/github/issues/APorkolab/Miserere-Mei.svg)](../../issues)
+[![Live Demo](https://img.shields.io/badge/live-miserere.porkolab.hu-success)](https://miserere.porkolab.hu/)
+
+
+# Documentation
 
 ## **0. History of the game**
 
