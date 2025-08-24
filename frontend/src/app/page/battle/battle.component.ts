@@ -18,9 +18,10 @@ import { Enemy } from 'src/app/model/enemy';
 import { BattleService } from 'src/app/service/battle.service';
 
 @Component({
-  selector: 'app-battle',
-  templateUrl: './battle.component.html',
-  styleUrls: ['./battle.component.scss'],
+    selector: 'app-battle',
+    templateUrl: './battle.component.html',
+    styleUrls: ['./battle.component.scss'],
+    standalone: false
 })
 export class BattleComponent implements OnInit {
   @ViewChild('roundNumbers')

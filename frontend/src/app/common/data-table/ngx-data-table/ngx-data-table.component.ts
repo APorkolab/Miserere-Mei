@@ -10,9 +10,10 @@ export interface INgxTableColumn {
 }
 
 @Component({
-  selector: 'ngx-data-table',
-  templateUrl: './ngx-data-table.component.html',
-  styleUrls: ['./ngx-data-table.component.scss'],
+    selector: 'ngx-data-table',
+    templateUrl: './ngx-data-table.component.html',
+    styleUrls: ['./ngx-data-table.component.scss'],
+    standalone: false
 })
 export class NgxDataTableComponent<T extends Record<string, any>> implements OnInit {
   @Input() list: T[] = [];

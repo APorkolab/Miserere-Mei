@@ -6,9 +6,10 @@ import { PlaceService } from 'src/app/service/place.service';
 import { NotificationService } from 'src/app/service/notification.service';
 
 @Component({
-  selector: 'app-all-place-editor',
-  templateUrl: './all-place-editor.component.html',
-  styleUrls: ['./all-place-editor.component.scss'],
+    selector: 'app-all-place-editor',
+    templateUrl: './all-place-editor.component.html',
+    styleUrls: ['./all-place-editor.component.scss'],
+    standalone: false
 })
 export class AllPlaceEditorComponent implements OnInit {
   allplace$!: Observable<Place>;
