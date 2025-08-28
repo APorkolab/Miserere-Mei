@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@popperjs/core": "^2.11.6",
+    "@popperjs/core": "^2.11.8",
     "ngx-bootstrap": "^9.0.0"
   }
 }
