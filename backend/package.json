@@ -17,7 +17,7 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "mysql2": "^3.10.3",
+    "mysql2": "^3.14.3",
     "npkill": "^0.12.2",
     "sequelize": "^6.37.3",
     "swagger-ui-express": "^5.0.1",
