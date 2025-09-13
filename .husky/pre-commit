@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "🚀 Running pre-commit checks..."
+
+# Run lint-staged
+if command -v npx >/dev/null 2>&1; then
+    echo "📋 Formatting staged files..."
+    npx lint-staged
+fi
+
+echo "✅ Pre-commit checks completed!"

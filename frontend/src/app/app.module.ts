@@ -46,7 +46,6 @@ import { BattleComponent } from './page/battle/battle.component';
     MapComponent,
     PlayerComponent,
     BattleComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -70,5 +69,5 @@ import { BattleComponent } from './page/battle/battle.component';
 })
 export class AppModule {
   sidebar: IMenuItem[] = this.config.sidebarMenu;
-  constructor(private config: ConfigService) { }
+  constructor(private config: ConfigService) {}
 }

@@ -1,0 +1,101 @@
+version: "3.8"
+
+services:
+  # Database for development
+  mysql:
+    image: mysql:8.0
+    container_name: miserere-mysql-dev
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-devpassword}
+      MYSQL_DATABASE: ${DB_NAME:-miserere_dev}
+      MYSQL_USER: ${DB_USER:-miserere}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-devpassword}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_dev_data:/var/lib/mysql
+      - ./database/init:/docker-entrypoint-initdb.d
+    networks:
+      - miserere-dev-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  # Backend development server
+  backend-dev:
+    build:
+      context: ./backend
+      target: dev
+    container_name: miserere-backend-dev
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+      - "9229:9229" # Debug port
+    environment:
+      NODE_ENV: development
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: ${DB_NAME:-miserere_dev}
+      DB_USER: ${DB_USER:-miserere}
+      DB_PASSWORD: ${DB_PASSWORD:-devpassword}
+      JWT_SECRET: ${JWT_SECRET:-dev-jwt-secret}
+      PORT: 3000
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - miserere-dev-network
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+      - backend_dev_logs:/usr/src/app/logs
+    command: ["dumb-init", "npm", "run", "dev"]
+
+  # Frontend development server
+  frontend-dev:
+    build:
+      context: ./frontend
+      target: dev
+    container_name: miserere-frontend-dev
+    restart: unless-stopped
+    ports:
+      - "4200:4200"
+    networks:
+      - miserere-dev-network
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    command: ["dumb-init", "npm", "start", "--", "--host", "0.0.0.0"]
+
+  # Redis for development
+  redis-dev:
+    image: redis:7-alpine
+    container_name: miserere-redis-dev
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    networks:
+      - miserere-dev-network
+    command: redis-server --appendonly yes
+
+  # MailHog for email testing in development
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: miserere-mailhog
+    ports:
+      - "1025:1025" # SMTP server
+      - "8025:8025" # Web UI
+    networks:
+      - miserere-dev-network
+
+networks:
+  miserere-dev-network:
+    driver: bridge
+
+volumes:
+  mysql_dev_data:
+    driver: local
+  backend_dev_logs:
+    driver: local

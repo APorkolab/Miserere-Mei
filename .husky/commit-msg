@@ -1,0 +1,42 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+echo "${GREEN}🔍 Validating commit message...${NC}"
+
+# Run commitlint to validate the commit message
+npx --no-install commitlint --edit "$1"
+
+if [ $? -eq 0 ]; then
+    echo "${GREEN}✅ Commit message validation passed${NC}"
+else
+    echo "${RED}❌ Commit message validation failed${NC}"
+    echo ""
+    echo "${YELLOW}📝 Commit message format should follow Conventional Commits:${NC}"
+    echo ""
+    echo "  ${GREEN}Examples:${NC}"
+    echo "    feat(auth): add JWT authentication system"
+    echo "    fix(backend): resolve database connection timeout"
+    echo "    docs(readme): update installation instructions"
+    echo "    test(frontend): add unit tests for game service"
+    echo ""
+    echo "  ${YELLOW}Format: <type>(<scope>): <description>${NC}"
+    echo ""
+    echo "  ${YELLOW}Types:${NC} feat, fix, docs, style, refactor, test, chore, ci, build"
+    echo "  ${YELLOW}Scopes:${NC} frontend, backend, api, ui, database, docker, etc."
+    echo ""
+    echo "  ${YELLOW}Rules:${NC}"
+    echo "  - Use lowercase for type and scope"
+    echo "  - Description should be 10-100 characters"
+    echo "  - Use imperative mood (add, not added)"
+    echo "  - No period at the end"
+    echo ""
+    echo "  ${GREEN}For more info: https://www.conventionalcommits.org/${NC}"
+    echo ""
+    exit 1
+fi

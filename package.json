@@ -1,6 +1,81 @@
 {
+  "name": "miserere-mei",
+  "version": "1.0.3",
+  "description": "Miserere Mei - The Precarious Trails to the Library of Preachers",
+  "scripts": {
+    "prepare": "husky install",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm run dev",
+    "start:frontend": "cd frontend && npm start",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build:prod",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test",
+    "test:ci": "npm run test:backend:ci && npm run test:frontend:ci",
+    "test:backend:ci": "cd backend && npm run test:ci",
+    "test:frontend:ci": "cd frontend && npm run test:ci",
+    "coverage": "npm run coverage:backend && npm run coverage:frontend",
+    "coverage:backend": "cd backend && npm run coverage",
+    "coverage:frontend": "cd frontend && npm run coverage",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:fix": "npm run lint:fix:backend && npm run lint:fix:frontend",
+    "lint:fix:backend": "cd backend && npm run lint:fix",
+    "lint:fix:frontend": "cd frontend && npm run lint:fix",
+    "format": "npm run format:backend && npm run format:frontend",
+    "format:backend": "cd backend && npm run format",
+    "format:frontend": "cd frontend && npm run format",
+    "e2e": "cd frontend && npm run e2e",
+    "docker:dev": "docker-compose -f docker-compose.dev.yml up -d",
+    "docker:dev:down": "docker-compose -f docker-compose.dev.yml down",
+    "docker:prod": "docker-compose up -d",
+    "docker:prod:down": "docker-compose down",
+    "docker:build": "docker-compose build",
+    "security:audit": "npm audit && cd backend && npm audit && cd ../frontend && npm audit",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^7.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.6",
+    "concurrently": "^8.2.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "semantic-release": "^24.2.8",
+    "stylelint": "^16.24.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-order": "^7.0.0",
+    "stylelint-scss": "^6.12.1"
+  },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "ngx-bootstrap": "^9.0.0"
-  }
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/APorkolab/Miserere-Mei.git"
+  },
+  "keywords": [
+    "text-adventure",
+    "game",
+    "angular",
+    "nodejs",
+    "express",
+    "mysql",
+    "docker"
+  ],
+  "author": "Adam Dr. Porkolab <adam@porkolab.digital>",
+  "license": "CC-BY-NC-ND-4.0"
 }
